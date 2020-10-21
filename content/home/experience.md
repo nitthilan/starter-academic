@@ -23,7 +23,7 @@ date_format = "Jan 2006"
   company_url = "https://www.poly.com/us/en"
   location = "Bangalore, India"
   date_start = "2012-05-01"
-  date_end = ""
+  date_end = "2017-08-01"
   description = """
   Responsibilities include product design, implementation, testing, and delivery:
   
@@ -40,7 +40,7 @@ date_format = "Jan 2006"
   company_url = "https://www.ittiam.com/"
   location = "Bangalore, India"
   date_start = "2007-08-01"
-  date_end = ""
+  date_end = "2012-05-01"
   description = """
   Responsibilities include product design, implementation, testing, and delivery:
   
@@ -56,7 +56,7 @@ date_format = "Jan 2006"
   company_url = "https://www.ittiam.com/"
   location = "Bangalore, India"
   date_start = "2004-08-01"
-  date_end = ""
+  date_end = "2007-08-01"
   description = """  
   * Managed remote teams for Stretch Inc in H264, MPEG4 codec development
   * Managed design development and delivery for codecs for Canon Camera Systems

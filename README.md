@@ -30,3 +30,14 @@ To help us develop this template and software sustainably under the MIT license,
 <!--
 [![Analytics](https://ga-beacon.appspot.com/UA-78646709-2/academic-kickstart/readme?pixel)](https://github.com/igrigorik/ga-beacon)
 -->
+
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+
+hugo
+cd public
+git add .
+git commit -m "Build website"
+git push origin master
+cd ..

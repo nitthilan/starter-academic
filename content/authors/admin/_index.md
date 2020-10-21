@@ -29,10 +29,10 @@ interests:
 education:
   courses:
   - course: PhD in Artificial Intelligence
-    institution: Washington State University
-    year: 2012
+    institution: Washington State University, 3.95/4 CGPA
+    year: 2012 
   - course: BE Electronics and  Communication
-    institution: College of Engineering, Anna university.
+    institution: College of Engineering, Anna university, , 8.91/10 CGPA
     year: 2004
  # - course: BSc in Artificial Intelligence
  #   institution: Massachusetts Institute of Technology
