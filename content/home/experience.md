@@ -53,7 +53,7 @@ date_format = "Jan 2006"
 [[experience]]
   title = "Senior Engineer R&D Video Codec"
   company = "Tata Elxsi"
-  company_url = "https://www.ittiam.com/"
+  company_url = "https://www.tataelxsi.com/"
   location = "Bangalore, India"
   date_start = "2004-08-01"
   date_end = "2007-08-01"

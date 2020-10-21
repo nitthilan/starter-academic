@@ -34,7 +34,7 @@
   weight = 80
 
 [[main]]
-  name = "Entertainment"
+  name = "Fun"
   url = "entertainment"
   weight = 90
 

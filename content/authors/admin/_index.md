@@ -46,12 +46,12 @@ social:
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=_CWcMj4AAAAJ&hl=en&authuser=1
+- icon: linkedin-in
+  icon_pack: fab
+  link: https://www.linkedin.com/in/nitthilan/
 - icon: envelope
   icon_pack: fas
   link: mailto:nitthilan@gmail.com # '#contact'  # For a direct email link, use "mailto:test@example.org".
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/nitthilan
 - icon: github
   icon_pack: fab
   link: https://github.com/nitthilan
@@ -60,6 +60,12 @@ social:
 - icon: cv
   icon_pack: ai
   link: files/CV_5.0.pdf
+#- icon: twitter
+#  icon_pack: fab
+#  link: https://twitter.com/nitthilan
+- icon: facebook
+  icon_pack: fab
+  link: https://www.facebook.com/kannappanjayakodi.nitthilan
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "n.kannappanjayakodi@wsu.edu, nitthilan@gmail.com"

@@ -38,3 +38,22 @@ header:
 - Member of Technical Staff Recognition for technical leadership at Ittiam Systems 2012
 - 164th rank of 100000 students in Tamil Nadu Professional Courses Entrance Examination, India.
 - Top 0.1% across India in Mathematics in 10th Standard
+
+#### Projects @ ITTIAM , Tata Elxsi and Under-graduation: 
+- (Involved in development of these projects/modules)
+- Mpeg4 Advanced Simple Profile HD Decoder on OMAP3430
+- Mpeg4, H.263 and Mpeg2 Encoders for catalogue products on C64x+ DSP
+- Handling 3:2 pulldown by reducing frame rate and generation of Timestamp information
+- Migrating the mpeg4 ME optimizations to MPEG2 non-accelerated workspace
+- Adding MV cost for Motion Estimation [MPEG4 non-accelerated]
+- H263 Encoder and its extensions D1 on C64x+ DSP
+- Added XDM 1.0 API support for Mpeg4 non accelerated version
+- Optimization of MPEG4 non accelerated encoder
+- ‘N’ mb level optimization of core loop Difference+DCT+Q+IQ+IDCT.
+- Study of SD H.264 Scalable Video Codec on SCP
+- Real Time HD (High Definition) MPEG2 Video Encoder on Multiple SCP (S5) Processors
+- Real Time HD H.264 Video Encoder On Multiple SCP (S5) Processors
+- H.264 Encoder modules development
+- Real Time Preview of HD bit streams on PC
+- Study on video transcoding of HD MPEG2 bit streams to SD (Standard Definition) bit streams
+- Visualization of White Matter Fiber Tract from DT-MR (Diffusion Tensor Magnetic Resonance) Image.

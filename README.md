@@ -41,3 +41,7 @@ git add .
 git commit -m "Build website"
 git push origin master
 cd ..
+
+List of things to do:
+- Add source code for papers
+- Add all the project  details for work done earlier [https://docs.google.com/document/d/1uGKzp_z_d9yr-X-y1aADYFB2vxoFWapEWY9KHAT5sU8/edit]

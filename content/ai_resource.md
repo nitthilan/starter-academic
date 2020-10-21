@@ -13,7 +13,7 @@ header:
   image: ""
 ---
 ### Sections       
-[Children resources](#children-resources) | [Videos](#videos) | [Accelerators](#accelerators) | [Channels followed](#channels-followed) | [GPU and CUDA resource](#gpu-and-cuda-resource) | [Projects](#projects)
+[Children resources](#children-resources) - [Videos](#videos) - [Accelerators](#accelerators) - [Channels followed](#channels-followed) - [GPU and CUDA resource](#gpu-and-cuda-resource) - [Projects](#projects)
 
 ###### Tutorials
 
@@ -93,7 +93,7 @@ header:
 - EGPU: [egpu](https://egpu.io/), [9to5mac](https://9to5mac.com/2017/04/11/hands-on-powering-the-macbook-pro-with-an-egpu-using-nvidias-new-pascal-drivers/)
 
 ###### Projects       
-[About](#about) | [Project Ideas](#project-ideas) | [Current Task List](#current-task-list) | [Tutorials](#tutorials) | [Applications](#applications) | [Prominent Papers](#prominent-papers)
+[About](#about) - [Project Ideas](#project-ideas) - [Current Task List](#current-task-list) - [Tutorials](#tutorials) - [Applications](#applications) - [Prominent Papers](#prominent-papers)
 
 ###### About
 Inspired from Pixar, Dreamworks, Sony and other animation studios. The general time required to produce an animated feature from conception to final rendered version has a long production time. 
