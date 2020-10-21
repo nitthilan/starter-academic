@@ -15,22 +15,28 @@ subtitle = ""
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
 
 [[feature]]
-  icon = "r-project"
+  icon = "python"
   icon_pack = "fab"
-  name = "R"
+  name = "PyTorch, Keras (DL Framework)"
   description = "90%"
   
 [[feature]]
-  icon = "chart-line"
-  icon_pack = "fas"
-  name = "Statistics"
-  description = "100%"  
+  icon = "cuttlefish"
+  icon_pack = "fab"
+  name = "C, C++, Embedded Systems"
+  description = "90%"  
   
 [[feature]]
-  icon = "camera-retro"
+  icon = "html5"
+  icon_pack = "fab"
+  name = "Full Stack (MEAN stack)"
+  description = "90%"
+
+[[feature]]
+  icon = "photo-video"
   icon_pack = "fas"
-  name = "Photography"
-  description = "10%"
+  name = "Video Codec (SVC, H265, H264, MPEG2/4)"
+  description = "90%"
 
 # Uncomment to use emoji icons.
 # [[feature]]
