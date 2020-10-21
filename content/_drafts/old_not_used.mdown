@@ -1,0 +1,544 @@
+
+==================
+Jana Referrence
+==================
+
+Deeplearning:
+- http://en.diveintodeeplearning.org/
+- NLP: https://github.com/dmlc/gluon-nlp/releases/tag/v0.5.0
+- MXNet : https://gluon-cv.mxnet.io/model_zoo/classification.html - Imagenet perfrmance across different networks
+- Graph Neural Networks: https://github.com/jermainewang/dgl
+- Rigorous agent RL : https://arxiv.org/pdf/1812.01647.pdf
+
+Papers not read:
+- https://arxiv.org/pdf/1607.00653.pdf - node2vec: Scalable Feature Learning for Networks
+
+- https://arxiv.org/pdf/1712.04741.pdf - Mathematics of Deep Learning
+
+- http://mlanctot.info/files/papers/aaai18-dqfd.pdf - Deep Q-learning from Demonstrations
+- https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/1z40kx414?locale=en - New learning for sequential decision making
+
+- https://arxiv.org/pdf/1711.00073.pdf - LONG-TERM FORECASTING USING TENSOR-TRAIN RNNS
+
+- https://arxiv.org/pdf/1611.01144.pdf - CATEGORICAL REPARAMETERIZATION WITH GUMBEL-SOFTMAX
+
+- https://arxiv.org/abs/1706.00764 - Hyperparameter Optimization: A Spectral Approach
+
+- https://research.googleblog.com/2017/09/seminal-ideas-from-2007.html
+- https://www.cs.ox.ac.uk/people/nando.defreitas/publications/BayesOptLoop.pdf
+
+- https://www.iro.umontreal.ca/~bengioy/cifar/NCAP2014-summerschool/slides/Ryan_adams_140814_bayesopt_ncap.pdf - good slides.
+	- Go through it to understand what can be done
+https://arxiv.org/abs/1406.7758 - Analysis of how to use bayesian optimisation
+
+- http://mlg.eng.cam.ac.uk/yarin/PDFs/2015_UCL_Bayesian_Deep_Learning_talk.pdf
+
+- https://arxiv.org/pdf/1708.06832.pdf - ANYTIME NEURAL NETWORK: A VERSATILE TRADEOFF BETWEEN COMPUTATION AND ACCURACY
+
+- https://arxiv.org/pdf/1706.01445.pdf - Ensemble Bayesian Optimization
+
+- https://arxiv.org/pdf/1701.04722.pdf - Adversarial Variational Bayes: Unifying Variational Autoencoders and Generative Adversarial Networks
+
+- http://jmlr.org/papers/volume18/15-403/15-403.pdf - Classification of Time Sequences using Graphs of Temporal Constraints
+
+- https://machinethoughts.wordpress.com/2017/10/02/vae-em/ - 
+
+- https://arxiv.org/pdf/1711.11566.pdf - Hybrid VAE: Improving Deep Generative Models using Partial Observations
+
+- https://arxiv.org/pdf/1611.00712.pdf - THE CONCRETE DISTRIBUTION: A CONTINUOUS RELAXATION OF DISCRETE RANDOM VARIABLES
+
+- https://arxiv.org/pdf/1704.08829.pdf - Deep Feature Learning for Graphs
+
+https://openreview.net/pdf?id=HymYLebCb - NETWORK SIGNATURES FROM IMAGE REPRESENTATION OF ADJACENCY MATRICES: DEEP/TRANSFER LEARNING FOR SUBGRAPH CLASSIFICATION
+
+- http://www.jmlr.org/papers/volume13/snoek12a/snoek12a.pdf - Nonparametric Guidance of Autoencoder Representations using Label Information
+
+- https://arxiv.org/pdf/1707.05005.pdf - graph2vec: Learning Distributed Representations of Graphs
+
+- http://www.abigailsee.com/2017/08/30/four-deep-learning-trends-from-acl-2017-part-1.html
+- http://www.abigailsee.com/2017/08/30/four-deep-learning-trends-from-acl-2017-part-2.html
+
+- http://www.mlsalt.eng.cam.ac.uk/foswiki/pub/Main/ClassOf2017/dcruz_thesis-poster.pdf - Tradeoffs in Neural Variational Inference
+	- Check the References
+
+ - http://bair.berkeley.edu/blog/2017/09/12/learning-to-optimize-with-rl/
+
+ - https://arxiv.org/pdf/1707.03502.pdf - Deep Learning for Sensor-based Activity Recognition: A Survey - Many dataset for activity recognition
+
+ - https://truyentran.github.io/papers/pakdd_16.pdf
+ 	- DeepCare: A Deep Dynamic Memory Model for Predictive Medicine
+ - https://arxiv.org/pdf/1707.05010.pdf
+ 	- Deep Learning to Attend to Risk in ICU
+
+ - https://arxiv.org/pdf/1702.08835.pdf
+ 	- Deep Forest: Towards an Alternative to Deep Neural Networks
+
+- https://arxiv.org/pdf/1705.10843.pdf
+	- Objective-Reinforced Generative Adversarial Networks (ORGAN) for Sequence Generation Models
+	- https://github.com/gablg1/ORGAN
+	- Reduction to continous representation
+
+
+- https://www.youtube.com/watch?v=LvmjbXZyoP0
+	- Geometric Deep Learning on Graphs and Manifolds #NIPS2017
+
+- http://www.offconvex.org/2017/12/08/generalization1/
+
+- https://bayesopt.github.io/slides/2017/bayesopt_2017_jegelka.pdf
+- https://bayesopt.github.io/slides/2017/Lorenz_NIPS_Workshop_2017.pdf
+- https://bayesopt.github.io/slides/2017/NIPS_BOws_Ginsbourger_09_12_2017.pdf
+- Here are accepted papers: https://bayesopt.github.io/accepted.html
+
+- https://www.youtube.com/watch?v=LvmjbXZyoP0 - Geometric Deep Learning on Graphs and Manifolds - #NIPS2017
+
+- https://www.youtube.com/watch?v=9saauSBgmcQ - Yee Whye Teh: On Bayesian Deep Learning and Deep Bayesian Learning (NIPS 2017 Keynote)
+
+- https://www.youtube.com/watch?v=hYip_Vuv8J0 - Blockchain
+
+ - Weisfeiler-Lehman Neural Machine for Link Prediction - http://www.cse.wustl.edu/~muhan/papers/KDD_2017.pdf
+
+ - http://bair.berkeley.edu/blog/2017/09/12/learning-to-optimize-with-rl/ 
+
+ - http://www.abigailsee.com/2017/08/30/four-deep-learning-trends-from-acl-2017-part-1.html
+
+
+- Time management: https://www.youtube.com/watch?v=oTugjssqOT0&t=1213s
+
+https://arxiv.org/pdf/1712.02734.pdf - ChemNet: A Transferable and Generalizable Deep Neural Network for Small-Molecule Property Prediction
+
+- Mixed Sum-Product Networks: A Deep Architecture for Hybrid Domains
+
+- https://arxiv.org/pdf/1708.08227.pdf - ChemGAN challenge for drug discovery: can AI reproduce natural chemical diversity?
+
+- http://videolectures.net/deeplearning2017_montreal/ - Very interesting topics by top people
+List of conferences:
+- AAAI - https://aaai.org/Conferences/AAAI-18/aaai18call/ - September 11, 2017
+- http://www.yisongyue.com/publications/aaai2018_safe_mdp.pdf - Safe Exploration and Optimization of Constrained MDPs using Gaussian Processes
+- http://www.yisongyue.com/publications/ijcai2017_corr_dueling.pdf - Correlational Dueling Bandits with Application to Clinical Treatment in Large Decision Spaces
+- https://arxiv.org/pdf/1711.11157.pdf - A SEMANTIC LOSS FUNCTION FOR DEEP LEARNING WITH SYMBOLIC KNOWLEDGE
+
+Papers To be Read:
+- http://www.cccblog.org/2017/12/04/nsf-lecture-soft-materials-research-in-the-era-of-machine-learning/ - explore this guy???
+
+Reviewed once:
+- http://i.stanford.edu/~jure/pub/talks2/graphsage-ieee_bigdata-dec17a.pdf
+	- Graph Representation Learning
+	- GraphSage and node2vec
+	- https://arxiv.org/pdf/1607.00653.pdf - node2vec
+- https://openreview.net/pdf?id=BJcAWaeCW - GRAPH TOPOLOGICAL FEATURES VIA GAN
+	- https://arxiv.org/pdf/0803.0476.pdf - Fast unfolding of communities in large networks
+	- http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.115.3303&rep=rep1&type=pdf - Analysis of Multilevel Graph Partitioning ∗
+- https://openreview.net/pdf?id=H15RufWAW - GRAPHGAN: GENERATING GRAPHS VIA RANDOM WALKS
+- https://arxiv.org/pdf/1711.08267.pdf - GraphGAN: Graph Representation Learning with Generative Adversarial Nets
+	- http://www.kdd.org/kdd2016/papers/files/rfp0191-wangAemb.pdf - Structural Deep Network Embedding
+- https://arxiv.org/pdf/1603.07063.pdf - Semantic Object Parsing with Graph LSTM
+- https://openreview.net/pdf?id=H15RufWAW - GRAPHGAN: GENERATING GRAPHS VIA RANDOM WALKS
+Papers Read:
+
+
+
+
+
+==================
+Neural Maps
+==================
+---
+layout: post
+title:  "Neural Maps"
+date:   
+categories: 
+permalink: 
+---
+
+### Understanding
+
+- Earlier methods: Temporal Convolution or LSTM
+- REINFORCE algorithm (Williams, 1992)
+- Differentiable Neural Computer (DNC) (Graves et al., 2016)
+
+- Note unknow things and terms
+- Try to find the dimension of each operation
+
+- any environments and tools used for experiments 
+
+Python doubts:
+- @attr.s - https://news.ycombinator.com/item?id=12359522
+- class x(object): and not : https://stackoverflow.com/questions/4015417/python-class-inherits-object
+- decorator: https://stackoverflow.com/questions/6392739/what-does-the-at-symbol-do-in-python
+
+
+
+
+
+==================
+Tipping point
+==================
+Other names:
+- TipIt, Tipper, Velaikaran
+
+Peer to peer transfers:
+- https://www.nerdwallet.com/blog/banking/faq-send-money-individual/
+- https://www.theatlantic.com/business/archive/2017/07/venmo-makes-money-banks/533946/
+
+
+Online accounts:
+- https://www.zellepay.com/
+- https://www.dwolla.com/ach/ach-api/ - more popular and to be used
+
+About ACH transfers: https://www.nacha.org/ach-network
+
+
+==================
+Where to buy what
+==================
+
+glasses:
+- https://www.glassesusa.com/eyeglasses-collection?dir=asc&order=price&p=1&frame_type=97
+- https://designeroptics.com/collections/eyeglasses
+
+Cars:
+- https://pullman.craigslist.org/cto/d/2010-toyota-corolla-low/6561849318.html
+- https://pullman.craigslist.org/cto/d/ford-taurus-se-2002/6553754159.html
+- https://pullman.craigslist.org/cto/d/honda-civic-ex/6562529963.html
+- https://pullman.craigslist.org/cto/d/2004-bmw/6563301517.html
+https://pullman.craigslist.org/cto/d/2010-vw-jetta/6541322252.html
+
+
+- https://pullman.craigslist.org/cto/d/2013-chevy-malibu-2lt/6550034598.html
+
+
+- https://pullman.craigslist.org/cto/d/want-car-that-rides-smooth/6650473380.html
+- https://pullman.craigslist.org/cto/d/4wd-nissan-murano-sl-awd-2007/6620581502.html
+- https://pullman.craigslist.org/cto/d/2004-bmw-525i-for-sale/6645721508.html
+- https://pullman.craigslist.org/cto/d/2008-nissan-altima-25s/6651279933.html
+- https://pullman.craigslist.org/cto/d/2009-kia-spectra/6651422130.html
+- https://pullman.craigslist.org/cto/d/hyundai-accent-2011-with-low/6652099083.html
+
+Pull overs:
+
+Canon 50mm:
+- Refurbished: https://shop.usa.canon.com/shop/en/catalog/ef-50mm-f-18-stm-refurbished
+- Craig list
+
+- booking a ride:
+- facebook pages??? two spokane
+
+- insoles??
+
+- facewash??
+
+- blender: https://www.amazon.com/s/ref=sr_pg_2?fst=p90x%3A1%2Cas%3Aon&rh=n%3A1055398%2Cn%3A284507%2Cn%3A289913%2Cn%3A289914%2Ck%3Ablender&page=2&keywords=blender&ie=UTF8&qid=1510912518
+	- https://www.walmart.com/search/?query=blender&cat_id=0
+	- thrift store
+
+- Guitar:
+
+
+Mobile plans:
+- https://www.usmobile.com/plans
+- https://www.h2owirelessnow.com/mainControl.php?page=planMonth
+- 
+
+- snow boots, winter shoes
+- http://www.payless.com/search/?q=snow%20boots
+
+
+headphones:
+- long battery life fast charging wireless noise canceling headphone
+- https://www.androidcentral.com/best-true-wireless-headphones
+- wireless headphones bluetooth noise cancelling
+- https://www.amazon.com/Cancelling-Headphones-Bluetooth-Microphone-Cellphone/dp/B077YG22Y9/ref=dp_ob_title_ce
+- programmable noise cancelling headphones
+
+
+
+==================
+Working on 
+==================
+
+- List of projects:
+	- 
+- Shaving cream, weighing scale, lap pad for working
+
+List of things to do:
+- Decide on whether to continue with PhD or not??
+- Look at the training: Gym instructor, dance/song practice
+- Making short films. Write scripts
+
+Target:
+- PhD Target
+	- Research and decide on the research topic as soon as possible
+- Company Target
+	- Set up a web site which starts publicising 
+	about things that can be done with AI
+
+
+
+numerai: Learning financial models
+- /Users/kannappanjayakodinitthilan/Documents/myfolder/project_devan/aws_workspace/reference/numerai
+
+general ai challenge: did not complete
+- /Users/kannappanjayakodinitthilan/Documents/myfolder/project_devan/aws_workspace/reference/general_ai/general_ai_round1/src/docs
+
+robotics:
+
+graphics:
+
+Stanford NLP: https://www.youtube.com/playlist?list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6
+Stanford CNN: https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv
+
+Stories
+Standup
+Music
+Drawing
+Photography
+Writing
+
+
+Job opportunities:
+- https://www.kaggle.com/jobs?utm_medium=email&utm_source=mailchimp&utm_campaign=newsletter+dec+2017
+- https://www.certace.com/?utm_source=kaggle&utm_campaign=Dec2017&utm_medium=jobad&utm_content=network
+
+
+- contact frank
+- mail to chenni sithappa
+- buy cutter, big bucket, plug, weighing scale, water heater, 
+- phone connection and phone status
+- Try collaborating with big people
+- 
+
+
+Immediate:
+- Take printout (get a memory card and print it out)
+- Rakibul on Monday to go to Clakston
+- Check with credit union about the debit card
+- Health insurance cover 
+
+
+healthcare options: https://hws.wsu.edu/2016/11/10/insurance-basics-cougs/
+
+Things to do:
+- Visit the Migration office once reaching campus
+- Visit the health and wellness services office once reaching campus (before 17th August)
+
+Things to try out:
+- https://www.pbsc.com/
+- https://urec.wsu.edu/green-bike/ - Biking
+- https://urec.wsu.edu/facilities/down-under-recreation-center/ - Fitness classes
+- https://urec.wsu.edu/facilities/indoor-facilities/ - Indoor facilities - Swimming pool, basket ball, skating,  etc
+- https://urec.wsu.edu/classes-trips?cat=0&g=0&time=0&loc=96&text=&prog=0 - Classes
+- https://urec.wsu.edu/special-events/ - upcoming events
+- https://urec.wsu.edu/imsports/
+- https://urec.wsu.edu/fitness/
+- http://urec.wsu.edu/classes-trips
+	- Modern Dance
+	- Kayaking
+	- Wall climbing
+	- backpacking
+	- swimming
+	- Kickboxing
+	- Photography
+
+- http://robosub.eecs.wsu.edu/index.php/get-involved
+- http://catalog.wsu.edu/General/Academics/Courses/MUS
+
+
+
+
+
+List of papers shared by Jana:
+- Probabilistically Safe Policy Transfer. (arXiv:1705.05394v1 [cs.RO]) http://arxiv.org/abs/1705.05394
+- Repeated Inverse Reinforcement Learning for AI Safety. (arXiv:1705.05427v1 [cs.AI]) http://arxiv.org/abs/1705.05427
+- Using Machine Learning to Explore Neural Network Architecture http://research.googleblog.com/2017/05/using-machine-learning-to-explore.html
+- Continual Learning with Deep Generative Replay. (arXiv:1705.08690v1 [cs.AI]) http://arxiv.org/abs/1705.08690
+-  On-the-fly Operation Batching in Dynamic Computation Graphs G Neubig, Y Goldberg, C Dyer - arXiv preprint arXiv:1705.07860, 2017 Abstract: Dynamic neural network toolkits such as PyTorch, DyNet, and Chainer offer more  flexibility for implementing models that cope with data of varying dimensions and structure,  relative to toolkits that operate on statically declared computations (eg, TensorFlow, CNTK, 
+
+- The Atari Grand Challenge Dataset V Kurin, S Nowozin, K Hofmann, L Beyer, B Leibe - arXiv preprint arXiv:1705.10998, 2017 Abstract: Recent progress in Reinforcement Learning (RL), fueled by its combination, with Deep Learning has enabled impressive results in learning to interact with complex virtual environments, yet real-world applications of RL are still scarce. A key limitation is data 
+
+- Stabilizing Training of Generative Adversarial Networks through Regularization K Roth, A Lucchi, S Nowozin, T Hofmann - arXiv preprint arXiv:1705.09367, 2017 Abstract: Deep generative models based on Generative Adversarial Networks (GANs) have demonstrated impressive sample quality but in order to work they require a careful choice of architecture, parameter initialization, and selection of hyper-parameters. This fragility is in 
+
+-  The Numerics of GANs L Mescheder, S Nowozin, A Geiger - arXiv preprint arXiv:1705.10461, 2017 Abstract: In this paper, we analyze the numerics of common algorithms for training Generative Adversarial Networks (GANs). Using the formalism of smooth two-player games we analyze the associated gradient vector field of GAN training objectives. Our findings 
+
+- SeaRNN (imitation learning for RNNs) https://arxiv.org/pdf/1706.04499.pdf They apply learning to search and imitation learning ideas to RNNs.I think this paper is under review at NIPS-2017.
+
+-  Ensemble Bayesian Optimization Z Wang, C Gehring, P Kohli, S Jegelka - arXiv preprint arXiv:1706.01445, 2017 Abstract: Bayesian Optimization (BO) has been shown to be a very effective paradigm for tackling hard black-box and non-convex optimization problems encountered in Machine Learning. Despite these successes, the computational complexity of the underlying function 
+
+- Energy-Based Sequence GANs for Recommendation and Their Connection to Imitation Learning. (arXiv:1706.09200v1 [cs.IR]) http://arxiv.org/abs/1706.09200
+
+- Amazon recommendations - https://www.computer.org/csdl/mags/ic/2017/03/mic2017030012.html
+
+- Human-in-the-loop RL http://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/15031/14411 - I think this is a more practical setting for RL than using simulators (e.g., video games) to create the big data setting for Deep RL.
+
+- http://proceedings.mlr.press/v70/baram17a/baram17a.pdf , https://arxiv.org/pdf/1707.02747.pdf In your free time, go through them quickly to get the high-level ideas.
+- https://deepstruct.github.io/ICML17/1stDeepStructWS_paper_5.pdf
+- Anomaly detection over graph time series https://arxiv.org/pdf/1708.02975.pdf
+
+
+
+
+http://timvieira.github.io/blog/post/2014/10/06/kl-divergence-as-an-objective-function/ 
+
+
+
+Scholar Alerts:
+- Scholar Alert - Sebastian Nowozin - new articles
+- Scholar Alert - Pushmeet Kohli - new articles
+
+Feedly alerts:
+
+Tweets:
+
+
+AAAI conference
+ICAPS conference
+
+
+deanofstudents@wsu.edu
+https://hws.wsu.edu/ - get medical insurance
+wsu app
+responsible conduct of research training - 15 min
+update mailing address in wsu website
+
+I9
+W4 - pay
+- Global Services (Bryan Hall 206)
+
+Payroll deductions - 954.74 per sem - 4th sept
+mail
+
+https://www.youtube.com/watch?v=p_mWJyBEdWc&feature=youtu.bea
+
+Posterior Regularisation:
+parametric
+regularization in a Bayesian framework, our approach incorporates data-dependent constraints that
+are easy to encode as information about model posteriors on the observed data, but may be difficult
+to encode as information about model parameters through Bayesian priors.
+
+Generative models  are usually estimated by maximizing the likelihood of the observed data
+by marginalizing over the hidden variables, typically via the Expectation Maximization (EM) algorithm
+
+
+KL divergence?
+Expectqtion
+Expectation maximization
+
+
+
+
+
+
+
+
+==================
+Points to Travel
+==================
+
+http://www.american.edu/ocl/isss/Change-of-Status-F-2-to-F-1.cfm
+
+http://forums.immigration.com/threads/how-to-change-visa-status-from-f2-to-f1.321428/
+
+https://www.quora.com/Can-I-pursue-an-MS-MIS-from-US-after-completing-an-MBA-IT-in-India
+https://www.quora.com/Can-an-MBA-from-India-pursue-MS-CSE-in-the-USA
+https://www.quora.com/What-are-the-courses-available-after-B-Com-In-USA
+
+
+
+
+
+
+http://isapullman.wixsite.com/wsuisa/faqs - ISA pullman
+https://livingat.wsu.edu/roommatefinder/posts/SSA2018?fill-out-profile
+
+https://livingat.wsu.edu/roommatefinder/posts/FAM2018
+
+https://www.zillow.com/homes/for_rent/condo,apartment_duplex_type/featured_sort/46.747242,-117.143741,46.713355,-117.2191_rect/13_zm/
+https://www.abodo.com/pullman-wa/washington-state-university-apartments/campus
+https://www.apartmentguide.com/apartments/Washington/Washington-State-University/ - Looks like good
+
+https://www.facebook.com/wsuisapullman/
+
+
+Staying at Spokane: http://www.sleepinginairports.net/usa/spokaneWash.htm
+
+Amtrak at morning 6:15am: https://www.wanderu.com/en/depart/Spokane%2C%20WA%2C%20USA/Pullman%2C%20WA%2099163%2C%20USA/2017-08-16
+Amtrak has bus service from International airport to pullman directly. Starts at 5:15pm. If not train from station starts at 5:45pm. Else 
+
+Wheatland Express at 2:00pm
+
+
+Get enough food and sleep for some 4-5 hours. Then board a amtrak at 6:15am
+According to their web site, the airport is open 24 hours but all the car rental outfits at the airport close down at 00:30am or earlier and reopen at 06:00am or later.
+https://www.tripadvisor.in/ShowTopic-g58759-i471-k5431468-Amtrak_train_station-Spokane_Washington.html
+
+Airport info- http://spokaneairports.net/ground-transportation/
+
+
+Stay related:
+- Single Student Flat: https://livingat.wsu.edu/ssa/app/groupInfo.aspx?create=1
+- Group username: nitthilan/ nitthilan1234
+
+https://livingat.wsu.edu/fam/main.aspx - Have to pay a security deposit
+
+https://livingat.wsu.edu/roommatefinder/posts/FAM2018
+
+
+https://www.uber.com/en-IN/fare-estimate/ - Spokane travel using uber to amtrak
+
+
+
+
+
+Housing options:
+- http://www.apartmentrentalsinc.com/
+- http://www.summerhillapts.net/
+- http://dabcomgmt.com/
+- boulder creek, pimlico housing at pullman etc
+- https://pullman.craigslist.org/search/apa
+1. University Campus Apartment 
+2. Dabco Property
+3. Summerhill Apartment
+4. Apprtment Rentals
+5. Cougar Ridge 
+6. Wadsworth Property
+7. Helen's Property
+
+http://www.wilru.com/
+
+https://pullman.craigslist.org/search/apa
+https://www.google.com/maps/place/Outlook+Apartments/@46.7333184,-117.1750027,14z/data=!4m8!1m2!2m1!1sapartments!3m4!1s0x0:0x7155f562f81b668a!8m2!3d46.7339745!4d-117.1758789 - apartments near WSU
+- http://dabcomgmt.com/apartment-buildings/pine-ridge/
+- http://www.northwoodwa.com/brochure.aspx
+- http://cougridge.com/
+- http://www.summerhillapts.net/cedar-ridge.html
+- http://groveatpullman.com/
+- http://willowplaceapts.com/
+- http://www.coughousing.com/#floorplans
+- http://www.theoutlookwa.com/brochure.aspx
+- http://www.summerhillapts.net/boulder-creek.html
+
+Roommate search:
+- https://pullman.craigslist.org/search/roo
+	- https://pullman.craigslist.org/
+- https://www.facebook.com/groups/WSUFreeAndForSale.Official/
+- https://www.facebook.com/groups/WSUFreeAndForSalePullman/
+- https://www.facebook.com/groups/376681432500926/
+
+
+
+
+
+
+
+- https://www.skyscanner.net/news/best-hand-luggage-bags-7-great-airline-carry-bags-reviewed
+- http://www.amazon.in/gp/product/B06VSVHGZP/ref=s9u_simh_gw_i6
+
+https://www.britishairways.com/en-gb/information/baggage-essentials/hand-baggage-allowances
+1 handbag/laptop bag (max. 23kg / 51lb and up to 45 x 36 x 20cm / 18 x 14 x 8in)
+plus
+1 additional cabin bag (max. 23kg / 51lb and up to 56 x 45 x 25cm / 22 x 18 x 10in)
+2 bags (max. 23kg / 51lb per bag)
+https://www.britishairways.com/en-gb/information/baggage-essentials/checked-baggage-allowances
+https://www.skyscanner.net/news/best-hand-luggage-bags-7-great-airline-carry-bags-reviewed
+
+http://www.amazon.in/American-Tourister-49W-01-002/dp/B015K2JC2O/
+
