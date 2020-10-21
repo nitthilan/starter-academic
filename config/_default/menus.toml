@@ -19,7 +19,7 @@
   weight = 30
 
 [[main]]
-  name = "Experience"
+  name = "Work"
   url = "#experience"
   weight = 40
 
@@ -27,6 +27,16 @@
   name = "Recognitions"
   url = "recognition"
   weight = 50
+
+[[main]]
+  name = "AI Resources"
+  url = "ai_resource"
+  weight = 80
+
+[[main]]
+  name = "Entertainment"
+  url = "entertainment"
+  weight = 90
 
 #[[main]]
 #  name = "Contact"
