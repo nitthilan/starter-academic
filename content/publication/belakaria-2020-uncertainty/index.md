@@ -35,4 +35,7 @@ publication_types:
 - '1'
 abstract: ''
 publication: '*AAAI*'
+#url_pdf: 'hihiih'
+#url_code: "http"
+#url_doi: "hi"
 ---
