@@ -35,6 +35,7 @@ projects: []
 publishDate: '2020-10-21T02:56:10.147365Z'
 publication_types:
 - '1'
-abstract: ''
+abstract: 'Deep Neural Networks (DNNs) employed for image segmentation are computationally more expensive and complex compared to the ones used for classification. However, manycore architectures to accelerate the training of these DNNs are relatively unexplored. Resistive random-access memory (ReRAM)-based architectures offer a promising alternative to commonly used GPU-based platforms for training DNNs. However, due to their low-precision storage capability, these architectures cannot support all DNN layers and suffer from accuracy loss of the learned models. To address these challenges, we propose GRAMARCH, a heterogeneous architecture that combines the benefits of ReRAM and GPUs simultaneously by using a high-throughput 3D Network-on-Chip. Experimental results indicate that by suitably mapping DNN layers to processing elements, it is possible to achieve up to 53X better performance compared to conventional GPUs for image segmentation.'
 publication: '*2020 Design, Automation & Test in Europe Conference & Exhibition (DATE)*'
+url_pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9116273
 ---

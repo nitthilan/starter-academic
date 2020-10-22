@@ -13,6 +13,13 @@ header:
   caption: ""
   image: ""
 ---
+#### Patents
+- U.S. Provisional Patent Application filed on August, 2020, entitled, “HETEROGENEOUS GPU-RERAM ARCHITECTURE FOR NEURAL NETWORKS,” 
+	- BIRESH KUMAR JOARDAR, PARTHA PRATIM PANDE, VENKATA JANARDHAN RAO DOPPA, and NITTHILAN KANNAPPAN JAYAKODI
+
+#### Grant Proposals
+- Jana Doppa (PI), Umit Ogras, and Partha Pande.Small:  Dynamic Resource Management in HeterogeneousMobile SoCs:  Novel Algorithms and Efficient Deployment of Emerging Applications.  National Science Foun-dation (NSF), Core Program.$500K (8/2020–8/2023).  Pending.
+	- My research work on design and optimization framework for EdgeAI contributed to half of this proposal.
 
 
 #### Conference and Journal Reviewer
