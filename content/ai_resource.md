@@ -14,7 +14,7 @@ header:
 ---
 
 ###### Sections       
-[About](#about) - [Project Ideas](#project-ideas) - [Significant Areas](#significant-areas)-[Current Task List](#current-task-list) - [Tutorials](#tutorials) - [Applications](#applications) - [Prominent Papers](#prominent-papers)
+[About](#about) - [Significant Areas](#significant-areas)-[Current Task List](#current-task-list) - [Tutorials](#tutorials) - [Applications](#applications) - [Prominent Papers](#prominent-papers)
 
 ###### About
 Inspired from Pixar, Dreamworks, Sony and other animation studios. The general time required to produce an animated feature from conception to final rendered version has a long production time. 
@@ -24,11 +24,11 @@ The current advancements in deep learning in the area of GAN, Neural Rendering
 
 Project Ideas : [Multi view based 3D models](#multi-view-based-3d-models) - Virtual Studio - Human Models
 
-####### Multi view based 3D models
+###### Multi view based 3D models
 - AI Sculptor:
 - NeRF in Motion:
 - Few Shot Learning:
-	- Understanding GPT3: [Paper](https://arxiv.org/pdf/2005.14165.pdf), [GPT2 Blog](https://openai.com/blog/better-language-models/),[GPT2 Paper](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf) ,[Youtube](https://www.youtube.com/watch?v=_8yVOC4ciXc&ab_channel=Computerphile), [Youtube2](https://www.youtube.com/watch?v=SY5PvZrJhLE&ab_channel=YannicKilcher), 
+	- Understanding GPT3: [Paper](https://arxiv.org/pdf/2005.14165.pdf), [GPT2 Blog](https://openai.com/blog/better-language-models/), [GPT2 Paper](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf), [Youtube](https://www.youtube.com/watch?v=_8yVOC4ciXc&ab_channel=Computerphile), [Youtube2](https://www.youtube.com/watch?v=SY5PvZrJhLE&ab_channel=YannicKilcher), 
 	- Transformers for 3d model - [Perspective Transformer Nets](https://papers.nips.cc/paper/6206-perspective-transformer-nets-learning-single-view-3d-object-reconstruction-without-3d-supervision.pdf), [Set Transformer](http://proceedings.mlr.press/v97/lee19d/lee19d.pdf), [Spatial Transformer for 3D Point Clouds](https://arxiv.org/pdf/1906.10887.pdf)
 - Active learning for 3d object reconstruction
 - Structure from motion using deep learning: [Turntable](https://www.robots.ox.ac.uk/~vgg/publications/1998/Fitzgibbon98a/fitzgibbon98a.pdf)
@@ -49,7 +49,6 @@ Project Ideas : [Multi view based 3D models](#multi-view-based-3d-models) - Virt
 - Multi-view rendering
 - HyperNetworks
 - Continous Learning - [Iman](https://imirzadeh.me/#contact), [paper](https://arxiv.org/pdf/2006.06958.pdf), [Review Paper](https://www.sciencedirect.com/science/article/pii/S0893608019300231), [Tackling catastropic forgetting](https://arxiv.org/pdf/2007.00487.pdf), [Incremental learning](https://arxiv.org/pdf/2004.00713.pdf)
-
 - [3D Machine Learning Github](https://github.com/timzhang642/3D-Machine-Learning)
 
 ###### Prominent Papers
