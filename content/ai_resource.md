@@ -12,10 +12,78 @@ header:
   caption: ""
   image: ""
 ---
+
+###### Sections       
+[About](#about) - [Project Ideas](#project-ideas) - [Significant Areas](#significant-areas)-[Current Task List](#current-task-list) - [Tutorials](#tutorials) - [Applications](#applications) - [Prominent Papers](#prominent-papers)
+
+###### About
+Inspired from Pixar, Dreamworks, Sony and other animation studios. The general time required to produce an animated feature from conception to final rendered version has a long production time. 
+Can Artificial Intelligence based solutions help in reducing this time line? 
+
+The current advancements in deep learning in the area of GAN, Neural Rendering 
+
+Project Ideas : [Multi view based 3D models](#multi-view-based-3d-models) - Virtual Studio - Human Models
+
+####### Multi view based 3D models
+- AI Sculptor:
+- NeRF in Motion:
+- Few Shot Learning:
+	- Understanding GPT3: [Paper](https://arxiv.org/pdf/2005.14165.pdf), [GPT2 Blog](https://openai.com/blog/better-language-models/),[GPT2 Paper](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf) ,[Youtube](https://www.youtube.com/watch?v=_8yVOC4ciXc&ab_channel=Computerphile), [Youtube2](https://www.youtube.com/watch?v=SY5PvZrJhLE&ab_channel=YannicKilcher), 
+	- Transformers for 3d model - [Perspective Transformer Nets](https://papers.nips.cc/paper/6206-perspective-transformer-nets-learning-single-view-3d-object-reconstruction-without-3d-supervision.pdf), [Set Transformer](http://proceedings.mlr.press/v97/lee19d/lee19d.pdf), [Spatial Transformer for 3D Point Clouds](https://arxiv.org/pdf/1906.10887.pdf)
+- Active learning for 3d object reconstruction
+- Structure from motion using deep learning: [Turntable](https://www.robots.ox.ac.uk/~vgg/publications/1998/Fitzgibbon98a/fitzgibbon98a.pdf)
+
+###### Significant Areas
+- Bayesian Optimzation based GAN latent variable search
+- Bayesian Neural network based BO 
+- StyleGAN
+- Camera pose estimate
+- Fourier feature networks
+- Photogrammetry - [software](https://all3dp.com/1/best-photogrammetry-software/)
+- Part segmentation
+- HairNet
+- Sculpting
+- SMPL
+- Image Harmonization
+- Pose Transfer
+- Multi-view rendering
+- HyperNetworks
+- Continous Learning - [Iman](https://imirzadeh.me/#contact), [paper](https://arxiv.org/pdf/2006.06958.pdf), [Review Paper](https://www.sciencedirect.com/science/article/pii/S0893608019300231), [Tackling catastropic forgetting](https://arxiv.org/pdf/2007.00487.pdf), [Incremental learning](https://arxiv.org/pdf/2004.00713.pdf)
+
+- [3D Machine Learning Github](https://github.com/timzhang642/3D-Machine-Learning)
+
+###### Prominent Papers
+- NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis: [paper](https://arxiv.org/pdf/2003.08934.pdf), [code](https://github.com/kwea123/nerf_pl), [mesh reconstruction](https://github.com/kwea123/nerf_pl/blob/master/README_mesh.md), [color reproduction](https://github.com/bmild/nerf/issues/44), [PyMcubes](https://github.com/pmneila/PyMCubes)
+- Neural Sparse Voxel Fields: [paper](https://arxiv.org/pdf/2007.11571.pdf)
+- Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains: [paper](https://arxiv.org/pdf/2006.10739.pdf)
+- Generating Diverse High-Fidelity Images with VQ-VAE-2: [paper](https://arxiv.org/pdf/1906.00446.pdf)
+- NeRF in the Wild: Neural Radiance Fields for Unconstrained Photo Collections: [paper](https://arxiv.org/pdf/2008.02268.pdf)
+- Neural Rendering: [project](https://github.com/weihaox/awesome-neural-rendering)
+- Nerf++: [Code](https://github.com/Kai-46/nerfplusplus)
+
+###### To Be Read Papers
+- [Interactive Video StylizationInteractive Video Stylization](https://ondrejtexler.github.io/patch-based_training/), [Resolution Dependent GAN](https://arxiv.org/pdf/2010.05334.pdf), [Video Completion](http://chengao.vision/FGVC/),[Latent Space of Generative Networks](https://arxiv.org/pdf/1707.05776.pdf), [Bayesian Deep Learning for Computer Vision](https://arxiv.org/pdf/1703.04977.pdf), [Real Image Editing GAN](https://genforce.github.io/idinvert/), [Rewriting a Deep Generative Model](https://rewriting.csail.mit.edu/)
+- Softwares: [AI Vdo](https://www.synthesia.io/), [CineTracer](https://www.cinetracer.com/),[GPU Sharing](https://vast.ai/),[SpyFU](https://www.spyfu.com/), [OBS Studio](https://obsproject.com/)
+
+###### Current Task List
+-
+
+###### Tutorials
+- GAN basics,
+- Running models on GPU
+- Framework - Pytorch, Keras, numpy, Pytorch3D
+- AlphaZero, 
+- CPISADGAN
+- BO
+
+###### Applications
+
+
 ### Sections       
 [Children resources](#children-resources) - [Videos](#videos) - [Accelerators](#accelerators) - [Channels followed](#channels-followed) - [GPU and CUDA resource](#gpu-and-cuda-resource) - [Projects](#projects)
 
 ###### Tutorials
+- [AI pay grades](https://aipaygrad.es/)
 
 ###### Children resources
 
@@ -92,56 +160,3 @@ header:
 	- [Jetson](https://www.phoronix.com/scan.php?page=article&item=jetson-tegra-x2&num=1)
 - EGPU: [egpu](https://egpu.io/), [9to5mac](https://9to5mac.com/2017/04/11/hands-on-powering-the-macbook-pro-with-an-egpu-using-nvidias-new-pascal-drivers/)
 
-###### Projects       
-[About](#about) - [Project Ideas](#project-ideas) - [Current Task List](#current-task-list) - [Tutorials](#tutorials) - [Applications](#applications) - [Prominent Papers](#prominent-papers)
-
-###### About
-Inspired from Pixar, Dreamworks, Sony and other animation studios. The general time required to produce an animated feature from conception to final rendered version has a long production time. 
-Can Artificial Intelligence based solutions help in reducing this time line? 
-
-The current advancements in deep learning in the area of GAN, Neural Rendering 
-
-###### Project Ideas
-
-- Virtual Studio
-- Human Models
-- Multi view based 3D models 
-
-###### Significant Areas
-- Bayesian Optimzation based GAN latent variable search
-- StyleGAN
-- Camera pose estimate
-- Fourier feature networks
-- Photogrammetry
-- Part segmentation
-- HairNet
-- Sculpting
-- SMPL
-- Image Harmonization
-- Pose Transfer
-- Multi-view rendering
-- HyperNetworks
-- Continous Learning
-
-
-###### Prominent Papers
-- NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis: [paper](https://arxiv.org/pdf/2003.08934.pdf), [code](https://github.com/kwea123/nerf_pl), [mesh reconstruction](https://github.com/kwea123/nerf_pl/blob/master/README_mesh.md), [color reproduction](https://github.com/bmild/nerf/issues/44), [PyMcubes](https://github.com/pmneila/PyMCubes)
-- Neural Sparse Voxel Fields: [paper](https://arxiv.org/pdf/2007.11571.pdf)
-- Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains: [paper](https://arxiv.org/pdf/2006.10739.pdf)
-- Generating Diverse High-Fidelity Images with VQ-VAE-2: [paper](https://arxiv.org/pdf/1906.00446.pdf)
-- NeRF in the Wild: Neural Radiance Fields for Unconstrained Photo Collections: [paper](https://arxiv.org/pdf/2008.02268.pdf)
-- Neural Rendering: [project](https://github.com/weihaox/awesome-neural-rendering)
-
-
-###### Current Task List
--
-
-###### Tutorials
-- GAN basics,
-- Running models on GPU
-- Framework - Pytorch, Keras, numpy, Pytorch3D
-- AlphaZero, 
-- CPISADGAN
-- BO
-
-###### Applications

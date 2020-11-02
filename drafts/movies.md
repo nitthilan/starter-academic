@@ -71,6 +71,9 @@ Story ideas:
 	- The driver is assuming they are planning a heist but they heist is staged to kill the driver
 	- The driver goes about the heist as a normal dad. Like taking about his family, to friends, like a matter of fact
 
+- A game idea: A game where the exploration happens in places where usually people die i.e. by falling into pits etc. This shows how good a player would be in taking risks and exploring new areas
+- Ghost movie gone wrong: A city where all the ghosts are moving around normally and people are so used to this. In this world things start to go wrong and so the scare begins
+
 - peter sellers pink panther style detective story
 - student trying to solve complete a project
 	- simple
