@@ -1,5 +1,5 @@
 ---
-title: AI Resources
+title: AI Resources (Under Development)
 # View.
 #   1 = List
 #   2 = Compact
@@ -20,13 +20,28 @@ header:
 Inspired from Pixar, Dreamworks, Sony and other animation studios. The general time required to produce an animated feature from conception to final rendered version has a long production time. 
 Can Artificial Intelligence based solutions help in reducing this time line? 
 
-The current advancements in deep learning in the area of GAN, Neural Rendering 
+The current advancements in deep learning in the area of GAN, Neural Rendering help to automate many processes like creating 3D models, animating 3d model motion. 
 
 Project Ideas : [Multi view based 3D models](#multi-view-based-3d-models) - Virtual Studio - Human Models
 
 ###### Multi view based 3D models
-- AI Sculptor:
-- NeRF in Motion:
+- AI Sculptor: Assuming the rays as a nail, we like to sculpt a 3D model based on multiple input views. We use the NSVF as our based code. The list of problems we are planning to attack:
+	- Using PSNR or SSIM to identify areas in the learnt model which are not properly learnt and using this guide the rays to be used for learning. 
+		- Create a weigting map of the areas which are lacking detail
+		- Sample rays based on this weighting map within a picture
+		- Sample rays based on weighting map of all the pictures
+		- Split voxels adaptively based on the PSNR and SSIM distribution
+	- Progressively learning model using smaller images and gradually increasing the image dimension as we increase the model accuracy. The aim is to reduce the training time of the 3D model.
+		- Estimating the bounding box automatically based on the camera position
+		- Use images from smaller size along widthxheight probably rations 2,4,8
+		- Select a small subset of camera postions to start with and gradually increase with iterations
+		- Allocate initial voxel size based on all the camera postions and interpixel ray distance and then as the image dimensions increase the voxel size would decrease accordingly
+	- Culling Voxels - This reduces the number voxels used for representing the object. This helps in reduction of the memory .Voxels in the bounding box which are not touched by the rays. Two major regions 
+		- Voxels inside the object which are not reached by the rays
+		- Voxels outside the object region which are not touched by the training rays
+- NeRF in Motion: Encoding motion for objects in a neural scene. There are diffferent ideas for it.
+	- NSVF uses Hyper networks to encode every network encode for each time step. [SRN](https://arxiv.org/pdf/1906.01618.pdf)
+	- Like mesh objects, can Bones, rigging and weighting be added for the objects thereby making it configurable [Bone structure](https://www.peachpit.com/articles/article.aspx?p=483793), [Blog](https://blog.machinimatrix.org/avastar/features/rigging-and-weighting/3/), 
 - Few Shot Learning:
 	- Understanding GPT3: [Paper](https://arxiv.org/pdf/2005.14165.pdf), [GPT2 Blog](https://openai.com/blog/better-language-models/), [GPT2 Paper](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf), [Youtube](https://www.youtube.com/watch?v=_8yVOC4ciXc&ab_channel=Computerphile), [Youtube2](https://www.youtube.com/watch?v=SY5PvZrJhLE&ab_channel=YannicKilcher), 
 	- Transformers for 3d model - [Perspective Transformer Nets](https://papers.nips.cc/paper/6206-perspective-transformer-nets-learning-single-view-3d-object-reconstruction-without-3d-supervision.pdf), [Set Transformer](http://proceedings.mlr.press/v97/lee19d/lee19d.pdf), [Spatial Transformer for 3D Point Clouds](https://arxiv.org/pdf/1906.10887.pdf)
@@ -74,6 +89,7 @@ Project Ideas : [Multi view based 3D models](#multi-view-based-3d-models) - Virt
 - AlphaZero, 
 - CPISADGAN
 - BO
+- [MultiView Geometry](https://github.com/DeepRobot2020/books/blob/master/Multiple%20View%20Geometry%20in%20Computer%20Vision%20(Second%20Edition).pdf), [Camera Basics](http://ksimek.github.io/2012/08/14/decompose/), [Rotation Matrix](https://mathworld.wolfram.com/RotationMatrix.html), [Projective, Affine, Euclidean Geometry](http://robotics.stanford.edu/~birch/projective/node2.html), [NDC Co-ordinate Systems](https://learnopengl.com/Getting-started/Coordinate-Systems)
 
 ###### Applications
 
