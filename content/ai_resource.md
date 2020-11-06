@@ -47,6 +47,8 @@ Project Ideas : [Multi view based 3D models](#multi-view-based-3d-models) - Virt
 	- Transformers for 3d model - [Perspective Transformer Nets](https://papers.nips.cc/paper/6206-perspective-transformer-nets-learning-single-view-3d-object-reconstruction-without-3d-supervision.pdf), [Set Transformer](http://proceedings.mlr.press/v97/lee19d/lee19d.pdf), [Spatial Transformer for 3D Point Clouds](https://arxiv.org/pdf/1906.10887.pdf)
 - Active learning for 3d object reconstruction
 - Structure from motion using deep learning: [Turntable](https://www.robots.ox.ac.uk/~vgg/publications/1998/Fitzgibbon98a/fitzgibbon98a.pdf)
+	- Can NeRF be modeled to run without the camera parameters? Since we are modelling the neural network as a funtioin of x,y,z can we learn using SGD the model without the camera parameters?
+	- Fix one camera position. Model the 3D model as function of relative camera parrameter. Try minimising the error of images while we learn the error from different projections
 
 ###### Significant Areas
 - Bayesian Optimzation based GAN latent variable search
@@ -92,6 +94,9 @@ Project Ideas : [Multi view based 3D models](#multi-view-based-3d-models) - Virt
 - [MultiView Geometry](https://github.com/DeepRobot2020/books/blob/master/Multiple%20View%20Geometry%20in%20Computer%20Vision%20(Second%20Edition).pdf), [Camera Basics](http://ksimek.github.io/2012/08/14/decompose/), [Rotation Matrix](https://mathworld.wolfram.com/RotationMatrix.html), [Projective, Affine, Euclidean Geometry](http://robotics.stanford.edu/~birch/projective/node2.html), [NDC Co-ordinate Systems](https://learnopengl.com/Getting-started/Coordinate-Systems)
 
 ###### Applications
+
+###### Graphics related
+- [Omniverse](https://www.nvidia.com/en-us/design-visualization/omniverse/), [Signed Distance Field Collision](https://mmacklin.com/sdfcontact.pdf), [Specular Manifold Sampling](http://rgl.epfl.ch/publications/Zeltner2020Specular), [Detailed Rigid Body Simulation](https://matthias-research.github.io/pages/publications/PBDBodies.pdf)
 
 
 ### Sections       
