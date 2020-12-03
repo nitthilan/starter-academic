@@ -37,6 +37,9 @@ git add .
 git commit -m "Initial commit"
 git push -u origin master
 
+hugo mod clean
+hugo mod get -u ./...
+
 hugo
 cd public
 git add .
