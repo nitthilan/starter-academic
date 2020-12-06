@@ -88,32 +88,43 @@ Code list:
 - https://github.com/kwea123/nerf_pl
 - https://github.com/facebookresearch/NSVF
 
-Paper list:
+###### Prominent Papers
 - [Arxiv - Computer Vision](https://arxiv.org/list/cs.CV/pastweek?show=490)
 - [Nerf - citations](https://scholar.google.com/scholar?cites=9378169911033868166&as_sdt=5,48&sciodt=0,48&hl=en)
 - [NSVF - citations](https://scholar.google.com/scholar?cites=8122086353742917335&as_sdt=5,48&sciodt=0,48&hl=en)
+- NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis: [paper](https://arxiv.org/pdf/2003.08934.pdf), [code](https://github.com/kwea123/nerf_pl), [mesh reconstruction](https://github.com/kwea123/nerf_pl/blob/master/README_mesh.md), [color reproduction](https://github.com/bmild/nerf/issues/44), [PyMcubes](https://github.com/pmneila/PyMCubes)
+- Neural Sparse Voxel Fields: [paper](https://arxiv.org/pdf/2007.11571.pdf)
+- Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains: [paper](https://arxiv.org/pdf/2006.10739.pdf)
+- Generating Diverse High-Fidelity Images with VQ-VAE-2: [paper](https://arxiv.org/pdf/1906.00446.pdf)
+- NeRF in the Wild: Neural Radiance Fields for Unconstrained Photo Collections: [paper](https://arxiv.org/pdf/2008.02268.pdf)
+- Neural Rendering: [project](https://github.com/weihaox/awesome-neural-rendering)
+- [Nerf++](https://github.com/Kai-46/nerfplusplus) - [paper](https://arxiv.org/pdf/2010.07492.pdf)
 - [FroDo](https://research.fb.com/wp-content/uploads/2020/05/FroDO-From-Detections-to-3D-Objects.pdf)
 - [PIFuHD](https://arxiv.org/pdf/2004.00452.pdf)
 - [PIFu](https://arxiv.org/pdf/1905.05172.pdf)
 - [Deformable Neural Radiance Fields](https://storage.googleapis.com/nerfies-public/videos/nerfies_paper.pdf) - [project](https://nerfies.github.io/)
+	- [Optimizing the Latent Space of Generative Networks](http://proceedings.mlr.press/v80/bojanowski18a/bojanowski18a.pdf)
 - [Space-time Neural Irradiance Fields for Free-Viewpoint Video](https://arxiv.org/pdf/2011.12950.pdf)
 - [D-NeRF: Neural Radiance Fields for Dynamic Scenes](https://arxiv.org/pdf/2011.13961.pdf)
 - [GIRAFFE: Representing Scenes as Compositional Generative Neural Feature Fields](https://arxiv.org/pdf/2011.12100.pdf)
+	- [GRAF](http://www.cvlibs.net/publications/Schwarz2020NEURIPS.pdf) - [project](https://avg.is.tuebingen.mpg.de/publications/schwarz2020neurips) - [code](https://github.com/autonomousvision/graf)
 - [DeRF: Decomposed Radiance Fields](https://arxiv.org/pdf/2011.12490.pdf)
 - [SFM - Structure from motion](https://demuc.de/papers/schoenberger2016sfm.pdf)
-- [DeepSDF](https://openaccess.thecvf.com/content_CVPR_2019/papers/Park_DeepSDF_Learning_Continuous_Signed_Distance_Functions_for_Shape_Representation_CVPR_2019_paper.pdf)
+- [DeepSDF](https://openaccess.thecvf.com/content_CVPR_2019/papers/Park_DeepSDF_Learning_Continuous_Signed_Distance_Functions_for_Shape_Representation_CVPR_2019_paper.pdf) - [Code](https://github.com/facebookresearch/DeepSDF) - [Supp](https://openaccess.thecvf.com/content_CVPR_2019/supplemental/Park_DeepSDF_Learning_Continuous_CVPR_2019_supplemental.pdf)
 - [Nerf-W](https://arxiv.org/pdf/2008.02268.pdf) - Nerf in the wild
-- [Nerf++](https://github.com/Kai-46/nerfplusplus) - [paper](https://arxiv.org/pdf/2010.07492.pdf)
 - [Scene Representation Networks: Continuous 3D-Structure-Aware Neural Scene Representations](https://papers.nips.cc/paper/2019/file/b5dc4e5d9b495d0196f61d45b26ef33e-Paper.pdf)
 - [State of the Art on Neural Rendering](https://arxiv.org/pdf/2004.03805.pdf)
 - [Local Deep Implicit Functions for 3D Shape](https://github.com/google/ldif)
 - [Deformed Implicit Field: Modeling 3D Shapes with Learned Dense Correspondence](https://arxiv.org/pdf/2011.13650.pdf)
 
+- canonical coordinates 3d model, quaternion representation of rotation
+- [ray marching and sdf](http://jamie-wong.com/2016/07/15/ray-marching-signed-distance-functions/) - [SDF renderiing](https://www.cl.cam.ac.uk/teaching/1819/FGraphics/1.%20Ray%20Marching%20and%20Signed%20Distance%20Fields.pdf)
 
 
 
 
-- AI Sculptor: Assuming the rays as a nail, we like to sculpt a 3D model based on multiple input views. We use the NSVF as our based code. The list of problems we are planning to attack:
+
+AI Sculptor: Assuming the rays as a nail, we like to sculpt a 3D model based on multiple input views. We use the NSVF as our based code. The list of problems we are planning to attack:
 	- Marching cubes would fail to recover the surface since the function learns only the boundary and does not learn inside the object. So a different learning algorithm is required for learning the 3D mesh object. We need to find a better algorithm to extract the 3D mesh and surface information. 
 		- A soluttion would be to shoot rays from different directions and choose only those points which have normals which are parallel to the ray of intersection. Use these points as an input to creat a point cloud and then convert this point cloud to a mesh using [pointcloud2mesh](https://towardsdatascience.com/5-step-guide-to-generate-3d-meshes-from-point-clouds-with-python-36bad397d8ba) algorithms, [Surface Reconstruction](https://www.cgal.org/)
 	- Alternative representation: Signed Distance field representation has better representation of objects than transparency representation. Can we use SDF instead of transparency? Define a rendering function using SDF. Use this function instead of transparency based rendering function and then use it to represent Neural scene [DeepSDF](https://openaccess.thecvf.com/content_CVPR_2019/papers/Park_DeepSDF_Learning_Continuous_Signed_Distance_Functions_for_Shape_Representation_CVPR_2019_paper.pdf), [DeepLS](https://arxiv.org/pdf/2003.10983.pdf), [Papier-Machˆe](https://arxiv.org/pdf/1802.05384.pdf), [Occupancy Networks](https://openaccess.thecvf.com/content_CVPR_2019/papers/Mescheder_Occupancy_Networks_Learning_3D_Reconstruction_in_Function_Space_CVPR_2019_paper.pdf)
@@ -141,19 +152,11 @@ Paper list:
 - Continous Learning - [Iman](https://imirzadeh.me/#contact), [paper](https://arxiv.org/pdf/2006.06958.pdf), [Review Paper](https://www.sciencedirect.com/science/article/pii/S0893608019300231), [Tackling catastropic forgetting](https://arxiv.org/pdf/2007.00487.pdf), [Incremental learning](https://arxiv.org/pdf/2004.00713.pdf)
 - [3D Machine Learning Github](https://github.com/timzhang642/3D-Machine-Learning)
 
-###### Prominent Papers
-- NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis: [paper](https://arxiv.org/pdf/2003.08934.pdf), [code](https://github.com/kwea123/nerf_pl), [mesh reconstruction](https://github.com/kwea123/nerf_pl/blob/master/README_mesh.md), [color reproduction](https://github.com/bmild/nerf/issues/44), [PyMcubes](https://github.com/pmneila/PyMCubes)
-- Neural Sparse Voxel Fields: [paper](https://arxiv.org/pdf/2007.11571.pdf)
-- Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains: [paper](https://arxiv.org/pdf/2006.10739.pdf)
-- Generating Diverse High-Fidelity Images with VQ-VAE-2: [paper](https://arxiv.org/pdf/1906.00446.pdf)
-- NeRF in the Wild: Neural Radiance Fields for Unconstrained Photo Collections: [paper](https://arxiv.org/pdf/2008.02268.pdf)
-- Neural Rendering: [project](https://github.com/weihaox/awesome-neural-rendering)
-- Nerf++: [Code](https://github.com/Kai-46/nerfplusplus)
 
 ###### To Be Read Papers
 - [Interactive Video StylizationInteractive Video Stylization](https://ondrejtexler.github.io/patch-based_training/), [Resolution Dependent GAN](https://arxiv.org/pdf/2010.05334.pdf), [Video Completion](http://chengao.vision/FGVC/),[Latent Space of Generative Networks](https://arxiv.org/pdf/1707.05776.pdf), [Bayesian Deep Learning for Computer Vision](https://arxiv.org/pdf/1703.04977.pdf), [Real Image Editing GAN](https://genforce.github.io/idinvert/), [Rewriting a Deep Generative Model](https://rewriting.csail.mit.edu/)
 - Softwares: [AI Vdo](https://www.synthesia.io/), [CineTracer](https://www.cinetracer.com/),[GPU Sharing](https://vast.ai/),[SpyFU](https://www.spyfu.com/), [OBS Studio](https://obsproject.com/)
-
+- [Neural Sampling](https://research.fb.com/wp-content/uploads/2020/06/Neural-Supersampling-for-Real-time-Rendering.pdf)
 ###### Current Task List
 -
 
