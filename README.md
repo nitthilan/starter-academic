@@ -32,6 +32,7 @@ To help us develop this template and software sustainably under the MIT license,
 -->
 
 https://search.google.com/search-console?resource_id=https%3A%2F%2Fnitthilan.github.io%2F
+https://analytics.google.com/analytics/web/#/realtime/rt-location/a178463631w246867066p229280192/
 
 hugo server
 

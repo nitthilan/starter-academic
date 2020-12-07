@@ -40,8 +40,11 @@ Requirements:
 		- Light could be used as a dot product i.e. a NN which takes the direction of light, direction of incident ray and material properties at that point and produces the output at that point
 	- 
 
+##### Current Task List
+- Modify NSVF - embedding and voxel culling
+- Modify NeRF - to support SDF experiments 
 
-List of ideas:
+##### List of ideas:
 - SDF helps in physics based simulations i.e. they help in contact detection between objects and hence in object object touching etc - so may help in hair, cloth simulations
 	- Experiment with Occupancy and SDF variations
 - Can we split objects into separate objects which and then join them together later [Graffe paper]. Create a system which can align objects as different poses and translation and camera pose
