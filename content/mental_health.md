@@ -38,7 +38,7 @@ List of tasks:
 - How it is different from laziness and procrastination??
 - Types of: Clinical depression, DSM
 - withdrawal from communication, withdrawal from light, withdrawl from daylight - harbinger symptoms
-
+- Playlist of depression related videos: https://www.youtube.com/playlist?list=PL4mtHuMZdZjyeGP7SCP6s75_Ic9CN3s3y
 
 quotes:
 - "how come every other organ in your body can get sick and you get sympathy.. expect for the brain"
