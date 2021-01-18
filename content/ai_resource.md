@@ -42,7 +42,7 @@ Requirements:
 
 ##### Current Task List
 - Modify NSVF - embedding and voxel culling
-- Modify NeRF - to support SDF experiments 
+- Modify NeRF - to support SDF experiments, add support of embedding for individual shape using DeepSDF idea
 
 ##### List of ideas:
 - SDF helps in physics based simulations i.e. they help in contact detection between objects and hence in object object touching etc - so may help in hair, cloth simulations
@@ -73,8 +73,11 @@ Requirements:
 	- Using normalized coordinate system i.e. map actual values to normalised value to then learn a warping function which adds on to it and then render it f(X(x), Y(y), Z(z)). Maps (x,y,z) for each time step. Learn how bones are mapped to mesh pixels. Find the transformation function) - Motion Capture based rendering system
 		- [Deformable Neural Radiance Fields](https://arxiv.org/pdf/2011.12948.pdf)
 		- [Space-time Neural Irradiance Fields for Free-Viewpoint Video](https://arxiv.org/pdf/2011.12950.pdf)
+		- [Neural Radiance Flow for 4D View Synthesis and Video Processing](https://arxiv.org/pdf/2012.09790.pdf)
 	- NSVF uses Hyper networks to encode every network encode for each time step. [SRN](https://arxiv.org/pdf/1906.01618.pdf)
 	- Like mesh objects, can Bones, rigging and weighting be added for the objects thereby making it configurable [Bone structure](https://www.peachpit.com/articles/article.aspx?p=483793), [Blog](https://blog.machinimatrix.org/avastar/features/rigging-and-weighting/3/), 
+- Relighting of models:
+	- [X-Fields: Implicit Neural View-, Light- and Time-Image Interpolation](http://xfields.mpi-inf.mpg.de/), [Deep Relightable Textures](http://gvv.mpi-inf.mpg.de/projects/DeepRelightableTextures/), [Deferred Neural Rendering: Image Synthesis using Neural Textures](https://arxiv.org/pdf/1904.12356.pdf)
 - Few Shot Learning:
 	- Learning priors using bayesian neural networks: [Uncertainity Quantification](https://en.wikipedia.org/wiki/Uncertainty_quantification), [Weight Uncertainity in NN](https://arxiv.org/abs/1505.05424), [Variational Inference in Bayesian NN](http://krasserm.github.io/2019/03/14/bayesian-neural-networks/) - The idea is to train priors of shapes using neural networks and then try to learn the representation using a single image input. The prior stores range of uncertainity in the variance of the weights and tries to find the right instance value using a single image input. We try to replace a NN in NeRF to a Baysian NN and try to model the uncertainity in shape as the weights of the bayesian-neural-networks
 	- Understanding GPT3: [Paper](https://arxiv.org/pdf/2005.14165.pdf), [GPT2 Blog](https://openai.com/blog/better-language-models/), [GPT2 Paper](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf), [Youtube](https://www.youtube.com/watch?v=_8yVOC4ciXc&ab_channel=Computerphile), [Youtube2](https://www.youtube.com/watch?v=SY5PvZrJhLE&ab_channel=YannicKilcher), 
@@ -112,16 +115,46 @@ Code list:
 - [GIRAFFE: Representing Scenes as Compositional Generative Neural Feature Fields](https://arxiv.org/pdf/2011.12100.pdf)
 	- [GRAF](http://www.cvlibs.net/publications/Schwarz2020NEURIPS.pdf) - [project](https://avg.is.tuebingen.mpg.de/publications/schwarz2020neurips) - [code](https://github.com/autonomousvision/graf)
 - [DeRF: Decomposed Radiance Fields](https://arxiv.org/pdf/2011.12490.pdf)
+
 - [SFM - Structure from motion](https://demuc.de/papers/schoenberger2016sfm.pdf)
+	- [Pixelwise View Selection for Unstructured Multi-View Stereo](https://www.cs.unc.edu/~ezheng/resources/mvs_2016/eccv2016.pdf)
+	- [COLMAP Documentation](https://colmap.github.io/tutorial.html) - [Dense Reconstruction - multi-view](https://colmap.github.io/faq.html#reconstruct-sparse-dense-model-from-known-camera-poses) - [FAQ](https://colmap.github.io/faq.html#)
+	- Structure From Motion - [RANSAC](http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/FISHER/RANSAC/), [RANSAC1](http://www.cse.yorku.ca/~kosta/CompVis_Notes/ransac.pdf), [five-point relative pose problem](https://www.rose-hulman.edu/class/cs/csse461/handouts/Day37/SINGLES2.pdf)
+	- [tutorial](https://colmap.github.io/tutorial.html)
+	- undistort images - making lines straight - usually lens causes distortion - [camera calibration](https://stackoverflow.com/questions/39530110/camera-calibration-for-structure-from-motion-with-opencv-python)
+	- patchmatch stereo algorithm - [Stereo Matching](http://www.bmva.org/bmvc/2011/proceedings/paper14/paper14.pdf), [wiki](https://en.wikipedia.org/wiki/PatchMatch), [code](https://github.com/ivanbergonzani/patch-match-stereo), 
+	- stereo_fusion algorithms - [slide](https://www.cs.princeton.edu/courses/archive/fall07/cos429/slides/stereo.pdf)
+	- poisson mesh reconstruction - [slide](http://hhoppe.com/poissonrecon.pdf)
+- Computer Vision Course [2019](https://slazebni.cs.illinois.edu/spring19/) - [13 Alignment](https://slazebni.cs.illinois.edu/spring19/lec13_alignment.pdf), [14 Calibration](https://slazebni.cs.illinois.edu/spring19/lec14_calibration.pdf), [15 Single View](https://slazebni.cs.illinois.edu/spring19/lec15_single_view.pdf), [16 Epipolar](https://slazebni.cs.illinois.edu/spring19/lec16_epipolar.pdf), [17 SFM](https://slazebni.cs.illinois.edu/spring19/lec17_sfm.pdf), [18 Stereo](https://slazebni.cs.illinois.edu/spring19/lec18_stereo.pdf), [19 Multiview stereo](https://slazebni.cs.illinois.edu/spring19/lec19_multiview_stereo.pdf)
+
 - [DeepSDF](https://openaccess.thecvf.com/content_CVPR_2019/papers/Park_DeepSDF_Learning_Continuous_Signed_Distance_Functions_for_Shape_Representation_CVPR_2019_paper.pdf) - [Code](https://github.com/facebookresearch/DeepSDF) - [Supp](https://openaccess.thecvf.com/content_CVPR_2019/supplemental/Park_DeepSDF_Learning_Continuous_CVPR_2019_supplemental.pdf)
 - [Nerf-W](https://arxiv.org/pdf/2008.02268.pdf) - Nerf in the wild
 - [Scene Representation Networks: Continuous 3D-Structure-Aware Neural Scene Representations](https://papers.nips.cc/paper/2019/file/b5dc4e5d9b495d0196f61d45b26ef33e-Paper.pdf)
 - [State of the Art on Neural Rendering](https://arxiv.org/pdf/2004.03805.pdf)
 - [Local Deep Implicit Functions for 3D Shape](https://github.com/google/ldif)
 - [Deformed Implicit Field: Modeling 3D Shapes with Learned Dense Correspondence](https://arxiv.org/pdf/2011.13650.pdf)
+- [Stable View Synthesis](https://arxiv.org/pdf/2011.07233.pdf)
+	- [Free View Synthesis](http://vladlen.info/papers/FVS.pdf) - [code](https://github.com/intel-isl/FreeViewSynthesis)
+- [SDF-SRN: Learning Signed Distance 3D Object Reconstruction from Static Images](https://papers.nips.cc/paper/2020/file/83fa5a432ae55c253d0e60dbfa716723-Paper.pdf)
+- [MetaSDF: Meta-learning Signed Distance Functions](https://arxiv.org/pdf/2006.09662.pdf)
+- [SDFDiff: Differentiable Rendering of Signed Distance Fields for 3D Shape Optimization](http://www.cs.umd.edu/~yuejiang/papers/SDFDiff.pdf) - [code](https://github.com/YueJiang-nj/CVPR2020-SDFDiff)
+	- [Implicit function](https://www.cs.princeton.edu/courses/archive/spring14/cos426/lectures/09-implicit.pdf)
 
+
+- Understanding illumination: [NeRD: Neural Reflectance Decomposition from Image Collections](https://arxiv.org/pdf/2012.03918.pdf) - [project](https://markboss.me/publication/2021-nerd/), Differenctiable renderer idea, [Two-shot Spatially-varying BRDF and Shape Estimation](https://arxiv.org/pdf/2004.00403.pdf) [code](https://github.com/NVlabs/two-shot-brdf-shape), [Neural Reflectance Fields for Appearance Acquisition](https://arxiv.org/pdf/2008.03824.pdf) - [author](http://cseweb.ucsd.edu/~bisai/)
+	- [Bidirectional reflectance distribution function - BRDF](https://en.wikipedia.org/wiki/Bidirectional_reflectance_distribution_function) - [Phong Refelection model](https://en.wikipedia.org/wiki/Phong_reflection_model) - [Cook–Torrance model](https://en.wikipedia.org/wiki/Specular_highlight#Cook%E2%80%93Torrance_model), [A Reflectance Model for Computer Graphics](https://inst.eecs.berkeley.edu/~cs294-13/fa09/lectures/cookpaper.pdf), [Physically-Based Shading at Disney](https://static1.squarespace.com/static/58586fa5ebbd1a60e7d76d3e/t/593a3afa46c3c4a376d779f6/1496988449807/s2012_pbs_disney_brdf_notes_v2.pdf)
+	- [Physics based Methods in Vision](http://www.cs.cmu.edu/afs/cs/academic/class/16823-s16/www/pdfs/)
+	- Tutorial on Spherical Gaussians - [SG SERIES PART 1-6](https://mynameismjp.wordpress.com/2016/10/09/sg-series-part-1-a-brief-and-incomplete-history-of-baked-lighting-representations/), [Spherical Harmonic Lighting: The Gritty Details](http://www.cse.chalmers.se/~uffe/xjobb/Readings/GlobalIllumination/Spherical%20Harmonic%20Lighting%20-%20the%20gritty%20details.pdfs)
+	- [Disney BRDF Base color Metallic parametrization](https://www.alexandre-pestana.com/disney-principled-brdf-implementation/), [Physically-Based Shading at Disney](https://static1.squarespace.com/static/58586fa5ebbd1a60e7d76d3e/t/593a3afa46c3c4a376d779f6/1496988449807/s2012_pbs_disney_brdf_notes_v2.pdf), [An Efficient Representation for Irradiance Environment Maps](https://cseweb.ucsd.edu/~ravir/papers/envmap/), [On the Relationship between Radiance and Irradiance: Determining the illumination from images of a convex Lambertian object](https://cseweb.ucsd.edu/~ravir/papers/invlamb/)
+
+- Depth Estimation from input image: [MiDaS](https://arxiv.org/pdf/1907.01341v3.pdf), [code](https://github.com/intel-isl/MiDaS),[latest code](https://pytorch.org/hub/intelisl_midas_v2/) - Perpetual View Generation - [Infinite Nature](https://infinite-nature.github.io/)
+	- [One Shot 3D Photography](https://facebookresearch.github.io/one_shot_3d_photography/), [code](https://github.com/facebookresearch/one_shot_3d_photography), 
+
+- Local Deep Implicit Functions for 3D Shape - [code](https://github.com/google/ldif), [paper](https://arxiv.org/pdf/1912.06126.pdf) - Learning a transformation matrix to approximate a gaussian function to define an implicit function. [Learning Shape Templates with Structured Implicit Functions](https://arxiv.org/pdf/1904.06447.pdf) - Can we use this to approximate shapes
+- Understanding SDF based operations - ray marching and sdf - [article1](http://jamie-wong.com/2016/07/15/ray-marching-signed-distance-functions/), [article2](https://www.iquilezles.org/www/articles/distfunctions/distfunctions.htm), [SDF renderiing](https://www.cl.cam.ac.uk/teaching/1819/FGraphics/1.%20Ray%20Marching%20and%20Signed%20Distance%20Fields.pdf), [Sphere Tracing](http://graphics.stanford.edu/courses/cs348b-20-spring-content/uploads/hart.pdf)
 - canonical coordinates 3d model, quaternion representation of rotation
-- [ray marching and sdf](http://jamie-wong.com/2016/07/15/ray-marching-signed-distance-functions/) - [SDF renderiing](https://www.cl.cam.ac.uk/teaching/1819/FGraphics/1.%20Ray%20Marching%20and%20Signed%20Distance%20Fields.pdf)
+- Adding secondary motion - [Complementary Dynamics](https://www.dgp.toronto.edu/projects/complementary-dynamics/)
+- Not read: [Learning to Recover 3D Scene Shape from a Single Image](https://arxiv.org/pdf/2012.09365.pdf), [Iso-Points: Optimizing Neural Implicit Surfaces with Hybrid Representations](https://arxiv.org/pdf/2012.06434.pdf), [Object-Centric Neural Scene Rendering](https://arxiv.org/pdf/2012.08503.pdf), [computer assisted prog](https://capworkshop.github.io/), [signed-distance-SRN](https://github.com/chenhsuanlin/signed-distance-SRN), [differentiable_volumetric_rendering](https://github.com/autonomousvision/differentiable_volumetric_rendering), 
 
 
 
@@ -136,6 +169,15 @@ AI Sculptor: Assuming the rays as a nail, we like to sculpt a 3D model based on 
 	- Physics simulation using NeRF: [Real Time Fluid simulation](https://users.cg.tuwien.ac.at/zsolnai/gfx/fluid_control_msc_thesis/), [Learning to simulate](https://arxiv.org/pdf/2002.09405.pdf)
 
 - A algorithm to solve generic problems: [C-Space Tunnel Discovery for Puzzle Path Planning](https://xinyazhang.gitlab.io/puzzletunneldiscovery/), [More Puzzles](https://gitlab.com/xinyazhang/puzzle-geometry/-/tree/master/), [paper](https://xinyazhang.gitlab.io/puzzletunneldiscovery/assets/MainPaper.pdf) - Concentrate on the different planning algorithms. The baisc idea would be to find tunnels (i.e. narrow points which could possibly leead to a solution). Then have a duble tree starting from Start and reversely from goal. This could be done for every tunnel point. This stage is the blooming stage. You could approximate the value of the tree using neural networks. Try finding links from the bloomed tree and the successive tunnel paths. IF we find a route find the optimal route from start to end - Probabilistic Roadmap Path Planning [PRM Planner](http://www.cs.columbia.edu/~allen/F15/NOTES/Probabilisticpath.pdf), [PRM1](https://people.eecs.berkeley.edu/~pabbeel/cs287-fa11/slides/MotionPlanning-v1.pdf), [RDT-Based Methods](http://planning.cs.uiuc.edu/node772.html) - dual-tree RDT algorithm 
+
+###### List of questions
+- multiresolution in signed distance function, how are multiple objects composed using SDF, What is the maximum capacity of NN?, occupancy vs sdf comparison
+- a KD-tree - nearest neighbor algorithm -
+- distance transform for any watertight shapes
+- Weight normalization: A simple reparameterization to accelerate training of deep neural networks. - speed up training instead of batch normalization
+- H.P.: Multi-level partition of unity implicits. - Splitting a volume into smaller regions and trying to generate to whole shape based on sum of smaller regions - weighting function is 1 when you are within the region - https://www.cc.gatech.edu/~turk/my_papers/mpu_implicits.pdf - https://en.wikipedia.org/wiki/Partition_of_unity 
+- datasets: https://3dwarehouse.sketchup.com/, http://graphics.stanford.edu/data/3Dscanrep/
+
 
 ###### Significant Areas
 - Bayesian Optimzation based GAN latent variable search

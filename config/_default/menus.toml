@@ -38,6 +38,11 @@
   url = "entertainment"
   weight = 90
 
+[[main]]
+  name = "Mental Health"
+  url = "mental_health"
+  weight = 90
+
 #[[main]]
 #  name = "Contact"
 #  url = "#contact"
