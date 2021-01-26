@@ -139,6 +139,7 @@ Code list:
 - [MetaSDF: Meta-learning Signed Distance Functions](https://arxiv.org/pdf/2006.09662.pdf)
 - [SDFDiff: Differentiable Rendering of Signed Distance Fields for 3D Shape Optimization](http://www.cs.umd.edu/~yuejiang/papers/SDFDiff.pdf) - [code](https://github.com/YueJiang-nj/CVPR2020-SDFDiff)
 	- [Implicit function](https://www.cs.princeton.edu/courses/archive/spring14/cos426/lectures/09-implicit.pdf)
+- [Vladlen Koltun: Towards Photorealism](https://www.youtube.com/watch?v=Rd0nBO6--bM), [contact](http://vladlen.info/contact/)
 
 
 - Understanding illumination: [NeRD: Neural Reflectance Decomposition from Image Collections](https://arxiv.org/pdf/2012.03918.pdf) - [project](https://markboss.me/publication/2021-nerd/), Differenctiable renderer idea, [Two-shot Spatially-varying BRDF and Shape Estimation](https://arxiv.org/pdf/2004.00403.pdf) [code](https://github.com/NVlabs/two-shot-brdf-shape), [Neural Reflectance Fields for Appearance Acquisition](https://arxiv.org/pdf/2008.03824.pdf) - [author](http://cseweb.ucsd.edu/~bisai/)
@@ -177,6 +178,14 @@ AI Sculptor: Assuming the rays as a nail, we like to sculpt a 3D model based on 
 - Weight normalization: A simple reparameterization to accelerate training of deep neural networks. - speed up training instead of batch normalization
 - H.P.: Multi-level partition of unity implicits. - Splitting a volume into smaller regions and trying to generate to whole shape based on sum of smaller regions - weighting function is 1 when you are within the region - https://www.cc.gatech.edu/~turk/my_papers/mpu_implicits.pdf - https://en.wikipedia.org/wiki/Partition_of_unity 
 - datasets: https://3dwarehouse.sketchup.com/, http://graphics.stanford.edu/data/3Dscanrep/
+
+##### Other queries
+- [AI Economist](https://blog.einstein.ai/the-ai-economist/)
+- [DALL·E: Creating Images from Text](https://openai.com/blog/dall-e/)
+- [Transformers are Graph Neural Networks](https://thegradient.pub/transformers-are-graph-neural-networks/)
+- [Immersive Light Field Video with a Layered Mesh Representation](https://storage.googleapis.com/immersive-lf-video-siggraph2020/ImmersiveLightFieldVideoWithALayeredMeshRepresentation.pdf)
+- [EFFICIENT CONTINUAL LEARNING WITH MODULAR NETWORKS AND TASK-DRIVEN PRIORS](https://arxiv.org/pdf/2012.12631.pdf)
+- [IIRC: Incremental Implicitly-Refined Classification](https://arxiv.org/pdf/2012.12477.pdf)
 
 
 ###### Significant Areas

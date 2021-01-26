@@ -117,6 +117,11 @@ header:
 - [paneer masala](https://www.youtube.com/watch?v=aM_wiQFia2M), [mattar paneer - looks better. besan](https://www.youtube.com/watch?v=eDOmZPQns8M), [paneer tikka masala](https://www.youtube.com/watch?v=_Um-jLO7_bM), [paneer butter masala](https://www.youtube.com/watch?v=1mVP2TkjafI)
 - [Prashant recipes](https://delightfulvegetarianrecipes.com/category/healthy/)
 
+###### Dishes to try
+
+- Namma puli kuzhambu, Enna kathirikka kuzhambu, kerela ulli theyal, nadan mutta roast, Vadacurry, maharastrian misal thala, that is spiciest for dunking in pav bun
+- Biriyani water-rice ratio - 1:1.25, or 1:1.50 - Hyderabadi style & Seeraga samba version. hyderabadi with salan & burani raitha. thalapakatti with salna & onion raitha. ambur with kathirikka & raitha. malabar biriyani they have it with oorga. Kolkata style & lucknowi.
+
 ##### Writing:
 - English speaking [link1](https://www.youtube.com/watch?v=r_5K7cs24-8&list=PL4IJAxR6Bqq8vP0kEeQRgU6lUe4s4u2DW&index=4), [Learn English in 3 Hours - ALL You Need to Master English Conversation](https://www.youtube.com/watch?v=QTJ02h7uiXs), [American accent](https://www.youtube.com/watch?v=6DiQ95hUUfI), [American Accent1](http://dl.ueb.edu.vn/bitstream/1247/2927/1/American%20Accent%20Training.pdf)
 - [writersbeat](http://www.writersbeat.com/),[writingforums](https://www.writingforums.org/), [nybookeditors](https://nybookeditors.com/2015/11/11-top-writing-communities-you-should-join-and-why/)

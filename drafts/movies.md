@@ -43,6 +43,8 @@ Standup ideas:
 	- wanders from one point to another
 - create a person and break the 4th wall. like a schezophinic person who is not there
 
+Film making links: https://filmbazaarindia.com/co-production-market/
+
 
 Story ideas:
 - In house there are two people - one is a ghost but the ghost assume that he is not dead and does not believe in ghost while the other person is a normal person and he comes up with ideas about ghost. Two thoughts
