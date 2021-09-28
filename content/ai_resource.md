@@ -70,12 +70,19 @@ Requirements:
 		- Voxels outside the object region which are not touched by the training rays
 - 
 - NeRF in Motion: Encoding motion for objects in a neural scene. There are diffferent ideas for it.
+	- Datasets: [D-NeRF: Neural Radiance Fields for Dynamic Scenes](https://arxiv.org/pdf/2011.13961.pdf) - Extends the dataset of NERF to dynamics, [RigNET](https://zhan-xu.github.io/rig-net/), [People Snapshot Dataset](https://graphics.tu-bs.de/people-snapshot) - [Video Based Reconstruction of 3D People Models](http://gvv.mpi-inf.mpg.de/projects/wxu/VideoAvatar/content/video_shapes.pdf), [BUFF: Bodies Under Flowing Fashion](http://buff.is.tue.mpg.de/) - [Detailed, accurate, human shape estimation from clothed {3D} scan sequences](https://ps.is.tuebingen.mpg.de/publications/shape_under_cloth-cvpr17), [PiFuHD](https://arxiv.org/pdf/2004.00452.pdf) - [renderpeople](https://renderpeople.com/free-3d-people/), [HDRI Haven](https://hdrihaven.com/), [cape](https://cape.is.tue.mpg.de/downloads), [code](https://github.com/QianliM/CAPE), [utils](https://github.com/QianliM/cape_utils/)
 	- Using normalized coordinate system i.e. map actual values to normalised value to then learn a warping function which adds on to it and then render it f(X(x), Y(y), Z(z)). Maps (x,y,z) for each time step. Learn how bones are mapped to mesh pixels. Find the transformation function) - Motion Capture based rendering system
 		- [Deformable Neural Radiance Fields](https://arxiv.org/pdf/2011.12948.pdf)
 		- [Space-time Neural Irradiance Fields for Free-Viewpoint Video](https://arxiv.org/pdf/2011.12950.pdf)
 		- [Neural Radiance Flow for 4D View Synthesis and Video Processing](https://arxiv.org/pdf/2012.09790.pdf)
+		- [Deformable Neural Radiance Fields](https://storage.googleapis.com/nerfies-public/videos/nerfies_paper.pdf) - [project](https://nerfies.github.io/)
+		- [D-NeRF: Neural Radiance Fields for Dynamic Scenes](https://arxiv.org/pdf/2011.13961.pdf)
+		- [DeRF: Decomposed Radiance Fields](https://arxiv.org/pdf/2011.12490.pdf)
 	- NSVF uses Hyper networks to encode every network encode for each time step. [SRN](https://arxiv.org/pdf/1906.01618.pdf)
 	- Like mesh objects, can Bones, rigging and weighting be added for the objects thereby making it configurable [Bone structure](https://www.peachpit.com/articles/article.aspx?p=483793), [Blog](https://blog.machinimatrix.org/avastar/features/rigging-and-weighting/3/), 
+- Embedding or Latent variable to control different aspects of a 3D generation
+	- Shape is encoded as a latent vector and then a shape with the (xyz) is used for predicting shape - [ShaRF: Shape-conditioned Radiance Fields from a Single View](https://arxiv.org/pdf/2102.08860.pdf), 
+	- Conditioned on the image the generate embedding for each voxel which could be used as input along with xyz - [pixelNeRF: Neural Radiance Fields from One or Few Images](https://arxiv.org/pdf/2012.02190.pdf) - [Code](https://github.com/sxyu/pixel-nerf)
 - Relighting of models:
 	- [X-Fields: Implicit Neural View-, Light- and Time-Image Interpolation](http://xfields.mpi-inf.mpg.de/), [Deep Relightable Textures](http://gvv.mpi-inf.mpg.de/projects/DeepRelightableTextures/), [Deferred Neural Rendering: Image Synthesis using Neural Textures](https://arxiv.org/pdf/1904.12356.pdf)
 - Few Shot Learning:
@@ -87,17 +94,41 @@ Requirements:
 - Structure from motion using deep learning: [Turntable](https://www.robots.ox.ac.uk/~vgg/publications/1998/Fitzgibbon98a/fitzgibbon98a.pdf)
 	- Can NeRF be modeled to run without the camera parameters? Since we are modelling the neural network as a funtioin of x,y,z can we learn using SGD the model without the camera parameters?
 	- Fix one camera position. Model the 3D model as function of relative camera parrameter. Try minimising the error of images while we learn the error from different projections.
+- Splitting light, view and time and directly rendering 2D images - X-field - [paper](https://arxiv.org/pdf/2010.00450.pdf), [code](https://github.com/m-bemana/xfields)
+- Compress 3D shape representation by using entries from a codebook like the idea in VQVAE - https://arxiv.org/pdf/1711.00937.pdf,
 
+- Depth/Height map as implicit functions : 
+	- Using a base template and encoding the shape as a structure over the template - [Learning Shape Templates with Structured Implicit Functions](https://openaccess.thecvf.com/content_ICCV_2019/papers/Genova_Learning_Shape_Templates_With_Structured_Implicit_Functions_ICCV_2019_paper.pdf), [code](https://github.com/google/ldif)
+	- Human models: Converting 3d model to 2d surface plane - developable surface SMPL
+		- [SMPL to UV mapping](https://github.com/facebookresearch/DensePose/issues/116), [UV map to SMPL model](https://github.com/Lotayou/densebody_pytorch/issues/41), [How to get UV coordinates for the template](https://github.com/CalciferZh/SMPL/issues/5)
+	- [Fitting code](https://github.com/vchoutas/smplify-x/blob/master/smplifyx/fitting.py)
+		- [Tutorial](https://medium.com/@apofeniaco/p3d-body-detection-with-smplify-x-ced6c38871df), [code sample](https://github.com/ortegatron/playing_smplifyx/tree/master/smplifyx)
+		- [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)
+		- [Converting from local to global](https://www.dropbox.com/scl/fi/zkatuv5shs8d4tlwr8ecc/Change-parameters-to-new-coordinate-system.paper?dl=0&rlkey=lotq1sh6wzkmyttisc05h0in0)
+	- [Understanding SMPL](https://khanhha.github.io/posts/SMPL-model-introduction/), [SMPLX](https://github.com/vchoutas/smplx)
+	- [Transfering between SMPL-SMPLX-SMPLH-FLAME-MANO](https://github.com/vchoutas/smplx/tree/master/transfer_model)
+	- SMPL - [Papers](http://files.is.tue.mpg.de/black/papers/SMPL2015.pdf), [project](https://smpl.is.tue.mpg.de/) - SMPLX - [paper](https://ps.is.tuebingen.mpg.de/uploads_file/attachment/attachment/497/SMPL-X.pdf), [supp](https://ps.is.tuebingen.mpg.de/uploads_file/attachment/attachment/498/SMPL-X-supp.pdf), [project](https://smpl-x.is.tue.mpg.de/)
+	- Face Fitting - [Flame fitting](https://github.com/Rubikplayer/flame-fitting), [FLAME](https://flame.is.tue.mpg.de/)
+	- Approximating 3d shapes with blobs/ellipsoids - [project](https://github.com/google/ldif), [Local Deep Implicit Functions for 3D Shape](https://arxiv.org/pdf/1912.06126.pdf), [Learning Shape Templates with Structured Implicit Functions](https://openaccess.thecvf.com/content_ICCV_2019/papers/Genova_Learning_Shape_Templates_With_Structured_Implicit_Functions_ICCV_2019_paper.pdf)
+- Online 3d models - Dataset - [Turbosquid](https://www.turbosquid.com/3d-model/chair), [sketchfab](https://sketchfab.com/tags/freemodel), [Pixologic, Zbrush](http://pixologic.com/turntable/?page=2)
+- Synching two cameras - [libsoftwaresync](https://github.com/google-research/libsoftwaresync) - 
 Code list:
 - https://github.com/shunsukesaito/PIFu
 - https://github.com/facebookresearch/pifuhd
 - https://github.com/kwea123/nerf_pl
 - https://github.com/facebookresearch/NSVF
 
+Nerf Universe:
+- Basic Nerf
+
+- Ability to choose appropriate texture and material properties based on BRDF
+
 ###### Prominent Papers
 - [Arxiv - Computer Vision](https://arxiv.org/list/cs.CV/pastweek?show=490)
 - [Nerf - citations](https://scholar.google.com/scholar?cites=9378169911033868166&as_sdt=5,48&sciodt=0,48&hl=en)
 - [NSVF - citations](https://scholar.google.com/scholar?cites=8122086353742917335&as_sdt=5,48&sciodt=0,48&hl=en)
+- [NeRF Explosion 2020](https://dellaert.github.io/NeRF/)
+- [Awesome NeRF](https://github.com/yenchenlin/awesome-NeRF)
 - NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis: [paper](https://arxiv.org/pdf/2003.08934.pdf), [code](https://github.com/kwea123/nerf_pl), [mesh reconstruction](https://github.com/kwea123/nerf_pl/blob/master/README_mesh.md), [color reproduction](https://github.com/bmild/nerf/issues/44), [PyMcubes](https://github.com/pmneila/PyMCubes)
 - Neural Sparse Voxel Fields: [paper](https://arxiv.org/pdf/2007.11571.pdf)
 - Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains: [paper](https://arxiv.org/pdf/2006.10739.pdf)
@@ -105,16 +136,13 @@ Code list:
 - NeRF in the Wild: Neural Radiance Fields for Unconstrained Photo Collections: [paper](https://arxiv.org/pdf/2008.02268.pdf)
 - Neural Rendering: [project](https://github.com/weihaox/awesome-neural-rendering)
 - [Nerf++](https://github.com/Kai-46/nerfplusplus) - [paper](https://arxiv.org/pdf/2010.07492.pdf)
+- [iNerf](https://arxiv.org/pdf/2102.07064.pdf), [Nerf--](https://arxiv.org/pdf/2102.07064.pdf)
 - [FroDo](https://research.fb.com/wp-content/uploads/2020/05/FroDO-From-Detections-to-3D-Objects.pdf)
 - [PIFuHD](https://arxiv.org/pdf/2004.00452.pdf)
 - [PIFu](https://arxiv.org/pdf/1905.05172.pdf)
-- [Deformable Neural Radiance Fields](https://storage.googleapis.com/nerfies-public/videos/nerfies_paper.pdf) - [project](https://nerfies.github.io/)
-	- [Optimizing the Latent Space of Generative Networks](http://proceedings.mlr.press/v80/bojanowski18a/bojanowski18a.pdf)
-- [Space-time Neural Irradiance Fields for Free-Viewpoint Video](https://arxiv.org/pdf/2011.12950.pdf)
-- [D-NeRF: Neural Radiance Fields for Dynamic Scenes](https://arxiv.org/pdf/2011.13961.pdf)
 - [GIRAFFE: Representing Scenes as Compositional Generative Neural Feature Fields](https://arxiv.org/pdf/2011.12100.pdf)
 	- [GRAF](http://www.cvlibs.net/publications/Schwarz2020NEURIPS.pdf) - [project](https://avg.is.tuebingen.mpg.de/publications/schwarz2020neurips) - [code](https://github.com/autonomousvision/graf)
-- [DeRF: Decomposed Radiance Fields](https://arxiv.org/pdf/2011.12490.pdf)
+- [Optimizing the Latent Space of Generative Networks](http://proceedings.mlr.press/v80/bojanowski18a/bojanowski18a.pdf)
 
 - [SFM - Structure from motion](https://demuc.de/papers/schoenberger2016sfm.pdf)
 	- [Pixelwise View Selection for Unstructured Multi-View Stereo](https://www.cs.unc.edu/~ezheng/resources/mvs_2016/eccv2016.pdf)
@@ -142,12 +170,22 @@ Code list:
 - [Vladlen Koltun: Towards Photorealism](https://www.youtube.com/watch?v=Rd0nBO6--bM), [contact](http://vladlen.info/contact/)
 
 
-- Understanding illumination: [NeRD: Neural Reflectance Decomposition from Image Collections](https://arxiv.org/pdf/2012.03918.pdf) - [project](https://markboss.me/publication/2021-nerd/), Differenctiable renderer idea, [Two-shot Spatially-varying BRDF and Shape Estimation](https://arxiv.org/pdf/2004.00403.pdf) [code](https://github.com/NVlabs/two-shot-brdf-shape), [Neural Reflectance Fields for Appearance Acquisition](https://arxiv.org/pdf/2008.03824.pdf) - [author](http://cseweb.ucsd.edu/~bisai/)
-	- [Bidirectional reflectance distribution function - BRDF](https://en.wikipedia.org/wiki/Bidirectional_reflectance_distribution_function) - [Phong Refelection model](https://en.wikipedia.org/wiki/Phong_reflection_model) - [Cook–Torrance model](https://en.wikipedia.org/wiki/Specular_highlight#Cook%E2%80%93Torrance_model), [A Reflectance Model for Computer Graphics](https://inst.eecs.berkeley.edu/~cs294-13/fa09/lectures/cookpaper.pdf), [Physically-Based Shading at Disney](https://static1.squarespace.com/static/58586fa5ebbd1a60e7d76d3e/t/593a3afa46c3c4a376d779f6/1496988449807/s2012_pbs_disney_brdf_notes_v2.pdf)
-	- [Physics based Methods in Vision](http://www.cs.cmu.edu/afs/cs/academic/class/16823-s16/www/pdfs/)
-	- Tutorial on Spherical Gaussians - [SG SERIES PART 1-6](https://mynameismjp.wordpress.com/2016/10/09/sg-series-part-1-a-brief-and-incomplete-history-of-baked-lighting-representations/), [Spherical Harmonic Lighting: The Gritty Details](http://www.cse.chalmers.se/~uffe/xjobb/Readings/GlobalIllumination/Spherical%20Harmonic%20Lighting%20-%20the%20gritty%20details.pdfs)
-	- [Disney BRDF Base color Metallic parametrization](https://www.alexandre-pestana.com/disney-principled-brdf-implementation/), [Physically-Based Shading at Disney](https://static1.squarespace.com/static/58586fa5ebbd1a60e7d76d3e/t/593a3afa46c3c4a376d779f6/1496988449807/s2012_pbs_disney_brdf_notes_v2.pdf), [An Efficient Representation for Irradiance Environment Maps](https://cseweb.ucsd.edu/~ravir/papers/envmap/), [On the Relationship between Radiance and Irradiance: Determining the illumination from images of a convex Lambertian object](https://cseweb.ucsd.edu/~ravir/papers/invlamb/)
 
+- Understanding illumination: Differenctiable renderer idea, [Two-shot Spatially-varying BRDF and Shape Estimation](https://arxiv.org/pdf/2004.00403.pdf) [code](https://github.com/NVlabs/two-shot-brdf-shape)
+	- Deep Learning Papers: [NeRD: Neural Reflectance Decomposition from Image Collections](https://arxiv.org/pdf/2012.03918.pdf) - [project](https://markboss.me/publication/2021-nerd/), [NeRV: Neural Reflectance and Visibility Fields for Relighting and View Synthesis](https://arxiv.org/pdf/2012.03927.pdf) - [project](https://pratulsrinivasan.github.io/nerv/)
+	- Tutorial on Spherical Gaussians - [SG SERIES PART 1-6](https://mynameismjp.wordpress.com/2016/10/09/sg-series-part-1-a-brief-and-incomplete-history-of-baked-lighting-representations/), [Spherical Harmonic Lighting: The Gritty Details](http://www.cse.chalmers.se/~uffe/xjobb/Readings/GlobalIllumination/Spherical%20Harmonic%20Lighting%20-%20the%20gritty%20details.pdfs), [Cook Torrence Model](http://www.codinglabs.net/article_physically_based_rendering_cook_torrance.aspx), [Environment mapping Slides](https://cseweb.ucsd.edu/classes/wi18/cse167-a/lec13.pdf)
+	- [A Reflectance Model for Computer Graphics](https://inst.eecs.berkeley.edu/~cs294-13/fa09/lectures/cookpaper.pdf), [Bidirectional reflectance distribution function - BRDF](https://en.wikipedia.org/wiki/Bidirectional_reflectance_distribution_function) - [Phong Refelection model](https://en.wikipedia.org/wiki/Phong_reflection_model) - [Cook–Torrance model](https://en.wikipedia.org/wiki/Specular_highlight#Cook%E2%80%93Torrance_model), [Physically-Based Shading at Disney](https://static1.squarespace.com/static/58586fa5ebbd1a60e7d76d3e/t/593a3afa46c3c4a376d779f6/1496988449807/s2012_pbs_disney_brdf_notes_v2.pdf), [Disney BRDF Base color Metallic parametrization](https://www.alexandre-pestana.com/disney-principled-brdf-implementation/), [An Efficient Representation for Irradiance Environment Maps](https://cseweb.ucsd.edu/~ravir/papers/envmap/), [On the Relationship between Radiance and Irradiance: Determining the illumination from images of a convex Lambertian object](https://cseweb.ucsd.edu/~ravir/papers/invlamb/), [Physically based rendering (PBR)](http://www.codinglabs.net/article_physically_based_rendering.aspx), [OpenGL PBR](https://learnopengl.com/PBR/Theory),
+	- Material Editing - [Photorealistic Material Editing Through Direct Image Manipulation](https://users.cg.tuwien.ac.at/~zsolnai/wp/wp-content/uploads/2019/09/pme.pdf), [Gaussian Material Synthesis](https://users.cg.tuwien.ac.at/zsolnai/gfx/gaussian-material-synthesis/)
+
+	- Not Read, Probably good:
+		- [Neural Reflectance Fields for Appearance Acquisition](https://arxiv.org/pdf/2008.03824.pdf) - [author](http://cseweb.ucsd.edu/~bisai/)
+		- [All-Frequency Rendering of Dynamic, Spatially-Varying Reflectance](https://www.microsoft.com/en-us/research/wp-content/uploads/2009/12/sg.pdf), [tutorial slide](https://www.slideserve.com/calder/all-frequency-rendering-of-dynamic-spatially-varying-reflectance) - tutorials on using Spherical Gaussians for BRDF and Environment illumination - [Portrait Neural Radiance Fields from a Single Image](https://arxiv.org/pdf/2012.05903.pdf)
+	- [Physics based Methods in Vision](http://www.cs.cmu.edu/afs/cs/academic/class/16823-s16/www/pdfs/)
+	- [Ligting basics](https://dreamfarmstudios.com/blog/the-ultimate-guide-to-lighting-fundamentals-for-3d/), [Video](https://www.facebook.com/BusinessInsiderIndia/videos/366771777864939), [3D Texturing](https://dreamfarmstudios.com/blog/getting-to-know-3d-texturing-in-animation-production/)
+
+- Online 3D model assets:
+	- [TurboSquid](https://www.turbosquid.com/) - Using professional models. This is a good reference
+	- Environmental Maps - [HDRI Haven](https://hdrihaven.com/hdris/)
 - Depth Estimation from input image: [MiDaS](https://arxiv.org/pdf/1907.01341v3.pdf), [code](https://github.com/intel-isl/MiDaS),[latest code](https://pytorch.org/hub/intelisl_midas_v2/) - Perpetual View Generation - [Infinite Nature](https://infinite-nature.github.io/)
 	- [One Shot 3D Photography](https://facebookresearch.github.io/one_shot_3d_photography/), [code](https://github.com/facebookresearch/one_shot_3d_photography), 
 
@@ -157,8 +195,12 @@ Code list:
 - Adding secondary motion - [Complementary Dynamics](https://www.dgp.toronto.edu/projects/complementary-dynamics/)
 - Not read: [Learning to Recover 3D Scene Shape from a Single Image](https://arxiv.org/pdf/2012.09365.pdf), [Iso-Points: Optimizing Neural Implicit Surfaces with Hybrid Representations](https://arxiv.org/pdf/2012.06434.pdf), [Object-Centric Neural Scene Rendering](https://arxiv.org/pdf/2012.08503.pdf), [computer assisted prog](https://capworkshop.github.io/), [signed-distance-SRN](https://github.com/chenhsuanlin/signed-distance-SRN), [differentiable_volumetric_rendering](https://github.com/autonomousvision/differentiable_volumetric_rendering), 
 
+- Quaternions - [ref1](https://jinyongjeong.github.io/Download/SE3/jlblanco2010geometry3d_techrep.pdf), [ref2](https://maxime-tournier.github.io/notes/quaternions.html), [SE(3) transform](https://www.seas.upenn.edu/~meam620/slides/kinematicsI.pdf)
 
+- [StyleGAN](https://arxiv.org/abs/1812.04948), [StyleFlow](https://rameenabdal.github.io/StyleFlow/)
 
+- [NeRF−−: Neural Radiance Fields Without Known Camera Parameters](https://arxiv.org/pdf/2102.07064.pdf)
+- Companies - [Teriflix](https://www.teriflix.com/), [Searching for artist](https://www.artella.com/), [paperboatstudios](https://paperboatstudios.co/index), [studiodurga](https://www.studiodurga.com/)
 
 
 AI Sculptor: Assuming the rays as a nail, we like to sculpt a 3D model based on multiple input views. We use the NSVF as our based code. The list of problems we are planning to attack:
@@ -169,7 +211,6 @@ AI Sculptor: Assuming the rays as a nail, we like to sculpt a 3D model based on 
 	- Can the shape information used as code in DeepSDF be used in NERF/NSVF kind of setup to reduce the number of images to encode a scene directly from a siingle image
 	- Physics simulation using NeRF: [Real Time Fluid simulation](https://users.cg.tuwien.ac.at/zsolnai/gfx/fluid_control_msc_thesis/), [Learning to simulate](https://arxiv.org/pdf/2002.09405.pdf)
 
-- A algorithm to solve generic problems: [C-Space Tunnel Discovery for Puzzle Path Planning](https://xinyazhang.gitlab.io/puzzletunneldiscovery/), [More Puzzles](https://gitlab.com/xinyazhang/puzzle-geometry/-/tree/master/), [paper](https://xinyazhang.gitlab.io/puzzletunneldiscovery/assets/MainPaper.pdf) - Concentrate on the different planning algorithms. The baisc idea would be to find tunnels (i.e. narrow points which could possibly leead to a solution). Then have a duble tree starting from Start and reversely from goal. This could be done for every tunnel point. This stage is the blooming stage. You could approximate the value of the tree using neural networks. Try finding links from the bloomed tree and the successive tunnel paths. IF we find a route find the optimal route from start to end - Probabilistic Roadmap Path Planning [PRM Planner](http://www.cs.columbia.edu/~allen/F15/NOTES/Probabilisticpath.pdf), [PRM1](https://people.eecs.berkeley.edu/~pabbeel/cs287-fa11/slides/MotionPlanning-v1.pdf), [RDT-Based Methods](http://planning.cs.uiuc.edu/node772.html) - dual-tree RDT algorithm 
 
 ###### List of questions
 - multiresolution in signed distance function, how are multiple objects composed using SDF, What is the maximum capacity of NN?, occupancy vs sdf comparison
@@ -186,6 +227,8 @@ AI Sculptor: Assuming the rays as a nail, we like to sculpt a 3D model based on 
 - [Immersive Light Field Video with a Layered Mesh Representation](https://storage.googleapis.com/immersive-lf-video-siggraph2020/ImmersiveLightFieldVideoWithALayeredMeshRepresentation.pdf)
 - [EFFICIENT CONTINUAL LEARNING WITH MODULAR NETWORKS AND TASK-DRIVEN PRIORS](https://arxiv.org/pdf/2012.12631.pdf)
 - [IIRC: Incremental Implicitly-Refined Classification](https://arxiv.org/pdf/2012.12477.pdf)
+- A algorithm to solve generic problems: [C-Space Tunnel Discovery for Puzzle Path Planning](https://xinyazhang.gitlab.io/puzzletunneldiscovery/), [More Puzzles](https://gitlab.com/xinyazhang/puzzle-geometry/-/tree/master/), [paper](https://xinyazhang.gitlab.io/puzzletunneldiscovery/assets/MainPaper.pdf) - Concentrate on the different planning algorithms. The baisc idea would be to find tunnels (i.e. narrow points which could possibly leead to a solution). Then have a duble tree starting from Start and reversely from goal. This could be done for every tunnel point. This stage is the blooming stage. You could approximate the value of the tree using neural networks. Try finding links from the bloomed tree and the successive tunnel paths. IF we find a route find the optimal route from start to end - Probabilistic Roadmap Path Planning [PRM Planner](http://www.cs.columbia.edu/~allen/F15/NOTES/Probabilisticpath.pdf), [PRM1](https://people.eecs.berkeley.edu/~pabbeel/cs287-fa11/slides/MotionPlanning-v1.pdf), [RDT-Based Methods](http://planning.cs.uiuc.edu/node772.html) - dual-tree RDT algorithm 
+- [Interlinked SPH Pressure Solvers for Strong Fluid-Rigid Coupling](https://cg.informatik.uni-freiburg.de/publications/2019_TOG_strongCoupling.pdf), 
 
 
 ###### Significant Areas

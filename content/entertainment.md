@@ -32,6 +32,8 @@ header:
 - [An Antidote to Dissatisfaction](https://www.youtube.com/watch?v=WPPPFqsECz0)
 - [I had a black dog](https://matthewjohnstone.com.au/courses/)
 - Caste - [India untouched](https://www.youtube.com/watch?v=PZb4lGYkjrg)
+- In matters of conscience, tthe law of the majority has no place - M K G (Gandhi)
+- I like the movie and not the maker. The maker can fail but the movie does not - Thiagarajan Kumararaja
 
 
 
@@ -121,6 +123,19 @@ header:
 
 - Namma puli kuzhambu, Enna kathirikka kuzhambu, kerela ulli theyal, nadan mutta roast, Vadacurry, maharastrian misal thala, that is spiciest for dunking in pav bun
 - Biriyani water-rice ratio - 1:1.25, or 1:1.50 - Hyderabadi style & Seeraga samba version. hyderabadi with salan & burani raitha. thalapakatti with salna & onion raitha. ambur with kathirikka & raitha. malabar biriyani they have it with oorga. Kolkata style & lucknowi.
+- For chef, I like Jacques Pepin, Ottolenghi, Kenji López-Alt (he is science nerd turned chef).
+- https://www.youtube.com/watch?v=sn9SqUkSFg4&list=PL_PgxS3FkP7ATPveBQ1yah7LDqysyzDCG&index=3&ab_channel=KQED - Jacques Pepin Cooking
+- https://www.youtube.com/playlist?list=PLDFUoU1r0lJNMPfDNsBa3Z2vqacomOGx3 - Native receipies
+- https://www.youtube.com/c/CookingshookingIn - Thorough in his approach. His parathas are good and skills to make one
+- Masala lab : Why cooking is done the way it is done? : https://lifestyle.livemint.com/author/krish-ashok
+	- Book: https://www.amazon.com/Family-Partition-Urvashi-Butalia-ebook/dp/B0756WQVKR
+- https://www.youtube.com/channel/UCuMwOS-oxshrp6CxaaBBKWg - marwari kitchen
+- https://www.youtube.com/channel/UCWWUTc35N_j_bsC-gFWD0Hg/videos - IWC The Indian Wildlife Channel
+
+###### Quotes
+- Grandmother said, "You missed one ingredient. Write it down". While I waited with a pen in hand , she said "Patience. Thats the ingredient you are missiong if you give anything enough time, it will turn out delicious. You can approximate all the other ingredients"
+- Names : Kathyayini, Taanumadhya, Dandan,
+
 
 ##### Writing:
 - English speaking [link1](https://www.youtube.com/watch?v=r_5K7cs24-8&list=PL4IJAxR6Bqq8vP0kEeQRgU6lUe4s4u2DW&index=4), [Learn English in 3 Hours - ALL You Need to Master English Conversation](https://www.youtube.com/watch?v=QTJ02h7uiXs), [American accent](https://www.youtube.com/watch?v=6DiQ95hUUfI), [American Accent1](http://dl.ueb.edu.vn/bitstream/1247/2927/1/American%20Accent%20Training.pdf)

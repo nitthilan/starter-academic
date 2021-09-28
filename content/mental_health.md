@@ -192,5 +192,10 @@ I am in othe opposite end of the spectrum. I struggled a lot to learn the realit
 
 
 
+----
+
+The world is inherently biased. Though the systems are available to make you believe that solutions are there to make it a balanced world. Democrazy does not make the world balanced since one side is inherently big. People are discriminated based on clolor. All people are not rewarded based on their performance. Some people are lucky based on oportunity, color, money, status. Black and White. Rich and poor. Lack of one does not compensate for the other.
+
+
 
 
