@@ -21,10 +21,11 @@ organizations:
 bio: Pursuing PhD in AI/ML. Interested in artificial general intelligence (AGI) and Deep generativemodels (GAN, VQVAE) for Video/Image/3D Graphics (GCN/CNN). 12 years of software product development experience with wide exposure in building end to end systems from embedded to web technologies.
 
 interests:
+- Extracting facial and full body pose from monocular images and videos
 - Neural scene representation for fast and high-quality free-viewpoint
 - Generative Models - GAN, VAE - Video/Image/3D Graphics
 - Bayesian Optimization Approaches
-- Artificial General Intelligence (AGI)
+- Artificial General Intelligence
 
 education:
   courses:
