@@ -97,7 +97,5 @@ PhD Research: My research is at the intersection of Machine Learning (ML) and Co
 
 (b) Studied effective instantiations of this framework for different applications - Convolutional neural networks for image classification, Graph convolutional networks for 3D computer vision, and Generative adversarial networks for image manipulation tasks.
 
-(c) Published papers at top-tier venues including three journal papers (ACM/IEEE Transactions
-on CAD and Embedded Computing Systems) and four conference papers (AAAI, DAC, DATE,
-ICCAD). One journal paper is under review at Journal of Artificial Intelligence Research.
+(c) Published papers at top-tier venues including three journal papers (ACM/IEEE Transactions on CAD and Embedded Computing Systems) and four conference papers (AAAI, DAC, DATE, ICCAD). One journal paper is under review at Journal of Artificial Intelligence Research.
 
