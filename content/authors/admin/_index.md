@@ -80,18 +80,16 @@ user_groups:
 - Visitors
 ---
 
-I am  Nitthilan, pursuing PhD in AI/ML. Interested in artificial general intelligence (AGI) and Deep generative models (GAN, VQVAE) for Video/Image/3D Graphics (GCN/CNN).
+I am  Nitthilan, pursuing PhD in AI/ML for Video/Image/3D Graphics. Interested in image and video based motion capture using pose based estimation (SMPLX, FrankMocap, SMPLify-X), clothing and hair 3D model representation using Implicit Neural Representation (NeRF, NSVF, Neural Body) and Deep generative models (GAN, VQVAE) .
 - 12 years of software product development experience with wide exposure in building end to end
 systems from embedded to web technologies.
-- Passionate about developing optimized algorithms and exploring different domains. Developed
-video applications for conferencing, broadcast, and storage. Worked on ME/RC for H264/MPEG
-and developed plugin/webRTC/Html5 based video endpoints
+- Passionate about developing optimized algorithms and exploring different domains. Developed video applications for conferencing, broadcast, and storage. Worked on ME/RC for H264/MPEG and developed plugin/webRTC/Html5 based video endpoints
 
-Current Focus Area: Working on Neural scene representation for fast and high-quality free-viewpoint rendering. Extending the ideas of Neural Sparse Voxel Fields (NSVF, Liu et. al. 2020) and Neural Radiance Fields (NeRF, Mildenhall et. al. 2020) to
+Current Focus Area: 
 
-- Multi-resolution coarse to fine approach of learning
-- Single image to scene representation
-- Animate 3D objects by adding a time dimension.
+- Extracting facial pose and full body motion capture (dance steps, sport stances, exercise and fitness poses) data from monocular video (YouTube, TikTok) using SMPLX prior (FrankMocap, SMPLify-X, VIBE)
+- Controllable cloth, hair attribute and facial mocap of dynamic humans using SMPLX anchored latent codes (NeuralBody, FrankMocap, HumanParser)
+- Accelerating learning of the 3D Neural Scene representation using smaller neural nets and latent representation at a voxel level [NeRF, NSVF, KiloNeRF].
 
 PhD Research: My research is at the intersection of Machine Learning (ML) and Computing Systems (Sys). The overarching theme of my research is to bridge these two areas. Specifically, I’m working towards the vision of Edge AI to efficiently deploy AI solutions for emerging applications (e.g., robotics, selfdriving cars, augmented/virtual reality, and smart health) on edge platforms that are constrained by resources (power, compute, and memory).
 
