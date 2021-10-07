@@ -1,0 +1,44 @@
+
+Add an icon for the site
+Add visualizations like GIF and Images
+Add all the projects you have worked on as short notes
+Check in all the project you have worked and provide links here
+
+Add details about the projects worked as Intern
+Add details about the skills
+
+Daily projects:
+- AGI - brain project
+- Video compression - GAN based, progressive GAN, VQ-VAE-2
+- In Media Product Placement - DensePose, 3d-kenburns, detectron2, InGAN, SinGAN, StyleGAN-2, vid2vid, few-shot-vid2vid
+- Jpg image classifer
+- multi agent RL
+- Pose Comparison
+- Deep Neural Network Inference Optimization:
+	- Transformer Quantization - Classification and Seq
+	- Pytorch Quantization - Tensorflow Quantization
+	- Pruning
+	- ARM platform
+	- ResNet Quantization
+- Virtual Studio - ADGAN, CPISADGAN, Image HArmonization, LIP_SSL, Human Segmentation, Single-Human-Parsing-LIP,
+- Nerfies, PoseTransfer
+- vdo mocap - 
+- HumanModels - PifuHD, CAPE, OpenPose, HairNet,
+- Multi view rendering
+	- Cloth hair pose gen - ADGAN, PArsing-R-CNN, pi-GAN-pytorch, tex2shape
+	- colmap, DeepSDF, nerf, 
+	- nerf_universe - kilonerf, NSVF, pixel-nerf, nerf in the wild, 
+	[code] - Pose based nerf - densepose-siren, image_interp, pose2d_cnn, pose2d_gen, pose2d_siren, syn_data_train
+	- NeRF++, NSVF, NSVF_update
+	- neural_sparse_voxel_field - 1D signal encoding, analysis, fourier_feature_experiment, image_encoding, mesh_generation
+- Vdo_mocap - dancebabydance
+	- detectron2, Detr, EasyMocap, FRankMocap, human_body_prior, 
+	- nerf++, neuralbody, pifuhd, pixel2style2pixel
+	- pose_to_mocap, video2bvh, VIBE, SPIN, SMPL, SMPLX, SMPLify-X, SMPLicit
+	- theta_beta_iteration
+	- MeshTransformer
+- video_pose_estimation
+- videoavatars, VideoPose3D, White-Box-Cartoonization - Cartoon Generation, Dress extractor, Vtuber
+
+
+https://docs.google.com/document/d/1ScHjG-twtRYww3FXmStcN10Fytn6Ncr-P51zx5xwEoc/edit - Problems worked on

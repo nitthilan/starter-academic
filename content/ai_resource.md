@@ -14,15 +14,9 @@ header:
 ---
 
 ###### Sections       
-[About](#about) - [Significant Areas](#significant-areas)-[Current Task List](#current-task-list) - [Tutorials](#tutorials) - [Applications](#applications) - [Prominent Papers](#prominent-papers)
+[Significant Areas](#significant-areas)-[Current Task List](#current-task-list) - [Tutorials](#tutorials) - [Applications](#applications) - [Prominent Papers](#prominent-papers)
 
-###### About
-Inspired from Pixar, Dreamworks, Sony and other animation studios. The general time required to produce an animated feature from conception to final rendered version has a long production time. 
-Can Artificial Intelligence based solutions help in reducing this time line? 
 
-The current advancements in deep learning in the area of GAN, Neural Rendering help to automate many processes like creating 3D models, animating 3d model motion. 
-
-Project Ideas : [Multi view based 3D models](#multi-view-based-3d-models) - Virtual Studio - Human Models
 
 ###### Multi view based 3D models
 - Neural Fields Rendering System: 

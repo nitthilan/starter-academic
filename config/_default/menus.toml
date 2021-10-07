@@ -29,15 +29,20 @@
   weight = 50
 
 [[main]]
-  name = "To Infinity And Beyond"
-  url = "to_infinity_and_beyond"
+  name = "Projects"
+  url = "projects"
   weight = 80
-
 
 [[main]]
-  name = "AI Resources"
-  url = "ai_resource"
-  weight = 80
+  name = "To Infinity And Beyond"
+  url = "to_infinity_and_beyond"
+  weight = 60
+
+
+#[[main]]
+#  name = "AI Resources"
+#  url = "ai_resource"
+#  weight = 80
 
 #[[main]]
 #  name = "Fun"
