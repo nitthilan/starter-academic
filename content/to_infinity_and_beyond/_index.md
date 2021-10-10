@@ -8,12 +8,12 @@ title: To Infinity And Beyond
 view: 1
 ---
 
-[About](#about) - [MoCap SMPL-X priors](#motion-capture-using-smpl-x-priors) - [NeRF Rendering System](#neural-radiance-field-rendering-systems) - [Problems](#problems-working-on) - [References](#reference) 
+[About](#about) - [MoCap SMPL-X priors](#motion-capture-using-smpl-x-priors) - [NeRF Rendering System](#neural-radiance-field-rendering-systems) - [Problems](#problems-working-on) - [References](#references) 
 
 ##### About
-Inspired from Pixar, Dreamworks, Sony and other animation studios. The general time required to produce an animated feature from conception to final rendered version has a long production time. Can Artificial Intelligence based solutions help in reducing this time line? 
+With more and more AR and VR devices becoming ubiquitous and advancement in animation the animation, the difference between virtual and reality are getting blurred. This makes perception of reality and rendering it along with virtual scenes as the core problems. Being interested application of AI/ML in the area of 3D graphics and animation and having a background in video encoding for conferencing, transmission am working on two problems (a) Motion Capture from monocular videos dealing in perception and (b) Neural rendering of rigid and non-rigid bodies dealing in rendering. 
 
-The current advancements in deep learning in the area of GAN, Neural Rendering, Transformers help to automate many processes like creating 3D models, animating 3d model motion. 
+Further, the current advancements in deep learning in the area of GAN, Implicit representations, Transformers, GCN make them a invaluble tool that aid in solving these core problems. Anyone interested in the following problems can reach me nitthilan@gmail.com
 
 ###### Motion Capture using SMPL-X priors [(details)](#problems-working-on)
 - Using monocular video information
@@ -66,9 +66,10 @@ The current advancements in deep learning in the area of GAN, Neural Rendering, 
 
 ##### References:
 - [VIBE: Video Inference for Human Body Pose and Shape Estimation](https://github.com/mkocabas/VIBE)
-- [SMPLify-X](https://github.com/vchoutas/smplify-x)
+- [SMPLify-X](https://github.com/vchoutas/smplify-x), [SMPL-X](https://smpl-x.is.tue.mpg.de/), [SMPL](https://smpl.is.tue.mpg.de/)
 - [FrankMocap: A Strong and Easy-to-use Single View 3D Hand+Body Pose Estimator](https://github.com/facebookresearch/frankmocap)
-- [End-to-end Recovery of Human Shape and Pose](https://github.com/akanazawa/hmr)
+- [End-to-end Recovery of Human Shape and Pose](https://github.com/akanazawa/hmr), [SPIN: SMPL oPtimization IN the loop](https://github.com/nkolot/SPIN)
+- [Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
 - [NeRF: Neural Radiance Fields](https://github.com/bmild/nerf)
 - [Neural Body: Implicit Neural Representations with Structured Latent Codes for Novel View Synthesis of Dynamic Humans](https://github.com/zju3dv/neuralbody)
 - [KiloNeRF: Speeding up Neural Radiance Fields with Thousands of Tiny MLP](https://github.com/creiser/kilonerf)
