@@ -1,5 +1,5 @@
 ---
-title: To Infinity And Beyond
+title: Other Problems
 # View.
 #   1 = List
 #   2 = Compact

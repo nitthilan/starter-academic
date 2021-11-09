@@ -8,20 +8,20 @@ title: To Infinity And Beyond
 view: 1
 ---
 
-[About](#about) - [3D Volumetric Video System](#Deep-Neural-Radiance-Field-based-3D-Volumetric-Video-Capture-Rendering-and-Streaming) - [Drawbacks](#drawbacks) - [Problems](#problems-working-on) - [References](#references) 
+[About](#about) - [3D Volumetric Video System](#Deep-Neural-Radiance-Field-based-3D-Volumetric-Video-Capture-Rendering-and-Streaming) - [Drawbacks](#drawbacks) - [Problems](#problems-working-on) - [References](#references) - [Other Problems](/other_problems/)
 
 
 ##### About
 
-We have been capturing happy and memorable moments we shared with our friends and family as photos and videos. They usually remind us about the ambiance and the time the event happened. We usually reminiscence this in our minds. Instead, how would it be if we could capture the whole event in 3D? how would it be if we store the whole environment when the event happened? Share it with your friends and family like you share photos and videos? Invite them to that moment so that everyone could navigate the event like it is happening again? We are building a system to bring your memories to life in VR. 
+Videos and photos are used to capture our happy and memorable moments we shared with our friends and family. It takes us back to the place and time when the event happened, helping us reminiscence the moment. Instead, how would it be if we could capture these fleeting moments in 3D? Store and share them with your friends and family like you share photos and videos? Invite them to that moment so that everyone could relive it? We are building a system to bring your memories to life in VR. 
 
 
 <div class="container" style="display: flex;">
-    <div style="width: 50%;">
-        <video src="https://user-images.githubusercontent.com/4926564/140678640-dd953bc5-185f-4f3a-8a56-6ce225625334.mov?autoplay=1" autoplay loop controls="controls" style="height: 400px;"> </video> 
+    <div style="flex-grow: 1;">
+        <video src="https://user-images.githubusercontent.com/4926564/140678640-dd953bc5-185f-4f3a-8a56-6ce225625334.mov" autoplay loop controls="controls" style="width: 500px;"> </video> 
     </div>
     <div style="flex-grow: 1;">
-        <video src="https://user-images.githubusercontent.com/4926564/140678863-6f5c790f-f705-44fa-a1e0-47f311ddbe13.mp4?autoplay=1" controls="controls" style="height: 400px;" autoplay loop>
+        <video src="https://user-images.githubusercontent.com/4926564/140678863-6f5c790f-f705-44fa-a1e0-47f311ddbe13.mp4" controls="controls" style="width: 500px;" autoplay loop>
 		</video>
     </div>
 </div>
@@ -68,6 +68,7 @@ The final stage, encodes the composited stereo image and compresses it into a vi
 
 <!-- https://www.360cities.net/help/stereo_panos
 
+https://www.modtechlabs.com/volumetric-video-introduction/
 
 - Explain the application in simple terms like what is the input, what is the output
 - Explain terms like volumetric video, Neural radiance field etc
