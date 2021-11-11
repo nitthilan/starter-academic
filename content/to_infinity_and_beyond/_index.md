@@ -8,12 +8,12 @@ title: To Infinity And Beyond
 view: 1
 ---
 
-[About](#about) - [3D Volumetric Video System](#Deep-Neural-Radiance-Field-based-3D-Volumetric-Video-Capture-Rendering-and-Streaming) - [Drawbacks](#drawbacks) - [Problems](#problems-working-on) - [References](#references) - [Other Problems](/other_problems/)
+[[ABOUT]](#about) - [[OVERVIEW]](#overview) - [[ARCHITECTURE]](#Deep-Neural-Radiance-Field-based-3D-Volumetric-Video-Capture-Rendering-and-Streaming) - [[DRAWBACKS]](#drawbacks) - [[PROBLEMS]](#problems-working-on) - [[REFERENCES]](#references) - [[OTHER PROBLEMS]](/other_problems/)
 
 
-##### About
+# About
 
-Videos and photos are used to capture our happy and memorable moments we shared with our friends and family. It takes us back to the place and time when the event happened, helping us reminiscence the moment. Instead, how would it be if we could capture these fleeting moments in 3D? Store and share them with your friends and family like you share photos and videos? Invite them to that moment so that we all could relive it? We are building a system to recreate an immersive experience to bring your memories to life in VR. 
+Videos and photos are used to capture our happy and memorable moments we shared with our friends and family. It takes us back to the place and time when the event happened, helping us reminiscence the moment. Instead, how would it be if we could capture these fleeting moments in 3D? Store and share them with your friends and family like you share photos and videos? Invite them to that moment so that we all could relive it? We are building a system to recreate an immersive experience to bring your memories to life in VR. Wanna ride along mail me @ nitthilan@gmail.com
 
 
 <div class="container" style="display: flex;">
@@ -27,17 +27,20 @@ Videos and photos are used to capture our happy and memorable moments we shared 
 </div>
 
 
+# Overview
 
 To give a overview of our solution, a user scans the 3D environment he wants to store, as a video capturing it from different viewing angles. He can use multiple cameras to capture more information about the environment like actions. We use artificial intelligence to reconstruct and encode the 3D environment using the different videos captured by the user. Unlike other methods which use laser or depth sensors to estimate point clouds, we just use the scanned RGB monocular videos to reconstruct the environment. Finally, this captured 3D environment is viewed using a VR headset in a 360-degree stereoscopic panorama. A stereoscopic photo is a pair of images, taken simultaneously with two lenses placed like our eyes, about 65 mm apart and looking in the same direction. When presented to the two eyes by a stereoscope, these images give most people the impression of seeing a 3D space. A stereoscopic panorama is a pair of 360-degree images, which when viewed with synchronized pano viewers (like a VR headset) presents a stereo pair. Further, as the user moves around in the environment, we generate the corresponding stereo pair based on the user position to give the user an immersive 3D experience. 
 
+![screen reader text](overview.png "Overview")
 
 
-##### Deep Neural Radiance Field-based 3D Volumetric Video Capture, Rendering, and Streaming
+### Deep Neural Radiance Field-based 3D Volumetric Video Capture, Rendering, and Streaming
 
-![screen reader text](volumetric_video.png "Neural Body")
 
 
 Let's deep dive into the details of our solution. To provide a user with an immersive experience, the whole media pipeline from capture, storage, rendering, and streaming should be capable of handling 3D volumetric video data. Volumetric video capture technology is a technique that digitizes a three-dimensional space (i.e., the volume of space), object, or environment. The captured object can be digitized and transferred to the web, mobile, or virtual worlds and viewed in 3D. It does not have a set viewpoint, so the end-user can watch and interact with it from all angles, enhancing their experience and heightening their sense of immersion and engagement. The difference between 360-degree video and volumetric video is the depth provided with volume. In a 360-degree video, users can only view the action from a single, constant depth. With volumetric video, the end-user can play director and control how far in or out they want to explore the scene.
+
+![screen reader text](volumetric_video.png "System Architecture")
 
 First, to capture 3D volumetric data, we would require a multi-camera system, which captures the action from different views. After capturing the data as a set of videos we process the videos such that we break down the scene into a less important background region, a center stage foreground area where the actual action happens. This helps in encoding the background with less detail and the foreground with higher precision. Further, to enhance the quality, we separate the objects in the foreground region into rigid and non-rigid human bodies. In effect, we split the scene into three prominent regions (a) Foreground Rigid Bodies (b) Foreground Non-Rigid (Human) Bodies (c) Background Region. We process them separately as three different pipelines. Unlike, other solutions which encode objects as meshes and textures, we encode each region using a deep neural radiance field-based solution. Next, to provide an immersive visualization, the three regions are rendered separately into a stereo 360-degree panoramic image for each time instant and stream it to a Unity VR app running on a VR headset. Thus we breakdown our system into the following components:
 
@@ -55,13 +58,12 @@ The next stage involves splitting the data into foreground and background, rigid
 The final stage, encodes the composited stereo image and compresses it into a video stream (H264, MPEG, MJPEG) and streamed to the VR headset. A Unity-based VR app displays the compressed stream on the skybox shader to provide an immersive visualization of the captured sequence to the end-user
 
 
-##### Current status
+## Current status
 
 - Individual modules are available for each module
 - In the process of creating an MVP to demo the end-to-end solution
-- Anyone interested in the following problems can reach me at nitthilan@gmail.com
 
-##### Drawbacks
+## Drawbacks
 
 - The encoding (or storage) is time-consuming since it depends on the training time which is at present in the order of hours
 - The streaming delay would still be significant since it is done through the cloud
@@ -84,7 +86,7 @@ Being interested in application of AI/ML in the area of 3D graphics and animatio
 
  -->
 
-##### Reference
+## Reference
 - [NeRF: Neural Radiance Fields](https://github.com/bmild/nerf)
 - [Neural Body: Implicit Neural Representations with Structured Latent Codes for Novel View Synthesis of Dynamic Humans](https://github.com/zju3dv/neuralbody)
 - [Neural Sparse Voxel Fields (NSVF)](https://github.com/facebookresearch/NSVF)
