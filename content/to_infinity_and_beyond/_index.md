@@ -1,5 +1,6 @@
 ---
 title: To Infinity And Beyond
+subtitle: Capturing the world one voxel at a time
 # View.
 #   1 = List
 #   2 = Compact
@@ -8,7 +9,7 @@ title: To Infinity And Beyond
 view: 1
 ---
 
-[[ABOUT]](#about) - [[OVERVIEW]](#overview) - [[ARCHITECTURE]](#Deep-Neural-Radiance-Field-based-3D-Volumetric-Video-Capture-Rendering-and-Streaming) - [[DRAWBACKS]](#drawbacks) - [[PROBLEMS]](#problems-working-on) - [[REFERENCES]](#references) - [[CODE (under dev)]](https://github.com/nitthilan/volumetric_video) - [[OTHER PROBLEMS]](/other_problems/)
+[[ABOUT]](#about) - [[OVERVIEW]](#overview) - [[ARCHITECTURE]](#Deep-Neural-Radiance-Field-based-3D-Volumetric-Video-Capture-Rendering-and-Streaming) - [[NEURAL RENDERING PIPELINE]](#neural-encoder-architecture-and-pipeline)- [[PROGRESS]](#progress) - [[REFERENCES]](#references) - [[CODE (under dev)]](https://github.com/nitthilan/volumetric_video) - [[OTHER PROBLEMS]](/other_problems/)
 
 
 # About
@@ -34,7 +35,7 @@ To give a overview of our solution, a user scans the 3D environment he wants to 
 ![screen reader text](overview.png "Overview")
 
 
-### Deep Neural Radiance Field-based 3D Volumetric Video Capture, Rendering, and Streaming
+## Deep Neural Radiance Field-based 3D Volumetric Video Capture, Rendering, and Streaming
 
 
 
@@ -44,29 +45,149 @@ Let's deep dive into the details of our solution. To provide a user with an imme
 
 First, to capture 3D volumetric data, we would require a multi-camera system, which captures the action from different views. After capturing the data as a set of videos we process the videos such that we break down the scene into a less important background region, a center stage foreground area where the actual action happens. This helps in encoding the background with less detail and the foreground with higher precision. Further, to enhance the quality, we separate the objects in the foreground region into rigid and non-rigid human bodies. In effect, we split the scene into three prominent regions (a) Foreground Rigid Bodies (b) Foreground Non-Rigid (Human) Bodies (c) Background Region. We process them separately as three different pipelines. Unlike, other solutions which encode objects as meshes and textures, we encode each region using a deep neural radiance field-based solution. Next, to provide an immersive visualization, the three regions are rendered separately into a stereo 360-degree panoramic image for each time instant and stream it to a Unity VR app running on a VR headset. Thus we breakdown our system into the following components:
 
-###### (a) Multi-view capture system
+### (a) Multi-view capture system
 
 We design a capture system that ranges from 1 to N monocular RGB cameras. This could be as simple as one or more mobile cameras capturing a performance or scene from different angles. Since our setup is simple it enables anyone to create content that could be immersively consumed. The capture is timestamped so that multiple captures can be correlated for a particular time instance across different cameras. These different video streams are then uploaded to a cloud server.
 
-###### (b) Split neural encoder, renderer and compositor
+### (b) Split neural encoder, renderer and compositor
 
 The next stage involves splitting the data into foreground and background, rigid and non-rigid (human) bodies. Each of these components is then encoded separately into a deep neural network. Background region is encoded using Nerf++ based network. The foreground requires optimized rendering (or inference) and many solution options are to be investigated. Some of the options are KiloNerf, PlenOctrees. Finally, the non-rigid body is encoded using Neural body-based network solutions. The scene is composited by rendering the individual neural networks encoded for the three separate regions based on the position and viewing angle feedback from the user. This composited stereo 360-degree panorama image is then passed on to the next stage to be compressed and streamed
 
 
-###### (c) 360 Stereo video encoder 
+### (c) 360 Stereo video encoder 
 
 The final stage, encodes the composited stereo image and compresses it into a video stream (H264, MPEG, MJPEG) and streamed to the VR headset. A Unity-based VR app displays the compressed stream on the skybox shader to provide an immersive visualization of the captured sequence to the end-user
 
 
-## Current status
+# Progress
+
+## Stage 2
+
+- Check the detailed architecture for the current implementation
+- Dataloader and feature extractor module based on depth - 1 day
+- Data generation using iPhone/iPad Pro - 0.5 day
+- Inverse depth space nerf++ renderer - 1 day
+- Training loop for non-rigid neural renderer - 2 days
+	- 3D sparse convolution
+	- raycasting based rendering using volumetric prediction head
+	- Dataloader and cost function implementation
+
+- Testing and Debugging (Completion of basic pipeline) - 2 days
+- Experiment with surface prediction head - 2 day
+- Non-rigid volume renderer - 3 days
+	- Pose estimation using LiDAR
+	- Volume feature generator using ray triangle intersection
+	- Testing and Debugging
+- Unity VR application using hand gestures and locomotion - 3 days
+
+
+## Stage 1
 
 - Individual modules are available for each module
-- In the process of creating an MVP to demo the end-to-end solution
+- Implemented a end to end pipeline from capturing a video to rendering it and visualizing the output using a VR headset
+- Baseline modules used: 
+	- Colmap: To learn camera parameters
+	- Nerf++: Encoding unbound scenes using an inverted sphere parameterization
+	- Unity Oculus VR App: Rendering Stereo 360 degree panoroma images at different camera positions
+- Learnings:
+	- Colmap takes exponentially more time to identify camera parameters when the number of images to be registered are large. The mapper module spends 17 minutes for 200 odd images and this increases to 1-2 hours with 500 images and larger dimension
+	- Training time for Nerf++ - Takes 18-24 hours on a 4 GPU system
+	- Slow inference times - 14 seconds per 4000x4000 dimension image (top bottom stereo)
+- Using 360 degree panoroma stereo may not work. So initially try just planar stereo like the demo videos
+- End to end pipeline with best qualities picked from different NeRF/MVS implementation
+- Reduce the time across the whole pipeline. Major bottlenecks:
+	- Colmap based structure from motion (SfM) estimation
+	- Overfitting the NeRF module with excessive input views
+	- Depth estimation for feature mapping and dense voxel processing over the whole volume
+- The whole pipeline is implemented in Neural radiance field based solution
 
-## Drawbacks
+## Stage 0
 
 - The encoding (or storage) is time-consuming since it depends on the training time which is at present in the order of hours
 - The streaming delay would still be significant since it is done through the cloud
+
+# Neural Encoder [Architecture and Pipeline]
+In this section we explain the proposed neural encoder architecture where we try to take the best aspects of the various proposed solutions in literature and combine them together into a pipeline which address the pitfalls in their individual solutions. The architecture is generic, addressing both rigid and non-rigid body captures in a unbounded environment. Further, it tries to simplify the capture mechanism by a single iPhone video with Lidar depth information. The major pitfalls with the earlier proposed solutions used in Stage 1 was the long training time it takes for representing the 3D volumetric data using neural networks. This long training time was due to (a) estimation of camera intrinsic and extrinsic camera parameters using Structure from Motion approach used in Colmap. We utilize the IMU data availble on iPhones to estimate this (b) estimating the depth information of surfaces for mapping voxel features. We utilize the Lidar depth information to generate a feature point cloud which we can map to a particular voxel (c) overfitting of NeRF based variants using excessing input images to approximate the 3D volume. We utilize the ResNet convolution features extracted from the image to bootstrap the neural rendering process, thus inturn reducing the training time. Further, we use baysian optimization techniques to choose appropriate subset input images to reduce the training time.
+
+
+![screen reader text](architecture_overview.png "Neural Encoder Architecture")
+
+## Overview
+The neural encoder takes as input a series of images captured from different angles, their corresponding camera parameters (intrinsic and extrinsic), the lidar depth information. The pipleine splits the world 3D region into two different spaces (a) Unit depth volume space (b) Inverse depth volume space. The region of interest defined by where the action happens is normalized to lie within a unit cube. This region is called the Unit volume space. Using a unit cube instead of a sphere helps in spliting the region into voxels thereby helping in speeding up inference times of the neural rendering pipeline. We use a voxel based neural encoding approach to learn the 3D volume/surface. The region outside the normalized unit cube is mapped to a inverse depth volume, and we use a single NeRF MLP to encode this region. Finally, when a user request a output image from a new camera position, we render the values from both the regions and combine them together to display it to the user.
+
+
+## Pipeline
+
+### Inverse Depth Volume Space
+![screen reader text](inv_dpth_vol_enc.png "Inverse Depth Volume Encoder")
+In the inverse depth space, as proposed by NeRF++, we convert every 3D point to their inverses and parameterize the NeRF MLP with (x', y', z' and r') as shown in the figure. This maps all the values from 1 to infinity to values within 1 to 0.
+
+
+### Depth Volume Space
+![screen reader text](dpth_vol_spc_enc.png "Depth Volume Space Encoder")
+Depth volume space is more complex, since we capture both rigid and non-rigid (human actions) sequences using this pipeline. We split it into two stages (a) Volume Feature Generator (b) Neural Voxel Renderer. 
+
+## Volume Feature Generator
+The volume feature generator module takes images captured in multiple camera directions, passes it through a ResNet based convolution feature generator and then using the Lidar depth information maps it to a voxel inside the unit cube. The features mapped from different images to a same voxel are then averaged to estimate the voxel feature. 
+
+### Rigid body volume feature [Depth Voxel Feature Mapper]
+For rigid bodies we do not do anything special since it does not have any deformations. 
+
+### Non-Rigid body volume feature [SmplX Feature Mapper]
+However, in case of non-rigid bodies, based on the motion, the 3D geometry is defomrmed and also gets mapped to different regions of the 3D voxel due to the changes in pose. We adapt the ideas from the Neural body paper, where we first estimate the 3D pose from images for the SMPL mesh. Then map the convolution features to the SMPL vertices which is then mapped to the corresponding voxel. 
+ 
+
+## Neural Voxel Renderer
+The feature volume generated from the previous stage is taken as input for the Neural Voxel Renderer. The voxel features is passed through a sparse 3D UNet architecture to spread the features along the surface of the 3D objects in scene. These features are used as input for the ray casting module which uses a MLP as its head. Based on what the MLP predicts we can differentiate the kind of renderer we plan to learn.
+
+
+### Volumetric Prediction Head
+If the MLP head just predicts the transmittance and RGB values alone then it acts as a volumetric prediction head.
+
+### Surface Prediction Head
+However if it predicts surface normals along with the transmittance and RGB, then it tries to approximate the smooth surface prior there by acting as a Surface prediction head.
+
+<!-- #### BO for training -->
+
+
+
+
+## Reference
+- [NeRF: Neural Radiance Fields](https://github.com/bmild/nerf)
+- [Neural Body: Implicit Neural Representations with Structured Latent Codes for Novel View Synthesis of Dynamic Humans](https://github.com/zju3dv/neuralbody)
+- [Neural Sparse Voxel Fields (NSVF)](https://github.com/facebookresearch/NSVF)
+- [NeRF++: Analyzing and Improving Neural Radiance Fields](https://github.com/Kai-46/nerfplusplus)
+
+- [KiloNeRF: Speeding up Neural Radiance Fields with Thousands of Tiny MLPs](https://github.com/creiser/kilonerf)
+- [MVSNeRF](https://arxiv.org/pdf/2103.15595.pdf)
+- [NeX: Real-time View Synthesis with Neural Basis Expansion](https://arxiv.org/pdf/2103.05606.pdf)
+- [Baking Neural Radiance Fields for Real-Time View Synthesis](https://arxiv.org/pdf/2103.14645.pdf)
+- [FastNerf](https://arxiv.org/pdf/2103.10380.pdf)
+- [PlenOctrees: For Real-time Rendering of Neural Radiance Fields](https://alexyu.net/plenoctrees/)
+
+- [UNISURF: Unifying Neural Implicit Surfaces and Radiance Fields for Multi-View Reconstruction](https://moechsle.github.io/unisurf/)
+- [Multiview Neural Surface Reconstruction by Disentangling Geometry and Appearance, Universal Differentiable Renderer for Implicit Neural Representations, UDR](https://arxiv.org/pdf/2003.09852.pdf)
+- [Multi-view 3D reconstruction using neural rendering. Unofficial implementation of UNISURF, VolSDF, NeuS and more.](https://pythonrepo.com/repo/ventusff-neurecon-python-imagery)
+
+
+- [StrayVisualizer](https://github.com/kekeblom/StrayVisualizer)
+- [open3d tutorial](http://www.open3d.org/docs/release/tutorial/pipelines/index.html)
+- [StrayScanner Data capture](https://apps.apple.com/ci/app/stray-scanner/id1557051662?l=en)
+- [iPhone 12 Pro Lidar Sensitivity](https://www.it-jim.com/blog/iphones-12-pro-lidar-how-to-get-and-interpret-data/)
+
+
+
+- [VIBE: Video Inference for Human Body Pose and Shape Estimation](https://github.com/mkocabas/VIBE)
+- [SMPLify-X](https://github.com/vchoutas/smplify-x), [SMPL-X](https://smpl-x.is.tue.mpg.de/), [SMPL](https://smpl.is.tue.mpg.de/)
+- [FrankMocap: A Strong and Easy-to-use Single View 3D Hand+Body Pose Estimator](https://github.com/facebookresearch/frankmocap)
+- [End-to-end Recovery of Human Shape and Pose](https://github.com/akanazawa/hmr), [SPIN: SMPL oPtimization IN the loop](https://github.com/nkolot/SPIN)
+- [Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+- [Controllable Person Image Synthesis with Attribute-Decomposed GAN](https://github.com/menyifang/ADGAN)
+- [PIFuHD: Multi-Level Pixel-Aligned Implicit Function for High-Resolution 3D Human Digitization (CVPR 2020)](https://github.com/facebookresearch/pifuhd)
+- [Debugging networks](https://jonathan-hui.medium.com/debug-a-deep-learning-network-part-5-1123c20f960d)
+-  [On the Continuity of Rotation Representations in Neural Networks](https://arxiv.org/pdf/1812.07035.pdf), [Tutorial blog](https://towardsdatascience.com/better-rotation-representations-for-accurate-pose-estimation-e890a7e1317f)
+
+
 
 <!-- https://www.360cities.net/help/stereo_panos
 
@@ -85,21 +206,3 @@ More and more AR and VR devices becoming ubiquitous and advancement in animation
 Being interested in application of AI/ML in the area of 3D graphics and animation and having a background in video encoding for conferencing, transmission and storage am proposing a low cost consumer grade volumetric video capture, storage, renderer and streaming solution for AR/VR end devices
 
  -->
-
-## Reference
-- [NeRF: Neural Radiance Fields](https://github.com/bmild/nerf)
-- [Neural Body: Implicit Neural Representations with Structured Latent Codes for Novel View Synthesis of Dynamic Humans](https://github.com/zju3dv/neuralbody)
-- [Neural Sparse Voxel Fields (NSVF)](https://github.com/facebookresearch/NSVF)
-- [NeRF++: Analyzing and Improving Neural Radiance Fields](https://github.com/Kai-46/nerfplusplus)
-- [PlenOctrees: For Real-time Rendering of Neural Radiance Fields](https://alexyu.net/plenoctrees/)
-- [KiloNeRF: Speeding up Neural Radiance Fields with Thousands of Tiny MLPs](https://github.com/creiser/kilonerf)
-- [VIBE: Video Inference for Human Body Pose and Shape Estimation](https://github.com/mkocabas/VIBE)
-- [SMPLify-X](https://github.com/vchoutas/smplify-x), [SMPL-X](https://smpl-x.is.tue.mpg.de/), [SMPL](https://smpl.is.tue.mpg.de/)
-- [FrankMocap: A Strong and Easy-to-use Single View 3D Hand+Body Pose Estimator](https://github.com/facebookresearch/frankmocap)
-- [End-to-end Recovery of Human Shape and Pose](https://github.com/akanazawa/hmr), [SPIN: SMPL oPtimization IN the loop](https://github.com/nkolot/SPIN)
-- [Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
-- [Controllable Person Image Synthesis with Attribute-Decomposed GAN](https://github.com/menyifang/ADGAN)
-- [PIFuHD: Multi-Level Pixel-Aligned Implicit Function for High-Resolution 3D Human Digitization (CVPR 2020)](https://github.com/facebookresearch/pifuhd)
-- [Debugging networks](https://jonathan-hui.medium.com/debug-a-deep-learning-network-part-5-1123c20f960d)
--  [On the Continuity of Rotation Representations in Neural Networks](https://arxiv.org/pdf/1812.07035.pdf), [Tutorial blog](https://towardsdatascience.com/better-rotation-representations-for-accurate-pose-estimation-e890a7e1317f)
-

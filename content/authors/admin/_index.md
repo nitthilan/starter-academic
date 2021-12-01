@@ -31,7 +31,7 @@ education:
   courses:
   - course: PhD in Artificial Intelligence
     institution: Washington State University, 3.95/4 CGPA
-    year: 2012 
+    year: 2022 (Pursuing) 
   - course: BE Electronics and  Communication
     institution: College of Engineering, Anna university, , 8.91/10 CGPA
     year: 2004
