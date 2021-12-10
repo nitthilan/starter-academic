@@ -64,10 +64,10 @@ The final stage, encodes the composited stereo image and compresses it into a vi
 ## Stage 2
 
 - Check the detailed architecture for the current implementation
-- Dataloader and feature extractor module based on depth - 1 day
-- Data generation using iPhone/iPad Pro - 0.5 day
+- Dataloader and feature extractor module based on depth - 1 day - Done
+- Data generation using iPhone/iPad Pro - 0.5 day - Done
 - Inverse depth space nerf++ renderer - 1 day
-- Training loop for non-rigid neural renderer - 2 days
+- Training loop for non-rigid neural renderer - 2 days - Done
 	- 3D sparse convolution
 	- raycasting based rendering using volumetric prediction head
 	- Dataloader and cost function implementation
@@ -150,6 +150,59 @@ However if it predicts surface normals along with the transmittance and RGB, the
 <!-- #### BO for training -->
 
 
+## Future Problems
+This section talks about possible future problems which need to be addressed if we do not have that data available. If camera paramters cannot be estimated using the phone logs then how do we go about estimating them and the issue associated with them. Simillarly, if the depth information available from Lidar is not available how would the complexity of the pipeline change?
+
+### Non-rigid body neural rendering:
+Extract 2D features and map it to SMPLX. We can adapt this to other non-rigid bodies like animals since they too have a mesh prior - like SMPL there is a mesh for babies and animals. Facebook has such a representation. We can add clothing related mesh prior assuming cloths of a particular form like free flowing etc and then apply this idea [There is a clothing prior https://qianlim.github.io/SCALE, https://cape.is.tue.mpg.de/]. Also, for using a single video - first register the person in their A pose or TPose and then use this info to map the person when he moves
+
+
+### Camera Paramter Estimation:
+Current estimation methods using Colmap is time consuming. It exponentially increases with the number of input images for estimation. In particular the 
+
+### Splitting Voxel Grid:
+What are the different ways a voxel grid can be created. Can r, theta, phi representation instead of voxels? Like Nerf++, for nearby regions split it into voxels in the range 0-1 and for further parts make it from 1-inf . The splitting mechanism can be num parts 10 => 1000 voxels, [1/r, 1/r^2, 1/r^3], [10, 100, 1000]/r. Also can Octree be tried in the 1/r region?
+
+### Bayesian Optimization:
+Calculate inference from different camera views and choose the right set of images to learn [Bayesian optimization for choosing the right set of subset images]. We use bayesian optimization to find areas which need more learning. The camera position (x,y,z, axis angle representation) is the input (at a higher levels regions withing the camera could also be used). The error values between predicted and the actual obtained during training could be used?. Sampling random areas within a image or using a downsampled image size to estimate the over all error based on the inference budget? Inference is costly and so you cannot evaluate all the positions. As the training progresses the old values become better and so has to be reevaluated? Can this be demonstrated with just nerf and assuming a infinite budget and training using images based on inference feedback evaluated at all positions ? Then if we make inference faster this can improve?
+
+### Nerf Heads:
+
+#### PlenOctree
+512x512 - NerfSH(PlenOctree) - Octree representation. Finally a single value for every tree node. Since we learn Spherical harmoics at each voxel, we just need to use triliniear interpolation to render the value in that position based on ray direction?
+
+#### Baking NeRF[Sparse Neural Radiance Grid (SNrG)]
+Grid of N^3 and data stored as MB of size B^3 for efficient access. Each voxel stores opacity, diffuse color (Cd), specular features (Vs)
+The evaluation for direction based effects is done by a single neural network evaluation which sums the features along the ray and produces a color
+Understand Specualr Features in SNrG, Spherical harmonics and Spherical gaussians in PlenOctree??
+
+#### NexMex 
+Uses a set of planes - plane sweep which tries to model the transparency and the Shperical harmonics values k0, k1, kN. 
+Mixed Implicit and explicit representation i.e. though they use a neural network to predict the k0, k1 etc and the alpha values they calculate it at fixed depths and store them in a array instead of directly using the neural network values. Further, they use the neural network for regularizing the k0, k1 and alpha values so that they do not overfit the data. 
+
+The good thing from here is they try to learn their own radial basis funtion instead of standard basis like fourier or SH or Spherical gaussian. 
+
+#### MVSNerf:
+Uses neighboring images to extract convolutional features i.e. if we have to generate view for a particular camera position, it identifies three (M) nearby images homomorphically projects them all to the reference camera position and creates a Cost Volume. All the processing is from the reference point of view (No global view of the object). Then it uses the color information appended from the neighboring views to regress 
+
+### Mechanisms for faster inference:
+- FastNerf: Caching techniques i.e. precalculating partial outputs for required directions and using that to optimze the rendering 
+- Decoupling view dependent and view-independent parts of the network and precomputing the view dependent parts earlier and doing only the view dependent part
+- Use SiREN for faster convergence
+
+
+### Non-visible voxels identification:
+We render alpha maps for all the training views using this voxel grid, keeping track of the maximum ray weight 1 − exp(−σiδi) at each voxel. Compared to naively thresholding by σ at each point, this method eliminates non-visible voxels.
+
+Module which evaluates the whole scene voxel by voxel and identifies voxels which have not been scene by the camera captured images
+this gives feedback on angles to take camera captures from
+can GANs or interpolation try filling these areas [Gan or Superresolution approaches for predicting intermediate unknown regions]
+
+
+
+
+
+
 
 
 ## Reference
@@ -165,6 +218,7 @@ However if it predicts surface normals along with the transmittance and RGB, the
 - [FastNerf](https://arxiv.org/pdf/2103.10380.pdf)
 - [PlenOctrees: For Real-time Rendering of Neural Radiance Fields](https://alexyu.net/plenoctrees/)
 
+<!-- Unifying surface rendering with volume rendering: -->
 - [UNISURF: Unifying Neural Implicit Surfaces and Radiance Fields for Multi-View Reconstruction](https://moechsle.github.io/unisurf/)
 - [Multiview Neural Surface Reconstruction by Disentangling Geometry and Appearance, Universal Differentiable Renderer for Implicit Neural Representations, UDR](https://arxiv.org/pdf/2003.09852.pdf)
 - [Multi-view 3D reconstruction using neural rendering. Unofficial implementation of UNISURF, VolSDF, NeuS and more.](https://pythonrepo.com/repo/ventusff-neurecon-python-imagery)
@@ -174,6 +228,10 @@ However if it predicts surface normals along with the transmittance and RGB, the
 - [open3d tutorial](http://www.open3d.org/docs/release/tutorial/pipelines/index.html)
 - [StrayScanner Data capture](https://apps.apple.com/ci/app/stray-scanner/id1557051662?l=en)
 - [iPhone 12 Pro Lidar Sensitivity](https://www.it-jim.com/blog/iphones-12-pro-lidar-how-to-get-and-interpret-data/)
+
+
+- [IBRNet: Learning Multi-View Image-Based Rendering](https://arxiv.org/pdf/2102.13090.pdf) -  - Read about this
+- [MVSNeRF: Fast Generalizable Radiance Field Reconstruction from Multi-View Stereo](https://arxiv.org/pdf/2103.15595.pdf)[this has result about all the implementation](https://github.com/apchenstu/mvsnerf/blob/main/renderer.ipynb)
 
 
 
@@ -187,6 +245,13 @@ However if it predicts surface normals along with the transmittance and RGB, the
 - [Debugging networks](https://jonathan-hui.medium.com/debug-a-deep-learning-network-part-5-1123c20f960d)
 -  [On the Continuity of Rotation Representations in Neural Networks](https://arxiv.org/pdf/1812.07035.pdf), [Tutorial blog](https://towardsdatascience.com/better-rotation-representations-for-accurate-pose-estimation-e890a7e1317f)
 
+
+<!-- Colmap, Camera parameter estimation -->
+- [Self calibraring neural radiance fields](https://github.com/POSTECH-CVLab/SCNeRF)
+- [Unofficial & improved implementation of NeRF--: Neural Radiance Fields Without Known Camera Parameters](https://pythonrepo.com/repo/ventusff-improved-nerfmm)
+- [NeRF−−: Neural Radiance Fields Without Known Camera Parameters](https://arxiv.org/pdf/2102.07064.pdf)
+- [BARF](https://chenhsuanlin.bitbucket.io/bundle-adjusting-NeRF/)
+[Pixel-Perfect Structure-from-Motion with Featuremetric Refinement](https://psarlin.com/pixsfm/), [Back to the Feature](https://github.com/cvg/pixloc)
 
 
 <!-- https://www.360cities.net/help/stereo_panos
