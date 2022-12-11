@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1 | Nitthilan</title>
+    <link>https://nitthilan.github.io/publication-type/1/</link>
+      <atom:link href="https://nitthilan.github.io/publication-type/1/index.xml" rel="self" type="application/rss+xml" />
+    <description>1</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>nitthilan@gmail.com</copyright><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://nitthilan.github.io/images/icon_hu794274cdbfab6a2e083ce074675524a2_29983_512x512_fill_lanczos_center_2.png</url>
+      <title>1</title>
+      <link>https://nitthilan.github.io/publication-type/1/</link>
+    </image>
+    
+    <item>
+      <title>GRAMARCH: A GPU-ReRAM based Heterogeneous Architecture for Neural Image Segmentation</title>
+      <link>https://nitthilan.github.io/publication/joardar-2020-gramarch/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://nitthilan.github.io/publication/joardar-2020-gramarch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PETNet: Polycount and Energy Trade-off Deep Networks for Producing 3D Objects from Images</title>
+      <link>https://nitthilan.github.io/publication/jayakodi-2020-petnet/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://nitthilan.github.io/publication/jayakodi-2020-petnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Uncertainty-Aware Search Framework for Multi-Objective Bayesian Optimization.</title>
+      <link>https://nitthilan.github.io/publication/belakaria-2020-uncertainty/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://nitthilan.github.io/publication/belakaria-2020-uncertainty/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

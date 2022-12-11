@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3D Volumetric Video Capture | Nitthilan</title>
+    <link>https://nitthilan.github.io/vol_vid_cap/</link>
+      <atom:link href="https://nitthilan.github.io/vol_vid_cap/index.xml" rel="self" type="application/rss+xml" />
+    <description>3D Volumetric Video Capture</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>nitthilan@gmail.com</copyright>
+    <image>
+      <url>https://nitthilan.github.io/vol_vid_cap/featured.png</url>
+      <title>3D Volumetric Video Capture</title>
+      <link>https://nitthilan.github.io/vol_vid_cap/</link>
+    </image>
+    
+  </channel>
+</rss>

@@ -1,0 +1,2300 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.2 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Nitthilan Kannappan Jayakodi">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="PhD in Artificial Intelligence / Machine Learning">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://nitthilan.github.io/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#1565c0">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.33319bbe33e1b9feff835521b777a249.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178463631-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-178463631-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+  
+
+
+  
+  
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Nitthilan">
+  
+
+  
+  <link rel="manifest" href="/index.webmanifest">
+  
+
+  <link rel="icon" type="image/png" href="/images/icon_hu794274cdbfab6a2e083ce074675524a2_29983_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu794274cdbfab6a2e083ce074675524a2_29983_180x180_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://nitthilan.github.io/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="twitter:site" content="@nitthilan">
+  <meta property="twitter:creator" content="@nitthilan">
+  
+  <meta property="og:site_name" content="Nitthilan">
+  <meta property="og:url" content="https://nitthilan.github.io/">
+  <meta property="og:title" content="Nitthilan">
+  <meta property="og:description" content="PhD in Artificial Intelligence / Machine Learning"><meta property="og:image" content="https://nitthilan.github.io/images/icon_hu794274cdbfab6a2e083ce074675524a2_29983_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="https://nitthilan.github.io/images/icon_hu794274cdbfab6a2e083ce074675524a2_29983_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    <meta property="og:updated_time" content="2020-01-01T00:00:00&#43;00:00">
+  
+
+  
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://nitthilan.github.io/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "url": "https://nitthilan.github.io/"
+}
+</script>
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Nitthilan</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.5f191f96acea84b5228d2c55baa910cd.js"></script>
+
+  
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Nitthilan</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Nitthilan</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/to_infinity_and_beyond"><span>To Infinity And Beyond</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications" data-target="#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#experience" data-target="#experience"><span>Work</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/recognition"><span>Recognitions</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/files/CV_5.0.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+<span class="js-widget-page d-none"></span>
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  <section id="about" class="home-section wg-about  "  >
+   <div class="home-section-bg " ></div>
+    <div class="container">
+
+    
+
+      
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-12 col-lg-4">
+    <div id="profile">
+
+      
+      
+      <img class="avatar avatar-circle" src="/author/nitthilan-kannappan-jayakodi/avatar_hu851017bc20c52d405f70b37f14a9151b_67212_270x270_fill_q90_lanczos_center.jpg" alt="Nitthilan Kannappan Jayakodi">
+      
+
+      <div class="portrait-title">
+        <h2>Nitthilan Kannappan Jayakodi</h2>
+        <h3>PhD in Artificial Intelligence / Machine Learning</h3>
+
+        
+        <h3>
+          <a href="https://school.eecs.wsu.edu/" target="_blank" rel="noopener">
+          <span>Washington State University</span>
+          </a>
+        </h3>
+        
+      </div>
+
+      <ul class="network-icon" aria-hidden="true">
+        
+        
+        
+        
+        
+        
+        
+        
+          
+        
+        <li>
+          <a href="https://scholar.google.com/citations?user=_CWcMj4AAAAJ&amp;hl=en&amp;authuser=1" target="_blank" rel="noopener" aria-label="google-scholar">
+            <i class="ai ai-google-scholar big-icon"></i>
+          </a>
+        </li>
+        
+        
+        
+        
+          
+        
+        
+        
+        
+        
+          
+        
+        <li>
+          <a href="https://www.linkedin.com/in/nitthilan/" target="_blank" rel="noopener" aria-label="linkedin-in">
+            <i class="fab fa-linkedin-in big-icon"></i>
+          </a>
+        </li>
+        
+        
+        
+        
+          
+        
+        
+        
+        
+        
+        <li>
+          <a href="mailto:nitthilan@gmail.com"  aria-label="envelope">
+            <i class="fas fa-envelope big-icon"></i>
+          </a>
+        </li>
+        
+        
+        
+        
+          
+        
+        
+        
+        
+        
+          
+        
+        <li>
+          <a href="https://github.com/nitthilan" target="_blank" rel="noopener" aria-label="github">
+            <i class="fab fa-github big-icon"></i>
+          </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+          
+        
+        <li>
+          <a href="/files/CV_5.0.pdf"  aria-label="cv">
+            <i class="ai ai-cv big-icon"></i>
+          </a>
+        </li>
+        
+        
+        
+        
+          
+        
+        
+        
+        
+        
+          
+        
+        <li>
+          <a href="https://www.facebook.com/kannappanjayakodi.nitthilan" target="_blank" rel="noopener" aria-label="facebook">
+            <i class="fab fa-facebook big-icon"></i>
+          </a>
+        </li>
+        
+      </ul>
+
+    </div>
+  </div>
+  <div class="col-12 col-lg-8">
+
+    
+    <h1>Biography</h1>
+
+    <div class="article-style">
+      <p>I am  Nitthilan, pursuing PhD in AI/ML for Video/Image/3D Graphics. Interested in image and video based motion capture using pose based estimation (SMPLX, FrankMocap, SMPLify-X), clothing and hair 3D model representation using Implicit Neural Representation (NeRF, NSVF, Neural Body) and Deep generative models (GAN, VQVAE) .</p>
+<ul>
+<li>12 years of software product development experience with wide exposure in building end to end
+systems from embedded to web technologies.</li>
+<li>Passionate about developing optimized algorithms and exploring different domains. Developed video applications for conferencing, broadcast, and storage. Worked on ME/RC for H264/MPEG and developed plugin/webRTC/Html5 based video endpoints</li>
+</ul>
+<p>Current Focus Area:</p>
+<ul>
+<li>Extracting facial pose and full body motion capture (dance steps, sport stances, exercise and fitness poses) data from monocular video (YouTube, TikTok) using SMPLX prior (FrankMocap, SMPLify-X, VIBE)</li>
+<li>Controllable cloth, hair attribute and facial mocap of dynamic humans using SMPLX anchored latent codes (NeuralBody, FrankMocap, HumanParser)</li>
+<li>Accelerating learning of the 3D Neural Scene representation using smaller neural nets and latent representation at a voxel level [NeRF, NSVF, KiloNeRF].</li>
+</ul>
+<p>PhD Research: My research is at the intersection of Machine Learning (ML) and Computing Systems (Sys). The overarching theme of my research is to bridge these two areas. Specifically, I’m working towards the vision of Edge AI to efficiently deploy AI solutions for emerging applications (e.g., robotics, selfdriving cars, augmented/virtual reality, and smart health) on edge platforms that are constrained by resources (power, compute, and memory).</p>
+<p>(a) Developed a novel hardware-aware design and optimization framework to trade-off power, performance, and accuracy for performing inference using deep neural networks.</p>
+<p>(b) Studied effective instantiations of this framework for different applications - Convolutional neural networks for image classification, Graph convolutional networks for 3D computer vision, and Generative adversarial networks for image manipulation tasks.</p>
+<p>(c) Published papers at top-tier venues including three journal papers (ACM/IEEE Transactions on CAD and Embedded Computing Systems) and four conference papers (AAAI, DAC, DATE, ICCAD). One journal paper is under review at Journal of Artificial Intelligence Research.</p>
+
+    </div>
+
+    <div class="row">
+
+      
+      <div class="col-md-5">
+        <div class="section-subheading">Interests</div>
+        <ul class="ul-interests">
+          
+          <li>Extracting facial and full body pose from monocular images and videos</li>
+          
+          <li>Neural scene representation for fast and high-quality free-viewpoint</li>
+          
+          <li>Generative Models - GAN, VAE - Video/Image/3D Graphics</li>
+          
+          <li>Bayesian Optimization Approaches</li>
+          
+          <li>Artificial General Intelligence</li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <div class="col-md-7">
+        <div class="section-subheading">Education</div>
+        <ul class="ul-edu fa-ul">
+          
+          <li>
+            <i class="fa-li fas fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">PhD in Artificial Intelligence, 2022 (Pursuing)</p>
+              <p class="institution">Washington State University, 3.95/4 CGPA</p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="fa-li fas fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">BE Electronics and  Communication, 2004</p>
+              <p class="institution">College of Engineering, Anna university, , 8.91/10 CGPA</p>
+            </div>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+    </div>
+  </div>
+</div>
+
+
+    
+
+    </div>
+  </section>
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  <section id="skills" class="home-section wg-featurette  "  >
+   <div class="home-section-bg " ></div>
+    <div class="container">
+
+    
+
+      
+
+
+<div class="row featurette">
+  
+  <div class="col-md-12 section-heading">
+    <h1>Skills</h1>
+    
+  </div>
+  
+
+  
+
+  
+  
+  
+  
+    
+  
+  <div class="col-12 col-sm-4">
+    
+    <div class="featurette-icon"><i class="fab fa-python"></i></div>
+    
+    <div class="section-subheading">PyTorch, Keras (DL Framework)</div>
+    <p>90%</p>
+  </div>
+  
+  
+  
+  
+    
+  
+  <div class="col-12 col-sm-4">
+    
+    <div class="featurette-icon"><i class="fab fa-cuttlefish"></i></div>
+    
+    <div class="section-subheading">C, C++, Embedded Systems</div>
+    <p>90%</p>
+  </div>
+  
+  
+  
+  
+    
+  
+  <div class="col-12 col-sm-4">
+    
+    <div class="featurette-icon"><i class="fab fa-html5"></i></div>
+    
+    <div class="section-subheading">Full Stack (MEAN stack)</div>
+    <p>90%</p>
+  </div>
+  
+  
+  
+  
+    
+  
+  <div class="col-12 col-sm-4">
+    
+    <div class="featurette-icon"><i class="fas fa-photo-video"></i></div>
+    
+    <div class="section-subheading">Video Codec (SVC, H265, H264, MPEG2/4)</div>
+    <p>90%</p>
+  </div>
+  
+</div>
+
+
+    
+
+    </div>
+  </section>
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  <section id="experience" class="home-section wg-experience  "  >
+   <div class="home-section-bg " ></div>
+    <div class="container">
+
+    
+      <div class="row  ">
+      
+        
+          <div class="col-12 col-lg-4 section-heading">
+            <h1>Experience</h1>
+            
+          </div>
+        
+      
+    
+
+      
+
+
+
+
+<div class="col-12 col-lg-8">
+  
+
+  
+  
+  
+  <div class="row experience">
+    
+    <div class="col-auto text-center flex-column d-none d-sm-flex">
+      <div class="row h-50">
+        <div class="col ">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+      <div class="m-2">
+        <span class="badge badge-pill border ">&nbsp;</span>
+      </div>
+      <div class="row h-50">
+        <div class="col border-right">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+    </div>
+    
+    <div class="col py-2">
+      <div class="card">
+        <div class="card-body">
+          <div class="section-subheading card-title exp-title text-muted mt-0 mb-1">Senior Staff Developer (Technical Architect)</div>
+          <div class="section-subheading card-title exp-company text-muted my-0"><a href="https://www.poly.com/us/en" target="_blank" rel="noopener">Polycom</a></div>
+          <div class="text-muted exp-meta">
+            May 2012 –
+            
+              Aug 2017
+            
+            
+              <span class="middot-divider"></span>
+              <span>Bangalore, India</span>
+            
+          </div>
+          <div class="card-text"><p>Responsibilities include product design, implementation, testing, and delivery:</p>
+<ul>
+<li>Successful deployments of Polycom Telepresence solutions @ major institutions and companies</li>
+<li>Video Conferencing plugin for chrome 64 bit using PPAPI</li>
+<li>RTP, RDP and HTML5 based Content Collaboration platform between MCU, Lync and Browser endpoints</li>
+<li>Automation Platform for bringing up Infrastructure for Video as a service on VMWare</li>
+<li>Platform Director: Life cycle management of virtual instances on VMWare using viJava</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row experience">
+    
+    <div class="col-auto text-center flex-column d-none d-sm-flex">
+      <div class="row h-50">
+        <div class="col border-right">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+      <div class="m-2">
+        <span class="badge badge-pill border ">&nbsp;</span>
+      </div>
+      <div class="row h-50">
+        <div class="col border-right">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+    </div>
+    
+    <div class="col py-2">
+      <div class="card">
+        <div class="card-body">
+          <div class="section-subheading card-title exp-title text-muted mt-0 mb-1">Lead Engineer / Senior Engineer</div>
+          <div class="section-subheading card-title exp-company text-muted my-0"><a href="https://www.ittiam.com/" target="_blank" rel="noopener">Ittiam Systems</a></div>
+          <div class="text-muted exp-meta">
+            Aug 2007 –
+            
+              May 2012
+            
+            
+              <span class="middot-divider"></span>
+              <span>Bangalore, India</span>
+            
+          </div>
+          <div class="card-text"><p>Responsibilities include product design, implementation, testing, and delivery:</p>
+<ul>
+<li>Managed small teams of size 4-5 people</li>
+<li>Successfully delivered to customers like Sony, Harman, Pioneer, Amagi, Samsung, Huwawei, Mango Systems, Parrot Systems,</li>
+<li>Mpeg2 (MP@HL) HD(1080i@30fps) Encoder/Transcoder for Broadcast on Netra (IVAHD Accelerated)</li>
+<li>MPEG4 Simple Profile (SP) HD(720p@30fps) Encoder for Smart Phones on OMAP34xx (Arm+DSP+IVA)</li>
+<li>Mpeg4 SP D1 (480p@30fps) Encoder for Portable Media Player and Recorder on C64x+ DSP (OMAP3430)</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row experience">
+    
+    <div class="col-auto text-center flex-column d-none d-sm-flex">
+      <div class="row h-50">
+        <div class="col border-right">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+      <div class="m-2">
+        <span class="badge badge-pill border ">&nbsp;</span>
+      </div>
+      <div class="row h-50">
+        <div class="col ">&nbsp;</div>
+        <div class="col">&nbsp;</div>
+      </div>
+    </div>
+    
+    <div class="col py-2">
+      <div class="card">
+        <div class="card-body">
+          <div class="section-subheading card-title exp-title text-muted mt-0 mb-1">Senior Engineer R&amp;D Video Codec</div>
+          <div class="section-subheading card-title exp-company text-muted my-0"><a href="https://www.tataelxsi.com/" target="_blank" rel="noopener">Tata Elxsi</a></div>
+          <div class="text-muted exp-meta">
+            Aug 2004 –
+            
+              Aug 2007
+            
+            
+              <span class="middot-divider"></span>
+              <span>Bangalore, India</span>
+            
+          </div>
+          <div class="card-text"><ul>
+<li>Managed remote teams for Stretch Inc in H264, MPEG4 codec development</li>
+<li>Managed design development and delivery for codecs for Canon Camera Systems</li>
+<li>Developed codec on Intel SSE tecnology for MPEG2, H264 codecs. Video Encoders.</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+
+
+    
+      </div>
+    
+
+    </div>
+  </section>
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  <section id="publications" class="home-section wg-pages  "  >
+   <div class="home-section-bg " ></div>
+    <div class="container">
+
+    
+      <div class="row  ">
+      
+        
+          <div class="col-12 col-lg-4 section-heading">
+            <h1>Recent Publications</h1>
+            
+          </div>
+        
+      
+    
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+<div class="col-12 col-lg-8">
+
+  <div class="alert alert-note">
+  <div>
+    Quickly discover relevant content by <a href="./publication/">filtering publications</a>.
+  </div>
+</div>
+
+
+  
+    
+      
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/nitthilan-kanappan-jayakodi/">Nitthilan Kanappan Jayakodi</a></span>, <span >
+      <a href="/author/syrine-belakaria/">Syrine Belakaria</a></span>, <span >
+      <a href="/author/aryan-deshwal/">Aryan Deshwal</a></span>, <span >
+      <a href="/author/janardhan-rao-doppa/">Janardhan Rao Doppa</a></span>
+  </span>
+  (2020).
+  <a href="/publication/jayakodi-2020-design/">Design and Optimization of Energy-Accuracy Tradeoff Networks for Mobile Platforms via Pretrained Deep Models</a>.
+  <em>ACM Transactions on Embedded Computing Systems (TECS)</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://dl.acm.org/doi/pdf/10.1145/3366636" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/jayakodi-2020-design/cite.bib">
+  Cite
+</a>
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/nitthilan/ml_tutorials" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+    
+  
+    
+      
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/biresh-kumar-joardar/">Biresh Kumar Joardar</a></span>, <span >
+      <a href="/author/nitthilan-kannappan-jayakodi/">Nitthilan Kannappan Jayakodi</a></span>, <span >
+      <a href="/author/janardhan-rao-doppa/">Janardhan Rao Doppa</a></span>, <span >
+      <a href="/author/hai-li/">Hai Li</a></span>, <span >
+      <a href="/author/partha-pratim-pande/">Partha Pratim Pande</a></span>, <span >
+      <a href="/author/krishnendu-chakrabarty/">Krishnendu Chakrabarty</a></span>
+  </span>
+  (2020).
+  <a href="/publication/joardar-2020-gramarch/">GRAMARCH: A GPU-ReRAM based Heterogeneous Architecture for Neural Image Segmentation</a>.
+  <em>2020 Design, Automation &amp; Test in Europe Conference &amp; Exhibition (DATE)</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=9116273" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/joardar-2020-gramarch/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+    
+  
+    
+      
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/nitthilan-kanappan-jayakodi/">Nitthilan Kanappan Jayakodi</a></span>, <span >
+      <a href="/author/janardhan-rao-doppa/">Janardhan Rao Doppa</a></span>, <span >
+      <a href="/author/partha-pratim-pande/">Partha Pratim Pande</a></span>
+  </span>
+  (2020).
+  <a href="/publication/jayakodi-2020-petnet/">PETNet: Polycount and Energy Trade-off Deep Networks for Producing 3D Objects from Images</a>.
+  <em>2020 57th ACM/IEEE Design Automation Conference (DAC)</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=9218525https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=9218525" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/jayakodi-2020-petnet/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+    
+  
+    
+      
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/syrine-belakaria/">Syrine Belakaria</a></span>, <span >
+      <a href="/author/aryan-deshwal/">Aryan Deshwal</a></span>, <span >
+      <a href="/author/nitthilan-kannappan-jayakodi/">Nitthilan Kannappan Jayakodi</a></span>, <span >
+      <a href="/author/janardhan-rao-doppa/">Janardhan Rao Doppa</a></span>
+  </span>
+  (2020).
+  <a href="/publication/belakaria-2020-uncertainty/">Uncertainty-Aware Search Framework for Multi-Objective Bayesian Optimization.</a>.
+  <em>AAAI</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/pdf/2008.07029.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/belakaria-2020-uncertainty/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+    
+  
+    
+      
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/shubhomoy-das/">Shubhomoy Das</a></span>, <span >
+      <a href="/author/md-rakibul-islam/">Md Rakibul Islam</a></span>, <span >
+      <a href="/author/nitthilan-kannappan-jayakodi/">Nitthilan Kannappan Jayakodi</a></span>, <span >
+      <a href="/author/janardhan-rao-doppa/">Janardhan Rao Doppa</a></span>
+  </span>
+  (2019).
+  <a href="/publication/das-2019-active/">Active Anomaly Detection via Ensembles: Insights, Algorithms, and Interpretability</a>.
+  <em>arXiv preprint arXiv:1901.08930</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/pdf/1901.08930.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/das-2019-active/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+    
+  
+    
+      
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/aryan-deshwal/">Aryan Deshwal</a></span>, <span >
+      <a href="/author/nitthilan-kanappan-jayakodi/">Nitthilan Kanappan Jayakodi</a></span>, <span >
+      <a href="/author/biresh-kumar-joardar/">Biresh Kumar Joardar</a></span>, <span >
+      <a href="/author/janardhan-rao-doppa/">Janardhan Rao Doppa</a></span>, <span >
+      <a href="/author/partha-pratim-pande/">Partha Pratim Pande</a></span>
+  </span>
+  (2019).
+  <a href="/publication/deshwal-2019-moos/">MOOS: A multi-objective design space exploration and optimization framework for NoC enabled manycore systems</a>.
+  <em>ACM Transactions on Embedded Computing Systems (TECS)</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://dl.acm.org/doi/pdf/10.1145/3358206" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/deshwal-2019-moos/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+    
+  
+    
+      
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/nitthilan-kannappan-jayakodi/">Nitthilan Kannappan Jayakodi</a></span>, <span >
+      <a href="/author/anwesha-chatterjee/">Anwesha Chatterjee</a></span>, <span >
+      <a href="/author/wonje-choi/">Wonje Choi</a></span>, <span >
+      <a href="/author/janardhan-rao-doppa/">Janardhan Rao Doppa</a></span>, <span >
+      <a href="/author/partha-pratim-pande/">Partha Pratim Pande</a></span>
+  </span>
+  (2019).
+  <a href="/publication/kannappan-2019-trading/">Trading-off Accuracy and Energy of Deep Inference on Embedded Systems: A Co-Design Approach</a>.
+  <em>arXiv</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/kannappan-2019-trading/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+    
+  
+    
+      
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/shubhomoy-das/">Shubhomoy Das</a></span>, <span >
+      <a href="/author/md-rakibul-islam/">Md Rakibul Islam</a></span>, <span >
+      <a href="/author/nitthilan-kannappan-jayakodi/">Nitthilan Kannappan Jayakodi</a></span>, <span >
+      <a href="/author/janardhan-rao-doppa/">Janardhan Rao Doppa</a></span>
+  </span>
+  (2018).
+  <a href="/publication/das-2018-active/">Active anomaly detection via ensembles</a>.
+  <em>arXiv preprint arXiv:1809.06477</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/pdf/1809.06477.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/das-2018-active/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+    
+  
+    
+      
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/nitthilan-kannappan-jayakodi/">Nitthilan Kannappan Jayakodi</a></span>, <span >
+      <a href="/author/anwesha-chatterjee/">Anwesha Chatterjee</a></span>, <span >
+      <a href="/author/wonje-choi/">Wonje Choi</a></span>, <span >
+      <a href="/author/janardhan-rao-doppa/">Janardhan Rao Doppa</a></span>, <span >
+      <a href="/author/partha-pratim-pande/">Partha Pratim Pande</a></span>
+  </span>
+  (2018).
+  <a href="/publication/jayakodi-2018-trading/">Trading-off accuracy and energy of deep inference on embedded systems: A co-design approach</a>.
+  <em>IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/pdf/1901.10584.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/jayakodi-2018-trading/cite.bib">
+  Cite
+</a>
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/nitthilan/ml_tutorials" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+    
+  
+
+  
+  
+  
+
+</div>
+
+
+    
+      </div>
+    
+
+    </div>
+  </section>
+
+
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    <a href="mailto:nitthilan@gmail.com">nitthilan@gmail.com</a>
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+        <div class="search-hit-content">
+          <div class="search-hit-name">
+            <a href="{{relpermalink}}">{{title}}</a>
+            <div class="article-metadata search-hit-type">{{type}}</div>
+            <p class="search-hit-description">{{snippet}}</p>
+          </div>
+        </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    
+
+    
+    
+    
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.db25f1c075d050faafded35b9462523c.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

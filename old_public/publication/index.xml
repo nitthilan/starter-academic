@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications | Nitthilan</title>
+    <link>https://nitthilan.github.io/publication/</link>
+      <atom:link href="https://nitthilan.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publications</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>nitthilan@gmail.com</copyright>
+    <image>
+      <url>https://nitthilan.github.io/images/icon_hu794274cdbfab6a2e083ce074675524a2_29983_512x512_fill_lanczos_center_2.png</url>
+      <title>Publications</title>
+      <link>https://nitthilan.github.io/publication/</link>
+    </image>
+    
+    <item>
+      <title>Design and Optimization of Energy-Accuracy Tradeoff Networks for Mobile Platforms via Pretrained Deep Models</title>
+      <link>https://nitthilan.github.io/publication/jayakodi-2020-design/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://nitthilan.github.io/publication/jayakodi-2020-design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GRAMARCH: A GPU-ReRAM based Heterogeneous Architecture for Neural Image Segmentation</title>
+      <link>https://nitthilan.github.io/publication/joardar-2020-gramarch/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://nitthilan.github.io/publication/joardar-2020-gramarch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PETNet: Polycount and Energy Trade-off Deep Networks for Producing 3D Objects from Images</title>
+      <link>https://nitthilan.github.io/publication/jayakodi-2020-petnet/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://nitthilan.github.io/publication/jayakodi-2020-petnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Uncertainty-Aware Search Framework for Multi-Objective Bayesian Optimization.</title>
+      <link>https://nitthilan.github.io/publication/belakaria-2020-uncertainty/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://nitthilan.github.io/publication/belakaria-2020-uncertainty/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Active Anomaly Detection via Ensembles: Insights, Algorithms, and Interpretability</title>
+      <link>https://nitthilan.github.io/publication/das-2019-active/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://nitthilan.github.io/publication/das-2019-active/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MOOS: A multi-objective design space exploration and optimization framework for NoC enabled manycore systems</title>
+      <link>https://nitthilan.github.io/publication/deshwal-2019-moos/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://nitthilan.github.io/publication/deshwal-2019-moos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Trading-off Accuracy and Energy of Deep Inference on Embedded Systems: A Co-Design Approach</title>
+      <link>https://nitthilan.github.io/publication/kannappan-2019-trading/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://nitthilan.github.io/publication/kannappan-2019-trading/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Active anomaly detection via ensembles</title>
+      <link>https://nitthilan.github.io/publication/das-2018-active/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://nitthilan.github.io/publication/das-2018-active/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Trading-off accuracy and energy of deep inference on embedded systems: A co-design approach</title>
+      <link>https://nitthilan.github.io/publication/jayakodi-2018-trading/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://nitthilan.github.io/publication/jayakodi-2018-trading/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

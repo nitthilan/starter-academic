@@ -1,0 +1,27 @@
+https://www.youtube.com/watch?v=oYFFEkK4oIw&ab_channel=FraunhoferHHI - 3D streaming
+
+https://www.hhi.fraunhofer.de/en/departments/vca/research-groups/multimedia-communications/research-topics/volumetric-video-formats.html - Volumetric video formats
+
+
+
+
+Next feebback:
+Add individual module figures
+
+First feed back:
+A simple capture -> Cloud -> AR and VR visualisation diagram
+
+Separate capture and rendering pipeline
+
+More photos for each section - multi view 
+
+Heading font and color more prominent - make sure the heading and sections are prominent
+
+Move to the first click instead of other
+
+
+Scanning interiors of rooms and houses and encoding it into neural networks
+
+Make the about and other section links more prominent
+
+remove the date

@@ -1,0 +1,1237 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.2 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Nitthilan Kannappan Jayakodi">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="PhD in Artificial Intelligence / Machine Learning">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://nitthilan.github.io/vol_vid_cap/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#1565c0">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.33319bbe33e1b9feff835521b777a249.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178463631-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-178463631-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+  
+
+
+  
+  
+
+  
+  <link rel="alternate" href="/vol_vid_cap/index.xml" type="application/rss+xml" title="Nitthilan">
+  
+
+  
+  <link rel="manifest" href="/index.webmanifest">
+  
+
+  <link rel="icon" type="image/png" href="/images/icon_hu794274cdbfab6a2e083ce074675524a2_29983_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu794274cdbfab6a2e083ce074675524a2_29983_180x180_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://nitthilan.github.io/vol_vid_cap/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@nitthilan">
+  <meta property="twitter:creator" content="@nitthilan">
+  
+  <meta property="og:site_name" content="Nitthilan">
+  <meta property="og:url" content="https://nitthilan.github.io/vol_vid_cap/">
+  <meta property="og:title" content="3D Volumetric Video Capture | Nitthilan">
+  <meta property="og:description" content="PhD in Artificial Intelligence / Machine Learning"><meta property="og:image" content="https://nitthilan.github.io/vol_vid_cap/featured.png">
+  <meta property="twitter:image" content="https://nitthilan.github.io/vol_vid_cap/featured.png"><meta property="og:locale" content="en-us">
+  
+    
+  
+
+  
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>3D Volumetric Video Capture | Nitthilan</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.5f191f96acea84b5228d2c55baa910cd.js"></script>
+
+  
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Nitthilan</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Nitthilan</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/to_infinity_and_beyond"><span>To Infinity And Beyond</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#experience"><span>Work</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/recognition"><span>Recognitions</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/files/CV_5.0.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>3D Volumetric Video Capture</h1>
+
+  
+  <p class="page-subtitle">Capturing the world one voxel at a time</p>
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    Dec 11, 2022
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 253px;">
+  <div style="position: relative">
+    <img src="/vol_vid_cap/featured_huc99e38b0cfc7dc387f4af558eb1ecc1b_3181574_720x0_resize_lanczos_2.png" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+<div class="universal-wrapper">
+  
+  <div class="article-style"><p><a href="#about">[ABOUT]</a> - <a href="#overview">[OVERVIEW]</a> - <a href="#Deep-Neural-Radiance-Field-based-3D-Volumetric-Video-Capture-Rendering-and-Streaming">[ARCHITECTURE]</a> - <a href="#neural-encoder-architecture-and-pipeline">[NEURAL RENDERING PIPELINE]</a>- <a href="#progress">[PROGRESS]</a> - <a href="#references">[REFERENCES]</a> - <a href="https://github.com/nitthilan/volumetric_video" target="_blank" rel="noopener">[CODE (under dev)]</a> - <a href="/other_problems/">[OTHER PROBLEMS]</a></p>
+<h1 id="about">About</h1>
+<p>Videos and photos are used to capture our happy and memorable moments we shared with our friends and family. It takes us back to the place and time when the event happened, helping us reminiscence the moment. Instead, how would it be if we could capture these fleeting moments in 3D? Store and share them with your friends and family like you share photos and videos? Invite them to that moment so that we all could relive it? We are building a system to recreate an immersive experience to bring your memories to life in VR. Wanna ride along mail me @ <a href="mailto:nitthilan@gmail.com">nitthilan@gmail.com</a></p>
+<div class="container" style="display: flex;">
+    <div style="flex-grow: 1;">
+        <video src="https://user-images.githubusercontent.com/4926564/140678640-dd953bc5-185f-4f3a-8a56-6ce225625334.mov" autoplay loop controls="controls" style="width: 500px;"> </video> 
+    </div>
+    <div style="flex-grow: 1;">
+        <video src="https://user-images.githubusercontent.com/4926564/140678863-6f5c790f-f705-44fa-a1e0-47f311ddbe13.mp4" controls="controls" style="width: 500px;" autoplay loop>
+		</video>
+    </div>
+</div>
+<h1 id="overview">Overview</h1>
+<p>To give a overview of our solution, a user scans the 3D environment he wants to store, as a video capturing it from different viewing angles. He can use multiple cameras to capture more information about the environment like actions. We use artificial intelligence to reconstruct and encode the 3D environment using the different videos captured by the user. Unlike other methods which use laser or depth sensors to estimate point clouds, we just use the scanned RGB monocular videos to reconstruct the environment. Finally, this captured 3D environment is viewed using a VR headset in a 360-degree stereoscopic panorama. A stereoscopic photo is a pair of images, taken simultaneously with two lenses placed like our eyes, about 65 mm apart and looking in the same direction. When presented to the two eyes by a stereoscope, these images give most people the impression of seeing a 3D space. A stereoscopic panorama is a pair of 360-degree images, which when viewed with synchronized pano viewers (like a VR headset) presents a stereo pair. Further, as the user moves around in the environment, we generate the corresponding stereo pair based on the user position to give the user an immersive 3D experience.</p>
+<p><img src="overview.png" alt="screen reader text" title="Overview"></p>
+<h2 id="deep-neural-radiance-field-based-3d-volumetric-video-capture-rendering-and-streaming">Deep Neural Radiance Field-based 3D Volumetric Video Capture, Rendering, and Streaming</h2>
+<p>Let&rsquo;s deep dive into the details of our solution. To provide a user with an immersive experience, the whole media pipeline from capture, storage, rendering, and streaming should be capable of handling 3D volumetric video data. Volumetric video capture technology is a technique that digitizes a three-dimensional space (i.e., the volume of space), object, or environment. The captured object can be digitized and transferred to the web, mobile, or virtual worlds and viewed in 3D. It does not have a set viewpoint, so the end-user can watch and interact with it from all angles, enhancing their experience and heightening their sense of immersion and engagement. The difference between 360-degree video and volumetric video is the depth provided with volume. In a 360-degree video, users can only view the action from a single, constant depth. With volumetric video, the end-user can play director and control how far in or out they want to explore the scene.</p>
+<p><img src="volumetric_video.png" alt="screen reader text" title="System Architecture"></p>
+<p>First, to capture 3D volumetric data, we would require a multi-camera system, which captures the action from different views. After capturing the data as a set of videos we process the videos such that we break down the scene into a less important background region, a center stage foreground area where the actual action happens. This helps in encoding the background with less detail and the foreground with higher precision. Further, to enhance the quality, we separate the objects in the foreground region into rigid and non-rigid human bodies. In effect, we split the scene into three prominent regions (a) Foreground Rigid Bodies (b) Foreground Non-Rigid (Human) Bodies (c) Background Region. We process them separately as three different pipelines. Unlike, other solutions which encode objects as meshes and textures, we encode each region using a deep neural radiance field-based solution. Next, to provide an immersive visualization, the three regions are rendered separately into a stereo 360-degree panoramic image for each time instant and stream it to a Unity VR app running on a VR headset. Thus we breakdown our system into the following components:</p>
+<h3 id="a-multi-view-capture-system">(a) Multi-view capture system</h3>
+<p>We design a capture system that ranges from 1 to N monocular RGB cameras. This could be as simple as one or more mobile cameras capturing a performance or scene from different angles. Since our setup is simple it enables anyone to create content that could be immersively consumed. The capture is timestamped so that multiple captures can be correlated for a particular time instance across different cameras. These different video streams are then uploaded to a cloud server.</p>
+<h3 id="b-split-neural-encoder-renderer-and-compositor">(b) Split neural encoder, renderer and compositor</h3>
+<p>The next stage involves splitting the data into foreground and background, rigid and non-rigid (human) bodies. Each of these components is then encoded separately into a deep neural network. Background region is encoded using Nerf++ based network. The foreground requires optimized rendering (or inference) and many solution options are to be investigated. Some of the options are KiloNerf, PlenOctrees. Finally, the non-rigid body is encoded using Neural body-based network solutions. The scene is composited by rendering the individual neural networks encoded for the three separate regions based on the position and viewing angle feedback from the user. This composited stereo 360-degree panorama image is then passed on to the next stage to be compressed and streamed</p>
+<h3 id="c-360-stereo-video-encoder">(c) 360 Stereo video encoder</h3>
+<p>The final stage, encodes the composited stereo image and compresses it into a video stream (H264, MPEG, MJPEG) and streamed to the VR headset. A Unity-based VR app displays the compressed stream on the skybox shader to provide an immersive visualization of the captured sequence to the end-user</p>
+<h1 id="progress">Progress</h1>
+<h2 id="stage-2">Stage 2</h2>
+<ul>
+<li>
+<p>Check the detailed architecture for the current implementation</p>
+</li>
+<li>
+<p>Dataloader and feature extractor module based on depth - 1 day - Done</p>
+</li>
+<li>
+<p>Data generation using iPhone/iPad Pro - 0.5 day - Done</p>
+</li>
+<li>
+<p>Inverse depth space nerf++ renderer - 1 day</p>
+</li>
+<li>
+<p>Training loop for non-rigid neural renderer - 2 days - Done</p>
+<ul>
+<li>3D sparse convolution</li>
+<li>raycasting based rendering using volumetric prediction head</li>
+<li>Dataloader and cost function implementation</li>
+</ul>
+</li>
+<li>
+<p>Testing and Debugging (Completion of basic pipeline) - 2 days</p>
+</li>
+<li>
+<p>Experiment with surface prediction head - 2 day</p>
+</li>
+<li>
+<p>Non-rigid volume renderer - 3 days</p>
+<ul>
+<li>Pose estimation using LiDAR</li>
+<li>Volume feature generator using ray triangle intersection</li>
+<li>Testing and Debugging</li>
+</ul>
+</li>
+<li>
+<p>Unity VR application using hand gestures and locomotion - 3 days</p>
+</li>
+</ul>
+<h2 id="stage-1">Stage 1</h2>
+<ul>
+<li>Individual modules are available for each module</li>
+<li>Implemented a end to end pipeline from capturing a video to rendering it and visualizing the output using a VR headset</li>
+<li>Baseline modules used:
+<ul>
+<li>Colmap: To learn camera parameters</li>
+<li>Nerf++: Encoding unbound scenes using an inverted sphere parameterization</li>
+<li>Unity Oculus VR App: Rendering Stereo 360 degree panoroma images at different camera positions</li>
+</ul>
+</li>
+<li>Learnings:
+<ul>
+<li>Colmap takes exponentially more time to identify camera parameters when the number of images to be registered are large. The mapper module spends 17 minutes for 200 odd images and this increases to 1-2 hours with 500 images and larger dimension</li>
+<li>Training time for Nerf++ - Takes 18-24 hours on a 4 GPU system</li>
+<li>Slow inference times - 14 seconds per 4000x4000 dimension image (top bottom stereo)</li>
+</ul>
+</li>
+<li>Using 360 degree panoroma stereo may not work. So initially try just planar stereo like the demo videos</li>
+<li>End to end pipeline with best qualities picked from different NeRF/MVS implementation</li>
+<li>Reduce the time across the whole pipeline. Major bottlenecks:
+<ul>
+<li>Colmap based structure from motion (SfM) estimation</li>
+<li>Overfitting the NeRF module with excessive input views</li>
+<li>Depth estimation for feature mapping and dense voxel processing over the whole volume</li>
+</ul>
+</li>
+<li>The whole pipeline is implemented in Neural radiance field based solution</li>
+</ul>
+<h2 id="stage-0">Stage 0</h2>
+<ul>
+<li>The encoding (or storage) is time-consuming since it depends on the training time which is at present in the order of hours</li>
+<li>The streaming delay would still be significant since it is done through the cloud</li>
+</ul>
+<h1 id="neural-encoder-architecture-and-pipeline">Neural Encoder [Architecture and Pipeline]</h1>
+<p>In this section we explain the proposed neural encoder architecture where we try to take the best aspects of the various proposed solutions in literature and combine them together into a pipeline which address the pitfalls in their individual solutions. The architecture is generic, addressing both rigid and non-rigid body captures in a unbounded environment. Further, it tries to simplify the capture mechanism by a single iPhone video with Lidar depth information. The major pitfalls with the earlier proposed solutions used in Stage 1 was the long training time it takes for representing the 3D volumetric data using neural networks. This long training time was due to (a) estimation of camera intrinsic and extrinsic camera parameters using Structure from Motion approach used in Colmap. We utilize the IMU data availble on iPhones to estimate this (b) estimating the depth information of surfaces for mapping voxel features. We utilize the Lidar depth information to generate a feature point cloud which we can map to a particular voxel (c) overfitting of NeRF based variants using excessing input images to approximate the 3D volume. We utilize the ResNet convolution features extracted from the image to bootstrap the neural rendering process, thus inturn reducing the training time. Further, we use baysian optimization techniques to choose appropriate subset input images to reduce the training time.</p>
+<p><img src="architecture_overview.png" alt="screen reader text" title="Neural Encoder Architecture"></p>
+<h2 id="overview-1">Overview</h2>
+<p>The neural encoder takes as input a series of images captured from different angles, their corresponding camera parameters (intrinsic and extrinsic), the lidar depth information. The pipleine splits the world 3D region into two different spaces (a) Unit depth volume space (b) Inverse depth volume space. The region of interest defined by where the action happens is normalized to lie within a unit cube. This region is called the Unit volume space. Using a unit cube instead of a sphere helps in spliting the region into voxels thereby helping in speeding up inference times of the neural rendering pipeline. We use a voxel based neural encoding approach to learn the 3D volume/surface. The region outside the normalized unit cube is mapped to a inverse depth volume, and we use a single NeRF MLP to encode this region. Finally, when a user request a output image from a new camera position, we render the values from both the regions and combine them together to display it to the user.</p>
+<h2 id="pipeline">Pipeline</h2>
+<h3 id="inverse-depth-volume-space">Inverse Depth Volume Space</h3>
+<p><img src="inv_dpth_vol_enc.png" alt="screen reader text" title="Inverse Depth Volume Encoder">
+In the inverse depth space, as proposed by NeRF++, we convert every 3D point to their inverses and parameterize the NeRF MLP with (x', y', z' and r') as shown in the figure. This maps all the values from 1 to infinity to values within 1 to 0.</p>
+<h3 id="depth-volume-space">Depth Volume Space</h3>
+<p><img src="dpth_vol_spc_enc.png" alt="screen reader text" title="Depth Volume Space Encoder">
+Depth volume space is more complex, since we capture both rigid and non-rigid (human actions) sequences using this pipeline. We split it into two stages (a) Volume Feature Generator (b) Neural Voxel Renderer.</p>
+<h2 id="volume-feature-generator">Volume Feature Generator</h2>
+<p>The volume feature generator module takes images captured in multiple camera directions, passes it through a ResNet based convolution feature generator and then using the Lidar depth information maps it to a voxel inside the unit cube. The features mapped from different images to a same voxel are then averaged to estimate the voxel feature.</p>
+<h3 id="rigid-body-volume-feature-depth-voxel-feature-mapper">Rigid body volume feature [Depth Voxel Feature Mapper]</h3>
+<p>For rigid bodies we do not do anything special since it does not have any deformations.</p>
+<h3 id="non-rigid-body-volume-feature-smplx-feature-mapper">Non-Rigid body volume feature [SmplX Feature Mapper]</h3>
+<p>However, in case of non-rigid bodies, based on the motion, the 3D geometry is defomrmed and also gets mapped to different regions of the 3D voxel due to the changes in pose. We adapt the ideas from the Neural body paper, where we first estimate the 3D pose from images for the SMPL mesh. Then map the convolution features to the SMPL vertices which is then mapped to the corresponding voxel.</p>
+<h2 id="neural-voxel-renderer">Neural Voxel Renderer</h2>
+<p>The feature volume generated from the previous stage is taken as input for the Neural Voxel Renderer. The voxel features is passed through a sparse 3D UNet architecture to spread the features along the surface of the 3D objects in scene. These features are used as input for the ray casting module which uses a MLP as its head. Based on what the MLP predicts we can differentiate the kind of renderer we plan to learn.</p>
+<h3 id="volumetric-prediction-head">Volumetric Prediction Head</h3>
+<p>If the MLP head just predicts the transmittance and RGB values alone then it acts as a volumetric prediction head.</p>
+<h3 id="surface-prediction-head">Surface Prediction Head</h3>
+<p>However if it predicts surface normals along with the transmittance and RGB, then it tries to approximate the smooth surface prior there by acting as a Surface prediction head.</p>
+<!-- #### BO for training -->
+<h2 id="future-problems">Future Problems</h2>
+<p>This section talks about possible future problems which need to be addressed if we do not have that data available. If camera paramters cannot be estimated using the phone logs then how do we go about estimating them and the issue associated with them. Simillarly, if the depth information available from Lidar is not available how would the complexity of the pipeline change?</p>
+<h3 id="non-rigid-body-neural-rendering">Non-rigid body neural rendering:</h3>
+<p>Extract 2D features and map it to SMPLX. We can adapt this to other non-rigid bodies like animals since they too have a mesh prior - like SMPL there is a mesh for babies and animals. Facebook has such a representation. We can add clothing related mesh prior assuming cloths of a particular form like free flowing etc and then apply this idea [There is a clothing prior https://qianlim.github.io/SCALE, https://cape.is.tue.mpg.de/]. Also, for using a single video - first register the person in their A pose or TPose and then use this info to map the person when he moves</p>
+<h3 id="camera-paramter-estimation">Camera Paramter Estimation:</h3>
+<p>Current estimation methods using Colmap is time consuming. It exponentially increases with the number of input images for estimation. In particular the</p>
+<h3 id="splitting-voxel-grid">Splitting Voxel Grid:</h3>
+<p>What are the different ways a voxel grid can be created. Can r, theta, phi representation instead of voxels? Like Nerf++, for nearby regions split it into voxels in the range 0-1 and for further parts make it from 1-inf . The splitting mechanism can be num parts 10 =&gt; 1000 voxels, [1/r, 1/r^2, 1/r^3], [10, 100, 1000]/r. Also can Octree be tried in the 1/r region?</p>
+<h3 id="bayesian-optimization">Bayesian Optimization:</h3>
+<p>Calculate inference from different camera views and choose the right set of images to learn [Bayesian optimization for choosing the right set of subset images]. We use bayesian optimization to find areas which need more learning. The camera position (x,y,z, axis angle representation) is the input (at a higher levels regions withing the camera could also be used). The error values between predicted and the actual obtained during training could be used?. Sampling random areas within a image or using a downsampled image size to estimate the over all error based on the inference budget? Inference is costly and so you cannot evaluate all the positions. As the training progresses the old values become better and so has to be reevaluated? Can this be demonstrated with just nerf and assuming a infinite budget and training using images based on inference feedback evaluated at all positions ? Then if we make inference faster this can improve?</p>
+<h3 id="nerf-heads">Nerf Heads:</h3>
+<h4 id="plenoctree">PlenOctree</h4>
+<p>512x512 - NerfSH(PlenOctree) - Octree representation. Finally a single value for every tree node. Since we learn Spherical harmoics at each voxel, we just need to use triliniear interpolation to render the value in that position based on ray direction?</p>
+<h4 id="baking-nerfsparse-neural-radiance-grid-snrg">Baking NeRF[Sparse Neural Radiance Grid (SNrG)]</h4>
+<p>Grid of N^3 and data stored as MB of size B^3 for efficient access. Each voxel stores opacity, diffuse color (Cd), specular features (Vs)
+The evaluation for direction based effects is done by a single neural network evaluation which sums the features along the ray and produces a color
+Understand Specualr Features in SNrG, Spherical harmonics and Spherical gaussians in PlenOctree??</p>
+<h4 id="nexmex">NexMex</h4>
+<p>Uses a set of planes - plane sweep which tries to model the transparency and the Shperical harmonics values k0, k1, kN.
+Mixed Implicit and explicit representation i.e. though they use a neural network to predict the k0, k1 etc and the alpha values they calculate it at fixed depths and store them in a array instead of directly using the neural network values. Further, they use the neural network for regularizing the k0, k1 and alpha values so that they do not overfit the data.</p>
+<p>The good thing from here is they try to learn their own radial basis funtion instead of standard basis like fourier or SH or Spherical gaussian.</p>
+<h4 id="mvsnerf">MVSNerf:</h4>
+<p>Uses neighboring images to extract convolutional features i.e. if we have to generate view for a particular camera position, it identifies three (M) nearby images homomorphically projects them all to the reference camera position and creates a Cost Volume. All the processing is from the reference point of view (No global view of the object). Then it uses the color information appended from the neighboring views to regress</p>
+<h3 id="mechanisms-for-faster-inference">Mechanisms for faster inference:</h3>
+<ul>
+<li>FastNerf: Caching techniques i.e. precalculating partial outputs for required directions and using that to optimze the rendering</li>
+<li>Decoupling view dependent and view-independent parts of the network and precomputing the view dependent parts earlier and doing only the view dependent part</li>
+<li>Use SiREN for faster convergence</li>
+</ul>
+<h3 id="non-visible-voxels-identification">Non-visible voxels identification:</h3>
+<p>We render alpha maps for all the training views using this voxel grid, keeping track of the maximum ray weight 1 − exp(−σiδi) at each voxel. Compared to naively thresholding by σ at each point, this method eliminates non-visible voxels.</p>
+<p>Module which evaluates the whole scene voxel by voxel and identifies voxels which have not been scene by the camera captured images
+this gives feedback on angles to take camera captures from
+can GANs or interpolation try filling these areas [Gan or Superresolution approaches for predicting intermediate unknown regions]</p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li>
+<p><a href="https://github.com/bmild/nerf" target="_blank" rel="noopener">NeRF: Neural Radiance Fields</a></p>
+</li>
+<li>
+<p><a href="https://github.com/zju3dv/neuralbody" target="_blank" rel="noopener">Neural Body: Implicit Neural Representations with Structured Latent Codes for Novel View Synthesis of Dynamic Humans</a></p>
+</li>
+<li>
+<p><a href="https://github.com/facebookresearch/NSVF" target="_blank" rel="noopener">Neural Sparse Voxel Fields (NSVF)</a></p>
+</li>
+<li>
+<p><a href="https://github.com/Kai-46/nerfplusplus" target="_blank" rel="noopener">NeRF++: Analyzing and Improving Neural Radiance Fields</a></p>
+</li>
+<li>
+<p><a href="https://github.com/creiser/kilonerf" target="_blank" rel="noopener">KiloNeRF: Speeding up Neural Radiance Fields with Thousands of Tiny MLPs</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2103.15595.pdf" target="_blank" rel="noopener">MVSNeRF</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2103.05606.pdf" target="_blank" rel="noopener">NeX: Real-time View Synthesis with Neural Basis Expansion</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2103.14645.pdf" target="_blank" rel="noopener">Baking Neural Radiance Fields for Real-Time View Synthesis</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2103.10380.pdf" target="_blank" rel="noopener">FastNerf</a></p>
+</li>
+<li>
+<p><a href="https://alexyu.net/plenoctrees/" target="_blank" rel="noopener">PlenOctrees: For Real-time Rendering of Neural Radiance Fields</a></p>
+</li>
+</ul>
+<!-- Unifying surface rendering with volume rendering: -->
+<ul>
+<li>
+<p><a href="https://moechsle.github.io/unisurf/" target="_blank" rel="noopener">UNISURF: Unifying Neural Implicit Surfaces and Radiance Fields for Multi-View Reconstruction</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2003.09852.pdf" target="_blank" rel="noopener">Multiview Neural Surface Reconstruction by Disentangling Geometry and Appearance, Universal Differentiable Renderer for Implicit Neural Representations, UDR</a></p>
+</li>
+<li>
+<p><a href="https://pythonrepo.com/repo/ventusff-neurecon-python-imagery" target="_blank" rel="noopener">Multi-view 3D reconstruction using neural rendering. Unofficial implementation of UNISURF, VolSDF, NeuS and more.</a></p>
+</li>
+<li>
+<p><a href="https://github.com/kekeblom/StrayVisualizer" target="_blank" rel="noopener">StrayVisualizer</a></p>
+</li>
+<li>
+<p><a href="http://www.open3d.org/docs/release/tutorial/pipelines/index.html" target="_blank" rel="noopener">open3d tutorial</a></p>
+</li>
+<li>
+<p><a href="https://apps.apple.com/ci/app/stray-scanner/id1557051662?l=en" target="_blank" rel="noopener">StrayScanner Data capture</a></p>
+</li>
+<li>
+<p><a href="https://www.it-jim.com/blog/iphones-12-pro-lidar-how-to-get-and-interpret-data/" target="_blank" rel="noopener">iPhone 12 Pro Lidar Sensitivity</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2102.13090.pdf" target="_blank" rel="noopener">IBRNet: Learning Multi-View Image-Based Rendering</a> -  - Read about this</p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/2103.15595.pdf" target="_blank" rel="noopener">MVSNeRF: Fast Generalizable Radiance Field Reconstruction from Multi-View Stereo</a><a href="https://github.com/apchenstu/mvsnerf/blob/main/renderer.ipynb" target="_blank" rel="noopener">this has result about all the implementation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/mkocabas/VIBE" target="_blank" rel="noopener">VIBE: Video Inference for Human Body Pose and Shape Estimation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/vchoutas/smplify-x" target="_blank" rel="noopener">SMPLify-X</a>, <a href="https://smpl-x.is.tue.mpg.de/" target="_blank" rel="noopener">SMPL-X</a>, <a href="https://smpl.is.tue.mpg.de/" target="_blank" rel="noopener">SMPL</a></p>
+</li>
+<li>
+<p><a href="https://github.com/facebookresearch/frankmocap" target="_blank" rel="noopener">FrankMocap: A Strong and Easy-to-use Single View 3D Hand+Body Pose Estimator</a></p>
+</li>
+<li>
+<p><a href="https://github.com/akanazawa/hmr" target="_blank" rel="noopener">End-to-end Recovery of Human Shape and Pose</a>, <a href="https://github.com/nkolot/SPIN" target="_blank" rel="noopener">SPIN: SMPL oPtimization IN the loop</a></p>
+</li>
+<li>
+<p><a href="https://jalammar.github.io/illustrated-transformer/" target="_blank" rel="noopener">Illustrated Transformer</a></p>
+</li>
+<li>
+<p><a href="https://github.com/menyifang/ADGAN" target="_blank" rel="noopener">Controllable Person Image Synthesis with Attribute-Decomposed GAN</a></p>
+</li>
+<li>
+<p><a href="https://github.com/facebookresearch/pifuhd" target="_blank" rel="noopener">PIFuHD: Multi-Level Pixel-Aligned Implicit Function for High-Resolution 3D Human Digitization (CVPR 2020)</a></p>
+</li>
+<li>
+<p><a href="https://jonathan-hui.medium.com/debug-a-deep-learning-network-part-5-1123c20f960d" target="_blank" rel="noopener">Debugging networks</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/1812.07035.pdf" target="_blank" rel="noopener">On the Continuity of Rotation Representations in Neural Networks</a>, <a href="https://towardsdatascience.com/better-rotation-representations-for-accurate-pose-estimation-e890a7e1317f" target="_blank" rel="noopener">Tutorial blog</a></p>
+</li>
+</ul>
+<!-- Colmap, Camera parameter estimation -->
+<ul>
+<li><a href="https://github.com/POSTECH-CVLab/SCNeRF" target="_blank" rel="noopener">Self calibraring neural radiance fields</a></li>
+<li><a href="https://pythonrepo.com/repo/ventusff-improved-nerfmm" target="_blank" rel="noopener">Unofficial &amp; improved implementation of NeRF&ndash;: Neural Radiance Fields Without Known Camera Parameters</a></li>
+<li><a href="https://arxiv.org/pdf/2102.07064.pdf" target="_blank" rel="noopener">NeRF−−: Neural Radiance Fields Without Known Camera Parameters</a></li>
+<li><a href="https://chenhsuanlin.bitbucket.io/bundle-adjusting-NeRF/" target="_blank" rel="noopener">BARF</a>
+<a href="https://psarlin.com/pixsfm/" target="_blank" rel="noopener">Pixel-Perfect Structure-from-Motion with Featuremetric Refinement</a>, <a href="https://github.com/cvg/pixloc" target="_blank" rel="noopener">Back to the Feature</a></li>
+</ul>
+<!-- https://www.360cities.net/help/stereo_panos
+
+https://www.modtechlabs.com/volumetric-video-introduction/
+
+- Explain the application in simple terms like what is the input, what is the output
+- Explain terms like volumetric video, Neural radiance field etc
+- An app where you can capture your environment and share it with your friends
+- Then jump into the enviroment and play games like hide and seek or find the clue based on clues - treasure hunt, or pin ball, shoot arrows, throw balls etc
+- Like sharing photos and videos now you can share your whole environment
+
+
+
+More and more AR and VR devices becoming ubiquitous and advancement in animation, we see a shift in the way people consume content. Instead of using mobile, tablet and TV screens, more and more immersive 3D volumetric displays using AR/VR devices like Oculus, Holo Lens, Vive are getting used. This inturn increases the demand for generation and consumption of immersive content for various applications like live action sports, music concerts, performances or virtual worlds where consumers can interact and hang out with their favorites artists, sportsman or teleport themselves to exotic locations
+
+Being interested in application of AI/ML in the area of 3D graphics and animation and having a background in video encoding for conferencing, transmission and storage am proposing a low cost consumer grade volumetric video capture, storage, renderer and streaming solution for AR/VR end devices
+
+ --><blockquote>
+</blockquote>
+</div>
+  
+
+  
+  
+
+  
+
+</div>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    <a href="mailto:nitthilan@gmail.com">nitthilan@gmail.com</a>
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+        <div class="search-hit-content">
+          <div class="search-hit-name">
+            <a href="{{relpermalink}}">{{title}}</a>
+            <div class="article-metadata search-hit-type">{{type}}</div>
+            <p class="search-hit-description">{{snippet}}</p>
+          </div>
+        </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.db25f1c075d050faafded35b9462523c.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

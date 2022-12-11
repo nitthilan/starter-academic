@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Krishnendu Chakrabarty | Nitthilan</title>
+    <link>https://nitthilan.github.io/author/krishnendu-chakrabarty/</link>
+      <atom:link href="https://nitthilan.github.io/author/krishnendu-chakrabarty/index.xml" rel="self" type="application/rss+xml" />
+    <description>Krishnendu Chakrabarty</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>nitthilan@gmail.com</copyright><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://nitthilan.github.io/images/icon_hu794274cdbfab6a2e083ce074675524a2_29983_512x512_fill_lanczos_center_2.png</url>
+      <title>Krishnendu Chakrabarty</title>
+      <link>https://nitthilan.github.io/author/krishnendu-chakrabarty/</link>
+    </image>
+    
+    <item>
+      <title>GRAMARCH: A GPU-ReRAM based Heterogeneous Architecture for Neural Image Segmentation</title>
+      <link>https://nitthilan.github.io/publication/joardar-2020-gramarch/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://nitthilan.github.io/publication/joardar-2020-gramarch/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

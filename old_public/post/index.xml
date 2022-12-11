@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts | Nitthilan</title>
+    <link>https://nitthilan.github.io/post/</link>
+      <atom:link href="https://nitthilan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>nitthilan@gmail.com</copyright>
+    <image>
+      <url>https://nitthilan.github.io/images/icon_hu794274cdbfab6a2e083ce074675524a2_29983_512x512_fill_lanczos_center_2.png</url>
+      <title>Posts</title>
+      <link>https://nitthilan.github.io/post/</link>
+    </image>
+    
+  </channel>
+</rss>
