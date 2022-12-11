@@ -34,6 +34,14 @@ To help us develop this template and software sustainably under the MIT license,
 https://search.google.com/search-console?resource_id=https%3A%2F%2Fnitthilan.github.io%2F
 https://analytics.google.com/analytics/web/#/realtime/rt-location/a178463631w246867066p229280192/
 
+
+HUGO_VERSION = "0.78.2"
+wget https://github.com/gohugoio/hugo/releases/download/v0.78.2/hugo_extended_0.78.2_Linux-64bit.deb
+apt remove hugo
+apt install ./hugo_extended_0.78.2_Linux-64bit.deb 
+
+export PATH=$PATH:/usr/local/go/bin - Install go and export path
+
 hugo server
 
 git add .
@@ -57,3 +65,14 @@ List of things to do:
 
 Errors faced:
 - "template for shortcode "callout" not found" - https://discourse.gohugo.io/t/academic-theme-failed-to-extract-shortcode-template-for-shortcode-callout-not-found/28857/3
+
+
+podman run -it --rm --ipc=host -v /local/data/nitthilan/:/nitthilan/ --name nitt_hugo docker.io/klakegg/hugo 
+
+
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+&&  apt update \
+&&  apt install gh -y
+
