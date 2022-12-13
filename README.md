@@ -44,6 +44,10 @@ export PATH=$PATH:/usr/local/go/bin - Install go and export path
 
 hugo server
 
+Git login token used instead of password
+Also, checkout https://github.com/nitthilan/nitthilan.github.io into public folder
+
+
 git add .
 git commit -m "Initial commit"
 git push -u origin master
