@@ -24,9 +24,9 @@ As mentioned in the previous stages there are three stages. The first stage invo
 Lets dive a littel deep into the individual stages and understand the process in detail. 
 ## Full Body Capture
 
-<!-- Scanning Process           |  Full body scan
-:-------------------------:|:-------------------------: -->
-![](scanbody.gif "Scanning Process")  ![](fullbodyscan.jpeg "Full body scan")
+Scanning Process           |  Full body scan
+:-------------------------:|:-------------------------:
+![](scanbody.gif "Scanning Process") | ![](fullbodyscan.jpeg "Full body scan")
 
 
 For a fullbody scan involves a person standing in 'A' pose while another person goes around the person capturing the person using LiDAR based iPhone scans. Using the RGB image along with the depth information we using a hybrid intrinsic-extrinsic representation (namely DMTet) and a differentiable renderer (namely Nvdiffrast) to capture the model geometry and textures (Diffusion and specular albedos and surface normals). Unlike the whole body the deformations on facial expressions are complex. To enable this we do a high resoltuion canonical pose for the face seprately.
@@ -39,12 +39,23 @@ Fullbody animation rig     |  Face performace capture
 Having captured the canonical mesh representation, the next step is to capture the actual performance. In this stage we utilize the state of the art pose estimation algorithms to capture the 3D pose of the performance (namely OpenPose along with the depth information). With the target performance and the estimated pose we learn the blending weights for the different poses by minimising the reconstrution error on the rendered images. Here too we run a separate stage to capture the facial performance and learn the blending weights anchored on the facial keypoints. With the help of the blending weights and the estimated pose we should be able to build the rig for our replica models enbling them to be animated for any performance.
 
 ## Religtable Environment Renders
+Faces in different environment     |  HDRI Environment map
+:-------------------------:|:-------------------------:
+![](relightable_faces.png "Faces in different environment")  | ![](hdri.jpeg "HDRI Environment map")
+
+The final stage involves rendering the performance in the specified environment. For this stage, we create 3D rigid body models of the world. We then extract a HDRI environment map of the scanned 3D environment. Using this environment map, we place our animated 3D object in the environment and render them to match with the encoded 3D world. With this setup in place we would be able to 
 
 # References
+- [Deep Marching Tetrahedra: a Hybrid Representation for High-Resolution 3D Shape Synthesis ](https://nv-tlabs.github.io/DMTet/assets/dmtet.pdf)
+- [Extracting Triangular 3D Models, Materials, and Lighting From Images](https://github.com/NVlabs/nvdiffrec)
+- [Nvdiffrast](https://nvlabs.github.io/nvdiffrast/)
+- [Environment Mapping](https://cseweb.ucsd.edu/classes/wi18/cse167-a/lec13.pdf)
+- [Marching Tetrahedra](https://gist.github.com/d3x0r/5633f0548f4d7b283f8bab19e022acad)
+- [DefTet: Learning Deformable Tetrahedral Meshes for 3D Reconstruction](https://arxiv.org/pdf/2011.01437.pdf)
 
 
 
-Create 3D environments where you could transfer models
+<!-- Create 3D environments where you could transfer models
 
 Creating 3D animated movies
 Creating tikTok captures
@@ -58,4 +69,4 @@ Technology used:
 
 
 
-Videos and photos are used to capture our happy and memorable moments we shared with our friends and family. It takes us back to the place and time when the event happened, helping us reminiscence the moment. Instead, how would it be if we could capture these fleeting moments in 3D? Store and share them with your friends and family like you share photos and videos? Invite them to that moment so that we all could relive it? We are building a system to recreate an immersive experience to bring your memories to life in VR. Wanna ride along mail me @ nitthilan@gmail.com
+Videos and photos are used to capture our happy and memorable moments we shared with our friends and family. It takes us back to the place and time when the event happened, helping us reminiscence the moment. Instead, how would it be if we could capture these fleeting moments in 3D? Store and share them with your friends and family like you share photos and videos? Invite them to that moment so that we all could relive it? We are building a system to recreate an immersive experience to bring your memories to life in VR. Wanna ride along mail me @ nitthilan@gmail.com -->
