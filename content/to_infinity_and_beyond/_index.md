@@ -12,12 +12,16 @@ view: 1
 [[ABOUT]](#about) - [[OVERVIEW]](#overview) - [[ARCHITECTURE]](#volumetric-performance-capture) - [[PROGRESS]](#progress) - [[REFERENCES]](#references) - [[3D Volumetric Video Capture]](/vol_vid_cap/) - [[OTHER PROBLEMS]](/other_problems/)
 
 # About
+
+We have all grown up watching our super heros come to life with the Marvel cinematic universe. Don't you think it is now time to wear a suit and join them? With the rise of metaverse and the reality of the virtual worlds, we would be able to reealize our dreams of being vigilantes of the virtual universe. Our volumetric performance capture pipeline aims at easing the entire capture pipeline enabling everyone to live their dreams. Unlike traditional capture systems which ranges from high end lightstage based capture to multi-dslr camera setup we target to create our relightable virtual replicas using a single iPhone based captures. We utilize 3D deep learning technology to aide our volumetric performance capture and rendering pipeline. Our virtual counterparts are captured as PBR BRDF based texture components enbling them to be rendred in different environments from your 3D scanned home to the depths of mordor in LOTR. They would be compatible with traditional software stacks like Unity3D, Unreal Engine or Blender. Further, the models would be animated using markerless motion capture (mocap) technology. Our pipline on a high level could be brken down into three stages (a) Full body capture (b) Animation Performance Capture (c) Relightable Environment Renders. Our solutions unlocks the creativity in the hands of everyone to produce Hollywood style animation using just a mobile phone. 
+
 # Overview
+
+![screen reader text](pipeline.png "Pipeline")
+
 # Volumetric Performance Capture
 # References
 
-We have all grown up watching our super heros come to life with the Marvel cinematic universe. Do you think it is now time to wear a suit and join them? With the rise of metaverse and the reality of the virtual worlds, lets start building a volumetric performance capture system. Our projects targets an capture system, animation pipeline, workflow which helps capture a photorealistic cature system to create avatars. The avatars have the ability to be religtable unders different lighting conditions thereby enabling it to be used under different environments from the skies of star wars to the depths of mordor. They would also be animatable based on marker less motion capture system. We would also help in creating 3D environments in which we can place our 3D avatars. This makes the ability to create hollywood style animated movies in the hands of everyone with imagination and a mobile phone.  First, in our With the rise of Meta verse augumented and virtual reality more and more real world is recreated in the virtual world. More and more avatars are required. Ability to generate 3D avatars. Creating relightable avatars. Humans are catured with mesh and albedo and normal maps which can be used in any software stack like Unit3d, Unreal Engine Blender etc. 
-Problems which we are trying to solve. Performance capture. 
 
 
 Create 3D environments where you could transfer models
