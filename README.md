@@ -50,7 +50,6 @@ Also, checkout https://github.com/nitthilan/nitthilan.github.io into public fold
 
 git add .
 git commit -m "Initial commit"
-git push -u origin master
 
 hugo mod clean
 hugo mod get -u ./...
@@ -59,8 +58,13 @@ hugo
 cd public
 git add .
 git commit -m "Build website"
+cd ..
+
+git push -u origin master
+cd public
 git push origin master
 cd ..
+
 
 List of things to do:
 - Add source code for papers

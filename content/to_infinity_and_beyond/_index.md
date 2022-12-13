@@ -23,13 +23,16 @@ As mentioned in the previous stages there are three stages. The first stage invo
 # Volumetric Performance Capture
 Lets dive a littel deep into the individual stages and understand the process in detail. 
 ## Full Body Capture
-![screen reader text](scanbody.gif "Scanning Process")
-![screen reader text](fullbodyscan.jpeg "Full body scan")
+Scanning Process           |  Full body scan
+:-------------------------:|:-------------------------:
+![](scanbody.gif)          | ![](fullbodyscan.jpeg)
 For a fullbody scan involves a person standing in 'A' pose while another person goes around the person capturing the person using LiDAR based iPhone scans. Using the RGB image along with the depth information we using a hybrid intrinsic-extrinsic representation (namely DMTet) and a differentiable renderer (namely Nvdiffrast) to capture the model geometry and textures (Diffusion and specular albedos and surface normals). Unlike the whole body the deformations on facial expressions are complex. To enable this we do a high resoltuion canonical pose for the face seprately.
 
 ## Performance Animation Capture
-![screen reader text](fullbody_rig.webp "Fullbody animation rig")
-![screen reader text](face_rigging.gif "Face performace capture")
+Fullbody animation rig     |  Face performace capture
+:-------------------------:|:-------------------------:
+![](fullbody_rig.webp)     | ![](face_rigging.gif)
+
 Having captured the canonical mesh representation, the next step is to capture the actual performance. In this stage we utilize the state of the art pose estimation algorithms to capture the 3D pose of the performance (namely OpenPose along with the depth information). With the target performance and the estimated pose we learn the blending weights for the different poses by minimising the reconstrution error on the rendered images. Here too we run a separate stage to capture the facial performance and learn the blending weights anchored on the facial keypoints. With the help of the blending weights and the estimated pose we should be able to build the rig for our replica models enbling them to be animated for any performance.
 
 ## Religtable Environment Renders
