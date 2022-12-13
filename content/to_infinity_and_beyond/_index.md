@@ -23,9 +23,12 @@ As mentioned in the previous stages there are three stages. The first stage invo
 # Volumetric Performance Capture
 Lets dive a littel deep into the individual stages and understand the process in detail. 
 ## Full Body Capture
+
 Scanning Process           |  Full body scan
 :-------------------------:|:-------------------------:
 ![](scanbody.gif)          | ![](fullbodyscan.jpeg)
+
+
 For a fullbody scan involves a person standing in 'A' pose while another person goes around the person capturing the person using LiDAR based iPhone scans. Using the RGB image along with the depth information we using a hybrid intrinsic-extrinsic representation (namely DMTet) and a differentiable renderer (namely Nvdiffrast) to capture the model geometry and textures (Diffusion and specular albedos and surface normals). Unlike the whole body the deformations on facial expressions are complex. To enable this we do a high resoltuion canonical pose for the face seprately.
 
 ## Performance Animation Capture
