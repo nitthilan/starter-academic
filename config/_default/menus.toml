@@ -65,3 +65,8 @@
     name = "CV"
     url = "files/CV_5.0.pdf"
     weight = 70
+
+[[main]]
+    name = "Thesis"
+    url = "files/PhDThesis.pdf"
+    weight = 90

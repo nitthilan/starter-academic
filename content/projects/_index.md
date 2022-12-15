@@ -13,7 +13,7 @@ header:
   image: ""
 ---
 
-Project List  [Sony 3DCG R&D](#sony) [OnSpecta](#onspecta) [2017-present](#washington-state-university) : [2012-2017](#polycom) : [2007-2012](#ittiam-systems) : [2004-2007](#tata-elxsi) : [2000-2004](#anna-university)
+Project List  [Sony 3DCG R&D](#sony) : [OnSpecta](#onspecta) : [2017-present](#washington-state-university) : [2012-2017](#polycom) : [2007-2012](#ittiam-systems) : [2004-2007](#tata-elxsi) : [2000-2004](#anna-university)
 
 <!-- ##### Project list -->
 ##### Sony
