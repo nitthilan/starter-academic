@@ -13,9 +13,12 @@ header:
   image: ""
 ---
 
-Project List  [OnSpecta](#onspecta) [2017-present](#washington-state-university) : [2012-2017](#polycom) : [2007-2012](#ittiam-systems) : [2004-2007](#tata-elxsi) : [2000-2004](#anna-university)
+Project List  [Sony 3DCG R&D](#sony) [OnSpecta](#onspecta) [2017-present](#washington-state-university) : [2012-2017](#polycom) : [2007-2012](#ittiam-systems) : [2004-2007](#tata-elxsi) : [2000-2004](#anna-university)
 
 <!-- ##### Project list -->
+##### Sony
+- 3D Volumetric Performance Capture [link](https://docs.google.com/presentation/d/1iziafkiCZzH5TC9dzqF2BrQpcbUH_LgaJtzh8uBClhE/edit?usp=sharing)
+
 ##### Onspecta
 - BERT Optimization
 	- Pytorch Vs TensorFlow [link](https://docs.google.com/document/d/15SD2eQsP0PBOc_xL0TYiyo4wCg7P-3MOgbxwxLDmX5A/edit?usp=sharing)

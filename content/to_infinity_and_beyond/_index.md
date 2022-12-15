@@ -61,6 +61,14 @@ Things to do:
 - Add code and its link
 - Add implementation plan
 - Add reference implementation for face base relighting
+- Upload thesis online so that it can be liked. Update CV too
+
+List of steps to train:
+- First use nvdiffrec module to train and learn PBR textures, mesh and environment light
+- Once a base mesh of face is learnt. Learn weighting mechanism 
+    - Use the basemesh, fix the PBR textures and Environment lighting to learn the new deformation
+    - Use openpose keypoints generate a gaussian image and create an embedding which could be used for neural network for deformation
+    - An rigid transformation module which uses the change in openpose keypoints and depth to generate 3D pose and create a rigid transformation mesh. - This could be optional
 
 Create 3D environments where you could transfer models
 
