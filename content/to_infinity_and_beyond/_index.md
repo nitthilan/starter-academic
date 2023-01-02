@@ -47,7 +47,10 @@ Faces in different environment     |  HDRI Environment map
 The final stage involves rendering the performance in the specified environment. For this stage, we create 3D rigid body models of the world. We then extract an HDRI environment map of the scanned 3D environment. Using this environment map, we place our animated 3D objects in the environment and render them to match the encoded 3D world. With this setup in place, we would be able to render our performance in a photorealistic quality under varying environments.
 
 ## Digital Fashion Asset Creation
+Dress     |  Jewel
+:-------------------------:|:-------------------------:
 ![](https://www.theindustry.fashion/wp-content/uploads/2021/11/Pixel-6-Material-You-collection-cutout-e1637689114588.jpg) | ![](Gold_Caviar_Hoops.webp )
+
 We can create digital assets either by using available clothing software like clo3d. However, here plan to scan real life fashion assets into digital virtual assets. Like the way we scan full body using A pose, here to we make human models to wear the fashion assets and then scan them and create the virtual assets. Instead of scanning individual assets separately, we plan to capture the human model wearing all the accessories and capturing the person form multi-view RGBD images. We then use human part segmentation to extract individual accessories and generate their 3D virtual assets. This also enables one to generate digital assets from images available on the internet.
 
 # References
