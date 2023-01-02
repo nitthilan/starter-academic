@@ -50,7 +50,7 @@ The final stage involves rendering the performance in the specified environment.
 
 Dress     |  Jewel
 :-------------------------:|:-------------------------:
-<img src="https://www.theindustry.fashion/wp-content/uploads/2021/11/Pixel-6-Material-You-collection-cutout-e1637689114588.jpg" alt="Dress" width="75%"/> | <img src="Gold_Caviar_Hoops.webp" alt="Jewel" width="25%"/>
+<img src="https://www.theindustry.fashion/wp-content/uploads/2021/11/Pixel-6-Material-You-collection-cutout-e1637689114588.jpg" alt="Dress" width="75%"/> | <img src="diamond_hoops_NFT.webp" alt="Jewel" width="25%"/>
 <!-- ![](Gold_Caviar_Hoops.webp ) -->
 
 We can create digital assets either by using available clothing software like clo3d. However, here plan to scan real life fashion assets into digital virtual assets. Like the way we scan full body using A pose, here to we make human models to wear the fashion assets and then scan them and create the virtual assets. Instead of scanning individual assets separately, we plan to capture the human model wearing all the accessories and capturing the person form multi-view RGBD images. We then use human part segmentation to extract individual accessories and generate their 3D virtual assets. This also enables one to generate digital assets from images available on the internet.
