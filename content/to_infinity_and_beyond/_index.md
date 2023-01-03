@@ -48,8 +48,8 @@ The final stage involves rendering the performance in the specified environment.
 
 ## Digital Fashion Asset Creation
 
-Dress     |  Jewel
-:-------------------------:|:-------------------------:
+Dress     |  Jewel | 
+:-------------------------:|:-------------------------:|:-------------------------:
 <img src="https://www.theindustry.fashion/wp-content/uploads/2021/11/Pixel-6-Material-You-collection-cutout-e1637689114588.jpg" alt="Dress" width="75%"/> | <img src="diamond_hoops_NFT.webp" alt="Jewel" width="25%"/>|<img src="Gold_Caviar_Hoops.webp" alt="Jewel" width="25%"/>
 <!-- ![](Gold_Caviar_Hoops.webp ) -->
 
