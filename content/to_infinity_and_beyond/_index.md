@@ -55,6 +55,38 @@ Dress     |  Jewel |
 
 We can create digital assets either by using available clothing software like clo3d. However, here plan to scan real life fashion assets into digital virtual assets. Like the way we scan full body using A pose, here to we make human models to wear the fashion assets and then scan them and create the virtual assets. Instead of scanning individual assets separately, we plan to capture the human model wearing all the accessories and capturing the person form multi-view RGBD images. We then use human part segmentation to extract individual accessories and generate their 3D virtual assets. This also enables one to generate digital assets from images available on the internet.
 
+# Task Breakdown
+- Learning pose parameters and generating the static mesh using point cloud [2 Weeks]
+    - Use OpenPose to estimate Facial parameters
+    - Capture RGBD images and try to estimate the head rotation
+        - Key points based RANSAC based algorithm
+    - Preprocessing to identify frames with best match for rotation
+        - Using proper depth information for not clear regions and 
+        - Best rotation estimates pictures
+        - Best non blurry images
+        - Four minimum pictures
+    - Canonical Representation
+        - Front facing face
+- Learning environment lighting and material properties (Texture Learning) [2 weeks]
+    - PBR Optimize for all the different pictures
+    - Learn environment lighting
+    - Learn separate normals for each color to render things better
+- Refining initial static mesh by refining pose and DMTet [3 weeks less precise]
+    - Refine by assuming smooth surfaces normal smooth
+    - Refine environment lightning and material properties using images
+- Learning Riggable model using Facescape [4 weeks least precise]
+    - Fit a facescape model to the learnt mesh
+    - Map the facescape weights as the weights of learnt mesh - chamfer distance
+        - Gives basic riggable model
+    - Use displacement maps by using actual motions to learn deformations specific to people
+    - Facescape (3DMM/SMPLX)  based model fitting (Useful for rigging)
+        - 51 expressions controlled by 51 entries. Identify pose using openCV like expressions like happy, sad etc and then transfer that through binary values to rig the facial expression. How to do it seamlessly is something not fully clear though
+        - FACS Based system 
+        - Identify the mesh weights for deformations based on keypoints
+        - Mapping new facial expressions to existing facial expressions
+        - Mapping kep points from another face to this face
+
+
 # References
 - [Deep Marching Tetrahedra: a Hybrid Representation for High-Resolution 3D Shape Synthesis ](https://nv-tlabs.github.io/DMTet/assets/dmtet.pdf)
 - [Extracting Triangular 3D Models, Materials, and Lighting From Images](https://github.com/NVlabs/nvdiffrec)
@@ -62,6 +94,36 @@ We can create digital assets either by using available clothing software like cl
 - [Environment Mapping](https://cseweb.ucsd.edu/classes/wi18/cse167-a/lec13.pdf)
 - [Marching Tetrahedra](https://gist.github.com/d3x0r/5633f0548f4d7b283f8bab19e022acad)
 - [DefTet: Learning Deformable Tetrahedral Meshes for 3D Reconstruction](https://arxiv.org/pdf/2011.01437.pdf)
+- Face model and estimation:
+    - https://github.com/tencent-ailab/hifi3dface , https://tencent-ailab.github.io/hifi3dface_projpage/ , https://arxiv.org/pdf/2010.05562.pdf 
+- Face Model:
+    - https://github.com/zhuhao-nju/facescape 
+    - https://flame.is.tue.mpg.de/ 
+    - SMPLX face model
+- Learning from pointcloud DMTet:
+    - https://github.com/NVIDIAGameWorks/kaolin/blob/master/examples/tutorial/dmtet_tutorial.ipynb 
+- Hair mesh:
+    - http://www.hao-li.com/publications/papers/siggraphAsia2017ADFSIFRTR.pdf 
+    - Supplementary material talks about hair model? https://tencent-ailab.github.io/hifi3dface_projpage/files/tog2021_hifi3dface_supp.pdf 
+- Teeth Model:
+    - Accurate markerless jaw tracking for facial performance capture., Model-based teeth reconstruction. An empirical rig for jaw animation. ACM Trans. Graph. (P
+    - https://la.disneyresearch.com/wp-content/uploads/Appearance-Capture-and-Modeling-of-Human-Teeth-Thumbnail.pdf 
+- Eye Model:
+    - https://studios.disneyresearch.com/wp-content/uploads/2019/03/Lightweight-Eye-Capture-Using-a-Parametric-Model.pdf 
+    - Practical PersonSpecific Eye Rigging 
+    - https://cgl.ethz.ch/Downloads/Publications/Papers/2019/Pas19a/Pas19a.pdf 
+    - eye model 3d face model
+- Method for optimizing parameters: RANSAC
+    - http://www.cse.yorku.ca/~kosta/CompVis_Notes/ransac.pdf 
+- Face Rigging: [face mesh from rgbd map]
+    - https://github.com/zhuhao-nju/facescape 
+    - https://nbviewer.org/github/zhuhao-nju/facescape/blob/master/toolkit/demo_rig.ipynb 
+    - https://github.com/zhuhao-nju/facescape/blob/master/toolkit/src/facescape_fitter.py 
+    - https://github.com/zhuhao-nju/facescape , 
+    - Practical Blendshapes implementation and texturing:
+        - https://texturing.xyz/pages/vface-tutorials 
+        - https://www.russian3dscanner.com/wrap-tutorials/ 
+        - https://adamspring.co.uk/2020/05/25/facs-rigging-texture-blending-digital-humans/ 
 
 
 
