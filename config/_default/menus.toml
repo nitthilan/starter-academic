@@ -70,3 +70,18 @@
     name = "Thesis"
     url = "files/PhDThesis.pdf"
     weight = 90
+
+[[main]]
+    name = "cv(aiml)"
+    url = "files/mini_cv_aiml.pdf"
+    weight = 90
+
+[[main]]
+    name = "cv(vdo)"
+    url = "files/mini_cv_vdoenc.pdf"
+    weight = 90
+
+[[main]]
+    name = "cv(embed)"
+    url = "files/mini_cv_embed.pdf"
+    weight = 90
